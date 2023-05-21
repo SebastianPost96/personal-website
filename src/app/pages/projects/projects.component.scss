@@ -13,6 +13,11 @@
     iframe {
       flex-grow: 1;
     }
+    .description {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   mat-spinner {

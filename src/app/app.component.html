@@ -18,6 +18,7 @@
     <a
       *ngIf="!responsive.isMobile(); else mobileGitHub"
       href="https://github.com/SebastianPost96"
+      target="_blank"
       mat-fab
       extended
     >
@@ -27,7 +28,7 @@
       GitHub
     </a>
     <ng-template #mobileGitHub>
-      <a href="https://github.com/SebastianPost96" mat-mini-fab>
+      <a href="https://github.com/SebastianPost96" target="_blank" mat-mini-fab>
         <mat-icon
           [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"
         ></mat-icon>
@@ -37,6 +38,7 @@
     <a
       *ngIf="!responsive.isMobile(); else mobileLinkedIn"
       href="https://www.linkedin.com/in/sebastian-post-601356243"
+      target="_blank"
       mat-fab
       extended
     >
@@ -46,6 +48,7 @@
     <ng-template #mobileLinkedIn>
       <a
         href="https://www.linkedin.com/in/sebastian-post-601356243"
+        target="_blank"
         mat-mini-fab
       >
         <mat-icon [svgIcon]="'linkedin'"></mat-icon>

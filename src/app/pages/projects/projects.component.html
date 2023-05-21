@@ -1,10 +1,21 @@
 <mat-tab-group>
   <mat-tab label="Minesweeper">
     <div class="minesweeper">
-      <p class="content-padding">
-        Minesweeper built with Angular. Implemented using a custom state
-        management solution.
-      </p>
+      <div class="description content-padding">
+        <p>
+          Minesweeper built with Angular. Implemented using a custom state
+          management solution.
+        </p>
+
+        <a
+          href="https://github.com/SebastianPost96/rx-boilerstate"
+          target="_blank"
+          [matTooltip]="'View Source Code'"
+          mat-icon-button
+          ><mat-icon>open_in_new</mat-icon></a
+        >
+      </div>
+
       <iframe
         [hidden]="loading()"
         (load)="loading.set(false)"
