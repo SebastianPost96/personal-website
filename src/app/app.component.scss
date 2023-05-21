@@ -10,4 +10,10 @@
   .toolbar-spacer {
     flex-grow: 1;
   }
+
+  .content {
+    padding: 15px;
+    height: 100%;
+    box-sizing: border-box;
+  }
 }

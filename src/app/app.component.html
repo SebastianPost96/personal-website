@@ -19,6 +19,7 @@
     <mat-icon [svgIcon]="'linkedin'"></mat-icon>
   </a>
 </mat-toolbar>
+
 <mat-sidenav-container>
   <mat-sidenav
     [opened]="!responsive.isMobile() || sideNavOpen()"
@@ -36,6 +37,8 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <router-outlet></router-outlet>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

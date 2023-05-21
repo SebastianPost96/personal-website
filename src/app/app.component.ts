@@ -1,13 +1,12 @@
 import {
-  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   OnInit,
   signal,
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Router } from '@angular/router';
-import { map, startWith } from 'rxjs';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter, map } from 'rxjs';
 import { IconsService } from './services/icons.service';
 import { ResponsivenessService } from './services/responsiveness.service';
 
@@ -32,14 +31,14 @@ export class AppComponent implements OnInit {
 
   activePage = toSignal(
     this.router.events.pipe(
-      startWith(null),
-      map(() =>
+      filter((e): e is NavigationEnd => e instanceof NavigationEnd),
+      map(({ url }) =>
         this.pages.find((page) => {
           if (page.route === '/') {
-            return this.router.url === page.route;
+            return url === page.route;
           }
 
-          return this.router.url.startsWith(page.route);
+          return url.startsWith(page.route);
         })
       )
     )
