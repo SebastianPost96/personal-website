@@ -1,67 +1,41 @@
-<mat-toolbar *ngIf="responsive.isMobile()" (click)="sideNavOpen = !sideNavOpen"
-  >Open Menu</mat-toolbar
->
+<mat-toolbar color="primary">
+  <button
+    *ngIf="responsive.isMobile()"
+    mat-icon-button
+    (click)="toggleSideNav()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ activePage()?.title }}</span>
+  <div class="toolbar-spacer"></div>
+
+  <a href="https://github.com/SebastianPost96" mat-icon-button>
+    <mat-icon [svgIcon]="'github-white'"></mat-icon>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/sebastian-post-601356243/?lipi=urn%3Ali%3Apage%3Ad_flagship3_resumebuilder%3BFCNeJvl9S2G5zqNPVUO7%2Bw%3D%3D"
+    mat-icon-button
+  >
+    <mat-icon [svgIcon]="'linkedin'"></mat-icon>
+  </a>
+</mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav
-    [opened]="!responsive.isMobile() || sideNavOpen"
-    (closed)="sideNavOpen = false"
+    [opened]="!responsive.isMobile() || sideNavOpen()"
+    (closed)="toggleSideNav(false)"
     [mode]="responsive.isMobile() ? 'over' : 'side'"
   >
-    <p>Start</p>
-    <p>Page 1</p>
-    <p>Page 2</p>
-    <p>Page 3</p>
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let page of pages"
+        [activated]="activePage() === page"
+        (click)="navigateToPage(page)"
+      >
+        {{ page.title }}
+      </mat-list-item>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <section>
-      <div class="example-label">Basic</div>
-      <div class="example-button-row">
-        <button mat-button>Basic</button>
-        <button mat-button color="primary">Primary</button>
-        <button mat-button color="accent">Accent</button>
-        <button mat-button color="warn">Warn</button>
-        <button mat-button disabled>Disabled</button>
-        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-      </div>
-    </section>
-    <section>
-      <div class="example-label">Raised</div>
-      <div class="example-button-row">
-        <button mat-raised-button>Basic</button>
-        <button mat-raised-button color="primary">Primary</button>
-        <button mat-raised-button color="accent">Accent</button>
-        <button mat-raised-button color="warn">Warn</button>
-        <button mat-raised-button disabled>Disabled</button>
-        <a mat-raised-button href="https://www.google.com/" target="_blank"
-          >Link</a
-        >
-      </div>
-    </section>
-    <section>
-      <div class="example-label">Stroked</div>
-      <div class="example-button-row">
-        <button mat-stroked-button>Basic</button>
-        <button mat-stroked-button color="primary">Primary</button>
-        <button mat-stroked-button color="accent">Accent</button>
-        <button mat-stroked-button color="warn">Warn</button>
-        <button mat-stroked-button disabled>Disabled</button>
-        <a mat-stroked-button href="https://www.google.com/" target="_blank"
-          >Link</a
-        >
-      </div>
-    </section>
-    <section>
-      <div class="example-label">Flat</div>
-      <div class="example-button-row">
-        <button mat-flat-button>Basic</button>
-        <button mat-flat-button color="primary">Primary</button>
-        <button mat-flat-button color="accent">Accent</button>
-        <button mat-flat-button color="warn">Warn</button>
-        <button mat-flat-button disabled>Disabled</button>
-        <a mat-flat-button href="https://www.google.com/" target="_blank"
-          >Link</a
-        >
-      </div>
-    </section></mat-sidenav-content
-  >
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>

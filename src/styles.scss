@@ -15,20 +15,18 @@
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 
-@media (prefers-color-scheme: light) {
-  $personal-website-theme-light: mat.define-light-theme(
-    (
-      color: (
-        primary: mat.define-palette(mat.$indigo-palette),
-        accent: mat.define-palette(mat.$pink-palette),
-        warn: mat.define-palette(mat.$red-palette),
-      ),
-      typography: mat.define-typography-config(),
-      density: 0,
-    )
-  );
-  @include mat.all-component-themes($personal-website-theme-light);
-}
+$personal-website-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$indigo-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+      warn: mat.define-palette(mat.$red-palette),
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+@include mat.all-component-themes($personal-website-theme);
 
 @media (prefers-color-scheme: dark) {
   $personal-website-theme-dark: mat.define-dark-theme(
@@ -38,11 +36,9 @@
         accent: mat.define-palette(mat.$light-green-palette),
         warn: mat.define-palette(mat.$red-palette),
       ),
-      typography: mat.define-typography-config(),
-      density: 0,
     )
   );
-  @include mat.all-component-themes($personal-website-theme-dark);
+  @include mat.all-component-colors($personal-website-theme-dark);
 }
 
 // Include theme styles for core and each component used in your app.

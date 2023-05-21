@@ -1,18 +1,15 @@
-import { MediaMatcher } from '@angular/cdk/layout';
-import { Injectable, effect, signal } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Injectable, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ResponsivenessService {
-  public isMobile = signal(false);
-
-  constructor(media: MediaMatcher) {
-    const query = media.matchMedia('(max-width: 600px)');
-
-    this.isMobile.set(query.matches);
-    query.addEventListener('change', (query) =>
-      this.isMobile.set(query.matches)
-    );
-  }
+  public isMobile = toSignal(
+    inject(BreakpointObserver)
+      .observe(Breakpoints.Handset)
+      .pipe(map(({ matches }) => matches))
+  );
 }
