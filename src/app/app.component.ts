@@ -23,8 +23,10 @@ interface Page {
 })
 export class AppComponent implements OnInit {
   public readonly pages: Page[] = [
-    { route: '/', title: 'Home' },
-    { route: '/projects', title: 'Projects' },
+    { route: '/', title: 'About' },
+    { route: '/resume', title: 'Resume' },
+    { route: '/projects', title: 'Personal Projects' },
+    { route: '/contact', title: 'Contact' },
   ];
 
   sideNavOpen = signal(false);

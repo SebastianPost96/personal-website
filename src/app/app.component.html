@@ -6,7 +6,9 @@
   >
     <mat-icon>menu</mat-icon>
   </button>
-  <span>{{ activePage()?.title }}</span>
+  <span>{{
+    responsive.isMobile() ? activePage()?.title : "Sebastian Post"
+  }}</span>
   <div class="toolbar-spacer"></div>
 
   <a href="https://github.com/SebastianPost96" mat-icon-button>
