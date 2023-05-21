@@ -4,8 +4,8 @@
 $personal-website-theme: mat.define-light-theme(
   (
     color: (
-      primary: mat.define-palette(mat.$indigo-palette),
-      accent: mat.define-palette(mat.$pink-palette),
+      primary: mat.define-palette(mat.$cyan-palette, 700),
+      accent: mat.define-palette(mat.$grey-palette, 800),
       warn: mat.define-palette(mat.$red-palette),
     ),
     typography: mat.define-typography-config(),
@@ -18,8 +18,8 @@ $personal-website-theme: mat.define-light-theme(
   $personal-website-theme-dark: mat.define-dark-theme(
     (
       color: (
-        primary: mat.define-palette(mat.$cyan-palette),
-        accent: mat.define-palette(mat.$light-green-palette),
+        primary: mat.define-palette(mat.$cyan-palette, 300),
+        accent: mat.define-palette(mat.$grey-palette, 300),
         warn: mat.define-palette(mat.$red-palette),
       ),
     )

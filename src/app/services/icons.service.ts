@@ -30,9 +30,9 @@ export class IconsService {
       .addSvgIcon(
         'linkedin',
         this.sanitizer.bypassSecurityTrustResourceUrl(
-          'assets/LinkedIn_icon.svg'
+          'assets/LinkedIn_logo_In-Black.svg'
         ),
-        { viewBox: '0 0 72 72' }
+        { viewBox: '0 0 36 36' }
       );
   }
 }

@@ -6,20 +6,52 @@
   >
     <mat-icon>menu</mat-icon>
   </button>
-  <span>{{
-    responsive.isMobile() ? activePage()?.title : "Sebastian Post"
-  }}</span>
+  <div class="toolbar-left">
+    <span>{{
+      responsive.isMobile() ? activePage()?.title : "Sebastian Post"
+    }}</span>
+  </div>
+
   <div class="toolbar-spacer"></div>
 
-  <a href="https://github.com/SebastianPost96" mat-icon-button>
-    <mat-icon [svgIcon]="'github-white'"></mat-icon>
-  </a>
-  <a
-    href="https://www.linkedin.com/in/sebastian-post-601356243/?lipi=urn%3Ali%3Apage%3Ad_flagship3_resumebuilder%3BFCNeJvl9S2G5zqNPVUO7%2Bw%3D%3D"
-    mat-icon-button
-  >
-    <mat-icon [svgIcon]="'linkedin'"></mat-icon>
-  </a>
+  <div class="toolbar-right">
+    <a
+      *ngIf="!responsive.isMobile(); else mobileGitHub"
+      href="https://github.com/SebastianPost96"
+      mat-fab
+      extended
+    >
+      <mat-icon
+        [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"
+      ></mat-icon>
+      GitHub
+    </a>
+    <ng-template #mobileGitHub>
+      <a href="https://github.com/SebastianPost96" mat-mini-fab>
+        <mat-icon
+          [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"
+        ></mat-icon>
+      </a>
+    </ng-template>
+
+    <a
+      *ngIf="!responsive.isMobile(); else mobileLinkedIn"
+      href="https://www.linkedin.com/in/sebastian-post-601356243"
+      mat-fab
+      extended
+    >
+      <mat-icon [svgIcon]="'linkedin'"></mat-icon>
+      LinkedIn
+    </a>
+    <ng-template #mobileLinkedIn>
+      <a
+        href="https://www.linkedin.com/in/sebastian-post-601356243"
+        mat-mini-fab
+      >
+        <mat-icon [svgIcon]="'linkedin'"></mat-icon>
+      </a>
+    </ng-template>
+  </div>
 </mat-toolbar>
 
 <mat-sidenav-container>

@@ -7,8 +7,15 @@
     flex-grow: 1;
   }
 
+  .toolbar-left {
+    margin-left: 10px;
+  }
   .toolbar-spacer {
     flex-grow: 1;
+  }
+  .toolbar-right {
+    display: flex;
+    gap: 10px;
   }
 
   .content {
