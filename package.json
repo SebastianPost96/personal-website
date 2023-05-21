@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch false",
-    "deploy": "ng deploy --base-href=/personal-website/"
+    "deploy": "ng deploy --base-href=/personal-website/ --silent false"
   },
   "private": true,
   "dependencies": {
