@@ -30,10 +30,10 @@ export class AppComponent {
       map(() =>
         this.pages.find((page) => {
           if (page.route === '/') {
-            return window.location.pathname === page.route;
+            return this.router.url === page.route;
           }
 
-          return window.location.pathname.startsWith(page.route);
+          return this.router.url.startsWith(page.route);
         })
       )
     )
