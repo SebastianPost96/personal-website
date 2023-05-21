@@ -27,6 +27,5 @@ jobs:
           cache: "npm"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - run: npm ci
-      - run: npm run deploy
+      - run: npm run ng -- deploy --base-href=/personal-website/ --name="SebastianPost96" --email="sebastianpost@online.de" --no-silent
