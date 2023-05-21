@@ -5,7 +5,7 @@ $personal-website-theme: mat.define-light-theme(
   (
     color: (
       primary: mat.define-palette(mat.$cyan-palette, 700),
-      accent: mat.define-palette(mat.$grey-palette, 800),
+      accent: mat.define-palette(mat.$grey-palette, 700),
       warn: mat.define-palette(mat.$red-palette),
     ),
     typography: mat.define-typography-config(),
