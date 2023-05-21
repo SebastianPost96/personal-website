@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  signal,
+} from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { map, startWith } from 'rxjs';
@@ -16,7 +22,7 @@ interface Page {
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public readonly pages: Page[] = [
     { route: '/', title: 'Home' },
     { route: '/projects', title: 'Projects' },
@@ -44,6 +50,10 @@ export class AppComponent {
     private icons: IconsService,
     private router: Router
   ) {}
+
+  ngOnInit(): void {
+    this.responsive.syncMobileHeaderColor();
+  }
 
   toggleSideNav(explicit?: boolean): void {
     this.sideNavOpen.update((open) =>
