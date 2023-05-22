@@ -1,6 +1,8 @@
 @use "@angular/material" as mat;
 @include mat.core();
 
+// Theme
+
 $personal-website-theme: mat.define-light-theme(
   (
     color: (
@@ -14,7 +16,7 @@ $personal-website-theme: mat.define-light-theme(
 );
 @include mat.all-component-themes($personal-website-theme);
 
-@media (prefers-color-scheme: dark) {
+body.dark {
   $personal-website-theme-dark: mat.define-dark-theme(
     (
       color: (
@@ -26,6 +28,8 @@ $personal-website-theme: mat.define-light-theme(
   );
   @include mat.all-component-colors($personal-website-theme-dark);
 }
+
+// Global Styles
 
 html,
 body {

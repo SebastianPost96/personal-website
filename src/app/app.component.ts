@@ -21,7 +21,7 @@ interface Page {
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   public readonly pages: Page[] = [
     { route: '/', title: 'About' },
     { route: '/resume', title: 'Resume' },
@@ -51,10 +51,6 @@ export class AppComponent implements OnInit {
     private icons: IconsService,
     private router: Router
   ) {}
-
-  ngOnInit(): void {
-    this.responsive.syncMobileHeaderColor();
-  }
 
   toggleSideNav(explicit?: boolean): void {
     this.sideNavOpen.update((open) =>
