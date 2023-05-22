@@ -1,1 +1,10 @@
-<p>Work in progress</p>
+<pdf-viewer
+  [src]="'assets/cv.pdf'"
+  [show-all]="true"
+  [render-text]="true"
+  [render-text-mode]="2"
+  [external-link-target]="'blank'"
+  [original-size]="false"
+  [autoresize]="true"
+  [zoom-scale]="responsive.isMobile() ? 'page-width' : 'page-height'"
+></pdf-viewer>
