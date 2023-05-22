@@ -1,0 +1,63 @@
+<mat-toolbar id="toolbar" color="primary">
+  <button
+    *ngIf="responsive.isMobile()"
+    mat-icon-button
+    (click)="toggleSideNav.emit()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="toolbar-left">
+    <span *ngIf="!responsive.isMobile()">Sebastian Post</span>
+  </div>
+
+  <div class="toolbar-spacer gap"></div>
+
+  <div class="toolbar-right gap">
+    <button (click)="responsive.toggleDarkMode()" mat-icon-button>
+      <mat-icon>{{
+        responsive.isDarkMode() ? "dark_mode" : "light_mode"
+      }}</mat-icon>
+    </button>
+    <mat-divider [inset]="false" [vertical]="true"></mat-divider>
+    <div [class.gap]="!responsive.isMobile()">
+      <a
+        *ngIf="!responsive.isMobile(); else mobileGitHub"
+        class="fab-small"
+        href="https://github.com/SebastianPost96"
+        mat-fab
+        extended
+      >
+        <mat-icon
+          [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"
+        ></mat-icon>
+        GitHub
+      </a>
+      <ng-template #mobileGitHub>
+        <a href="https://github.com/SebastianPost96" mat-icon-button>
+          <mat-icon
+            [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"
+          ></mat-icon>
+        </a>
+      </ng-template>
+
+      <a
+        *ngIf="!responsive.isMobile(); else mobileLinkedIn"
+        class="fab-small"
+        href="https://www.linkedin.com/in/sebastian-post-601356243"
+        mat-fab
+        extended
+      >
+        <mat-icon [svgIcon]="'linkedin'"></mat-icon>
+        LinkedIn
+      </a>
+      <ng-template #mobileLinkedIn>
+        <a
+          href="https://www.linkedin.com/in/sebastian-post-601356243"
+          mat-icon-button
+        >
+          <mat-icon [svgIcon]="'linkedin'"></mat-icon>
+        </a>
+      </ng-template>
+    </div>
+  </div>
+</mat-toolbar>
