@@ -1,24 +1,5 @@
 <app-toolbar (toggleSideNav)="toggleSideNav()"></app-toolbar>
-
-<mat-sidenav-container>
-  <mat-sidenav
-    [opened]="!responsive.isMobile() || sideNavOpen()"
-    (closed)="toggleSideNav(false)"
-    [mode]="responsive.isMobile() ? 'over' : 'side'"
-  >
-    <mat-nav-list>
-      <mat-list-item
-        *ngFor="let page of pages"
-        [activated]="activePage() === page"
-        (click)="navigateToPage(page)"
-      >
-        {{ page.title }}
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<app-sidenav
+  [sideNavOpen]="sideNavOpen()"
+  (toggleSideNav)="toggleSideNav($event)"
+></app-sidenav>

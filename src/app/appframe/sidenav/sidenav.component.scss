@@ -1,0 +1,14 @@
+:host {
+  display: contents;
+
+  mat-sidenav-container {
+    flex-grow: 1;
+  }
+
+  .content {
+    height: 100%;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

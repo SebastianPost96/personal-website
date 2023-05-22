@@ -1,19 +1,6 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  signal,
-} from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter, map } from 'rxjs';
-import { IconsService } from './services/icons.service';
-import { ResponsivenessService } from './services/responsiveness.service';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
-interface Page {
-  route: string;
-  title: string;
-}
+import { IconsService } from './services/icons.service';
 
 @Component({
   selector: 'app-root',
@@ -22,46 +9,13 @@ interface Page {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  public readonly pages: Page[] = [
-    { route: '/', title: 'About' },
-    { route: '/resume', title: 'Resume' },
-    { route: '/projects', title: 'Personal Projects' },
-    { route: '/contact', title: 'Contact' },
-  ];
+  public sideNavOpen = signal(false);
 
-  sideNavOpen = signal(false);
-
-  activePage = toSignal(
-    this.router.events.pipe(
-      filter((e): e is NavigationEnd => e instanceof NavigationEnd),
-      map(({ url }) =>
-        this.pages.find((page) => {
-          if (page.route === '/') {
-            return url === page.route;
-          }
-
-          return url.startsWith(page.route);
-        })
-      )
-    )
-  );
-
-  constructor(
-    public responsive: ResponsivenessService,
-    private icons: IconsService,
-    private router: Router
-  ) {}
+  constructor(private icons: IconsService) {}
 
   toggleSideNav(explicit?: boolean): void {
     this.sideNavOpen.update((open) =>
       typeof explicit === 'boolean' ? explicit : !open
     );
-  }
-
-  navigateToPage(page: Page): void {
-    if (page === this.activePage()) return;
-
-    this.router.navigate([page.route]);
-    this.toggleSideNav(false);
   }
 }
