@@ -14,9 +14,10 @@
 
   <div class="toolbar-spacer"></div>
 
-  <div class="toolbar-right">
+  <div class="toolbar-right" [class.gap]="!responsive.isMobile()">
     <a
       *ngIf="!responsive.isMobile(); else mobileGitHub"
+      class="fab-small"
       href="https://github.com/SebastianPost96"
       mat-fab
       extended
@@ -27,7 +28,7 @@
       GitHub
     </a>
     <ng-template #mobileGitHub>
-      <a href="https://github.com/SebastianPost96" mat-mini-fab>
+      <a href="https://github.com/SebastianPost96" mat-icon-button>
         <mat-icon
           [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"
         ></mat-icon>
@@ -36,6 +37,7 @@
 
     <a
       *ngIf="!responsive.isMobile(); else mobileLinkedIn"
+      class="fab-small"
       href="https://www.linkedin.com/in/sebastian-post-601356243"
       mat-fab
       extended
@@ -46,7 +48,7 @@
     <ng-template #mobileLinkedIn>
       <a
         href="https://www.linkedin.com/in/sebastian-post-601356243"
-        mat-mini-fab
+        mat-icon-button
       >
         <mat-icon [svgIcon]="'linkedin'"></mat-icon>
       </a>
