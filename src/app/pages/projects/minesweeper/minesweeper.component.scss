@@ -1,0 +1,13 @@
+.minesweeper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  iframe {
+    flex-grow: 1;
+  }
+  .description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
