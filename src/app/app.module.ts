@@ -10,7 +10,6 @@ import { ToolbarComponent } from './appframe/toolbar/toolbar.component';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-
     BrowserAnimationsModule,
     HttpClientModule,
     ToolbarComponent,
