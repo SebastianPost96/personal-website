@@ -10,8 +10,8 @@
   }
 
   .responsive-body {
-    height: 100%;
-    margin-left: 32px;
-    margin-right: 32px;
+    max-width: 1040px;
+    padding: 0 16px;
+    margin: 0 auto;
   }
 }
