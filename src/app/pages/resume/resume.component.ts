@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
-import { ResponsivenessService } from 'src/app/services/responsiveness.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-resume',
@@ -11,10 +10,5 @@ import { ResponsivenessService } from 'src/app/services/responsiveness.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ResumeComponent {
-  @HostBinding('style.padding')
-  get padding(): string {
-    return this.responsive.isMobile() ? '' : '20px 0';
-  }
-
-  constructor(public responsive: ResponsivenessService) {}
+  constructor() {}
 }

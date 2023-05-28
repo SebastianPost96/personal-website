@@ -5,10 +5,13 @@
     flex-grow: 1;
   }
 
-  .content {
+  mat-sidenav {
+    width: 256px;
+  }
+
+  .responsive-body {
     height: 100%;
-    box-sizing: border-box;
-    max-width: 1000px;
-    margin: 0 auto;
+    margin-left: 32px;
+    margin-right: 32px;
   }
 }
