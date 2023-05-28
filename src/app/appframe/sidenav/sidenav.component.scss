@@ -18,12 +18,12 @@
     background-position: bottom right, top right 2%;
 
     &:not(.dark) {
-      background-image: url('/assets/angular-black.svg'), url('/assets/react-black.svg');
+      background-image: url('~src/assets/angular-black.svg'), url('~src/assets/react-black.svg');
       background-color: #f0f0f0;
     }
 
     &.dark {
-      background-image: url('/assets/angular.svg'), url('/assets/react.svg');
+      background-image: url('~src/assets/angular.svg'), url('~src/assets/react.svg');
     }
   }
 
