@@ -1,6 +1,7 @@
 :host {
   $sidenav-width: 256px;
   $body-max-width: 1040px;
+  $minimum-margin: 16px;
 
   display: contents;
 
@@ -14,8 +15,13 @@
 
   .responsive-body {
     max-width: $body-max-width;
-    padding: 0 clamp(16px, calc(100% - $body-max-width), $sidenav-width + 16px)
-      0 16px;
     margin: 0 auto;
+    padding: 0
+      clamp(
+        $minimum-margin,
+        calc(100% - $minimum-margin - $body-max-width),
+        $sidenav-width + $minimum-margin
+      )
+      0 $minimum-margin;
   }
 }
