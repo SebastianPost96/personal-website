@@ -14,7 +14,8 @@
 
   .responsive-body {
     max-width: $body-max-width;
-    padding: 0 clamp(16px, calc(100% - $body-max-width), $sidenav-width) 0 16px;
+    padding: 0 clamp(16px, calc(100% - $body-max-width), $sidenav-width + 16px)
+      0 16px;
     margin: 0 auto;
   }
 }
