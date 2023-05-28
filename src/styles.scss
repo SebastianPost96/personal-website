@@ -42,6 +42,11 @@ body {
 iframe {
   border: none;
 }
+router-outlet + * > :last-child,
+:first-child {
+  margin: 0;
+}
+
 .fab-small {
   height: 35px !important;
 }

@@ -1,7 +1,9 @@
 <ng-container *ngFor="let item of resumeContent">
   <div *ngIf="item.type === 'title'" class="title">
     <h2>{{ item.content }}</h2>
-    <button (click)="downloadCV()" mat-icon-button><mat-icon>download</mat-icon></button>
+    <button color="primary" (click)="downloadCV()" mat-icon-button>
+      <mat-icon>download</mat-icon>
+    </button>
   </div>
 
   <p *ngIf="item.type === 'paragraph'" class="paragraph">{{ item.content }}</p>
