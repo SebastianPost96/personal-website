@@ -7,8 +7,8 @@
   </div>
 
   <p *ngIf="item.type === 'paragraph'" class="paragraph">{{ item.content }}</p>
-  <div>
-    <a *ngIf="item.type === 'imageIcon'" [href]="item.link" class="image-icon">
+  <div *ngIf="item.type === 'imageIcon'">
+    <a [href]="item.link" class="image-icon">
       <mat-icon
         [svgIcon]="item.svgIcon ?? ''"
         [fontIcon]="item.fontIcon ?? ''"

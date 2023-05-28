@@ -42,9 +42,12 @@ body {
 iframe {
   border: none;
 }
-router-outlet + * > :last-child,
-:first-child {
-  margin: 0;
+
+router-outlet + * > * {
+  &:last-child,
+  &:first-child {
+    margin: 0;
+  }
 }
 
 .fab-small {
