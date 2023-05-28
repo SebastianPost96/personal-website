@@ -15,13 +15,26 @@
 
   .responsive-body {
     max-width: $body-max-width;
-    margin: 0 auto;
-    padding: 0
-      clamp(
-        $minimum-margin,
-        calc(100% - $minimum-margin - $body-max-width),
-        $sidenav-width + $minimum-margin
-      )
-      0 $minimum-margin;
+    margin: 16px auto;
+    padding: 0 clamp(16px, calc(100% - $body-max-width - 16px), $sidenav-width)
+      0 16px;
+
+    .body-content ::ng-deep {
+      border-radius: 4px;
+
+      padding: 16px 16px;
+      > * > :last-child,
+      :first-child {
+        margin: 0;
+      }
+    }
+
+    &.mobile {
+      margin: 0;
+      padding: 0;
+      .body-content {
+        border-radius: 0;
+      }
+    }
   }
 }
