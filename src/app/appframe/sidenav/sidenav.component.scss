@@ -1,4 +1,7 @@
 :host {
+  $sidenav-width: 256px;
+  $body-max-width: 1040px;
+
   display: contents;
 
   mat-sidenav-container {
@@ -10,8 +13,8 @@
   }
 
   .responsive-body {
-    max-width: 1040px;
-    padding: 0 16px;
+    max-width: $body-max-width;
+    padding: 0 clamp(16px, calc(100% - $body-max-width), $sidenav-width) 0 16px;
     margin: 0 auto;
   }
 }
