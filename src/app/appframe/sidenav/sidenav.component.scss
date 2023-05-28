@@ -12,7 +12,7 @@
     width: 256px;
   }
 
-  mat-sidenav-content {
+  mat-sidenav-content:not(.mobile) {
     background-size: 20%, 18%;
     background-repeat: no-repeat, no-repeat;
     background-position: bottom right, top right 2%;
