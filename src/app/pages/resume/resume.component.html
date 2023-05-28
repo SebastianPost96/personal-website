@@ -1,1 +1,23 @@
-<p>Work in progress</p>
+<ng-container *ngFor="let item of resumeContent">
+  <h2 *ngIf="item.type === 'title'">{{ item.content }}</h2>
+  <p *ngIf="item.type === 'paragraph'">{{ item.content }}</p>
+  <a *ngIf="item.type === 'imageIcon'" [href]="item.link" class="image-icon">
+    <mat-icon
+      [svgIcon]="item.svgIcon ?? ''"
+      [fontIcon]="item.fontIcon ?? ''"
+    ></mat-icon>
+    <span> {{ item.content }}</span>
+  </a>
+  <h3 *ngIf="item.type === 'section'">{{ item.content }}</h3>
+  <div *ngIf="item.type === 'occupation'" class="occupation">
+    <div class="icon">
+      <img [height]="24" [width]="24" [ngSrc]="item.icon" />
+    </div>
+    <div class="info">
+      <h4>{{ item.title }}</h4>
+      <span>{{ item.subtitle }}</span>
+      <small>{{ item.timeLine }}</small>
+      <small *ngFor="let line of item.description">{{ line }}</small>
+    </div>
+  </div>
+</ng-container>
