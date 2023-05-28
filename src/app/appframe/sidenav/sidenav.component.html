@@ -17,13 +17,12 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="responsive-body" [class.mobile]="responsive.isMobile()">
-      <div
-        [class.mat-elevation-z24]="!responsive.isMobile()"
-        class="body-content mat-app-background"
-      >
-        <router-outlet></router-outlet>
-      </div>
+    <div class="responsive-body" [class.no-spacing]="responsive.isMobile()">
+      <mat-card [style.border-radius]="responsive.isMobile() ? 0 : ''">
+        <mat-card-content>
+          <router-outlet></router-outlet>
+        </mat-card-content>
+      </mat-card>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
