@@ -12,10 +12,12 @@
     width: 256px;
   }
 
-  //mat-sidenav-content {
-  //  background: url("/assets/bg.jpg");
-  //  background-size: cover;
-  //}
+  mat-sidenav-content {
+    background: url(/assets/angular.svg), url(/assets/react.svg);
+    background-size: 20%, 18%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, top 4% right 2%;
+  }
 
   .responsive-body {
     max-width: $body-max-width;
