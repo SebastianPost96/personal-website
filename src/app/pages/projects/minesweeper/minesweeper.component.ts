@@ -8,13 +8,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
   selector: 'app-minesweeper',
   standalone: true,
-  imports: [
-    CommonModule,
-    MatProgressSpinnerModule,
-    MatButtonModule,
-    MatIconModule,
-    MatTooltipModule,
-  ],
+  imports: [CommonModule, MatProgressSpinnerModule, MatButtonModule, MatIconModule, MatTooltipModule],
   templateUrl: './minesweeper.component.html',
   styleUrls: ['./minesweeper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

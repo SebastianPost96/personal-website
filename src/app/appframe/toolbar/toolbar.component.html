@@ -1,9 +1,5 @@
 <mat-toolbar id="toolbar" color="primary">
-  <button
-    *ngIf="responsive.isMobile()"
-    mat-icon-button
-    (click)="toggleSideNav.emit()"
-  >
+  <button *ngIf="responsive.isMobile()" mat-icon-button (click)="toggleSideNav.emit()">
     <mat-icon>menu</mat-icon>
   </button>
   <div class="toolbar-left">
@@ -14,9 +10,7 @@
 
   <div class="toolbar-right gap">
     <button (click)="responsive.toggleDarkMode()" mat-icon-button>
-      <mat-icon>{{
-        responsive.isDarkMode() ? "dark_mode" : "light_mode"
-      }}</mat-icon>
+      <mat-icon>{{ responsive.isDarkMode() ? "dark_mode" : "light_mode" }}</mat-icon>
     </button>
     <mat-divider [inset]="false" [vertical]="true"></mat-divider>
     <div [class.gap]="!responsive.isMobile()">
@@ -27,26 +21,16 @@
         mat-fab
         extended
       >
-        <mat-icon
-          [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"
-        ></mat-icon>
+        <mat-icon [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"></mat-icon>
         GitHub
       </a>
       <ng-template #mobileGitHub>
         <a href="https://github.com/SebastianPost96" mat-icon-button>
-          <mat-icon
-            [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"
-          ></mat-icon>
+          <mat-icon [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"></mat-icon>
         </a>
       </ng-template>
 
-      <a
-        *ngIf="!responsive.isMobile(); else mobileLinkedIn"
-        class="fab-small"
-        [href]="linkedinUrl"
-        mat-fab
-        extended
-      >
+      <a *ngIf="!responsive.isMobile(); else mobileLinkedIn" class="fab-small" [href]="linkedinUrl" mat-fab extended>
         <mat-icon [svgIcon]="'linkedin'"></mat-icon>
         LinkedIn
       </a>

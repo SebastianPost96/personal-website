@@ -1,15 +1,5 @@
-import {
-  BreakpointObserver,
-  Breakpoints,
-  MediaMatcher,
-} from '@angular/cdk/layout';
-import {
-  Injectable,
-  WritableSignal,
-  effect,
-  inject,
-  signal,
-} from '@angular/core';
+import { BreakpointObserver, Breakpoints, MediaMatcher } from '@angular/cdk/layout';
+import { Injectable, WritableSignal, effect, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 
@@ -19,9 +9,7 @@ const DARK_MODE = 'darkmode';
   providedIn: 'root',
 })
 export class ResponsivenessService {
-  public isDarkMode = signal(
-    inject(MediaMatcher).matchMedia('(prefers-color-scheme: dark)').matches
-  );
+  public isDarkMode = signal(inject(MediaMatcher).matchMedia('(prefers-color-scheme: dark)').matches);
   public isMobile = toSignal(
     inject(BreakpointObserver)
       .observe(Breakpoints.Handset)
@@ -51,9 +39,7 @@ export class ResponsivenessService {
   private loadAndPersistDarkMode(): void {
     effect(() => {
       const body = document.getElementsByTagName('body')[0];
-      this.isDarkMode()
-        ? body.classList.add('dark')
-        : body.classList.remove('dark');
+      this.isDarkMode() ? body.classList.add('dark') : body.classList.remove('dark');
 
       this.syncMobileHeaderColor();
     });

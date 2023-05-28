@@ -8,13 +8,7 @@ import { ToolbarComponent } from './appframe/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ToolbarComponent,
-    SidenavComponent,
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, ToolbarComponent, SidenavComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

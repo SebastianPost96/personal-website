@@ -1,11 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -19,13 +13,7 @@ import { Page } from 'src/app/types/page';
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [
-    CommonModule,
-    MatSidenavModule,
-    MatListModule,
-    AppRoutingModule,
-    MatCardModule,
-  ],
+  imports: [CommonModule, MatSidenavModule, MatListModule, AppRoutingModule, MatCardModule],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -56,10 +44,7 @@ export class SidenavComponent {
     )
   );
 
-  constructor(
-    public responsive: ResponsivenessService,
-    private router: Router
-  ) {}
+  constructor(public responsive: ResponsivenessService, private router: Router) {}
 
   navigateToPage(page: Page): void {
     if (page === this.activePage()) return;

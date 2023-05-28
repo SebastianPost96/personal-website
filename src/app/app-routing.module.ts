@@ -6,22 +6,15 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'cv',
-    loadComponent: () =>
-      import('./pages/resume/resume.component').then((m) => m.ResumeComponent),
+    loadComponent: () => import('./pages/resume/resume.component').then((m) => m.ResumeComponent),
   },
   {
     path: 'projects',
-    loadComponent: () =>
-      import('./pages/projects/projects.component').then(
-        (m) => m.ProjectsComponent
-      ),
+    loadComponent: () => import('./pages/projects/projects.component').then((m) => m.ProjectsComponent),
   },
   {
     path: 'contact',
-    loadComponent: () =>
-      import('./pages/contact/contact.component').then(
-        (m) => m.ContactComponent
-      ),
+    loadComponent: () => import('./pages/contact/contact.component').then((m) => m.ContactComponent),
   },
 ];
 

@@ -14,8 +14,6 @@ export class AppComponent {
   constructor(private icons: IconsService) {}
 
   toggleSideNav(explicit?: boolean): void {
-    this.sideNavOpen.update((open) =>
-      typeof explicit === 'boolean' ? explicit : !open
-    );
+    this.sideNavOpen.update((open) => (typeof explicit === 'boolean' ? explicit : !open));
   }
 }

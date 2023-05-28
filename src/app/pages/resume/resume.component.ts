@@ -66,9 +66,7 @@ export class ResumeComponent {
       title: 'Frontend Developer',
       subtitle: 'AraCom IT Services AG',
       timeLine: 'Apr 2021 - Sep 2022 (1 year 6 months)',
-      description: [
-        'Projects on Enterprise Resource Planning and Internationalization.',
-      ],
+      description: ['Projects on Enterprise Resource Planning and Internationalization.'],
     },
     {
       type: 'occupation',
@@ -76,11 +74,7 @@ export class ResumeComponent {
       title: 'IT Administrator (Minijob)',
       subtitle: 'Ronny T-Shirt Druck',
       timeLine: '2015 - 2021 (6 years)',
-      description: [
-        '● Onlineshop web development',
-        '● SEO',
-        '● Maintenance of soft- and hardware',
-      ],
+      description: ['● Onlineshop web development', '● SEO', '● Maintenance of soft- and hardware'],
     },
     { type: 'section', content: 'Education' },
     {
@@ -97,15 +91,7 @@ export class ResumeComponent {
     { type: 'section', content: 'Skills' },
     {
       type: 'paragraph',
-      content: [
-        'Angular',
-        'React',
-        'TypeScript',
-        'RxJS',
-        'SCSS',
-        'HTML',
-        'SEO',
-      ].join('   •   '),
+      content: ['Angular', 'React', 'TypeScript', 'RxJS', 'SCSS', 'HTML', 'SEO'].join('   •   '),
     },
   ];
 

@@ -13,15 +13,14 @@
   }
 
   //mat-sidenav-content {
-  //  background: url("/assets/bg.png");
+  //  background: url("/assets/bg.jpg");
   //  background-size: cover;
   //}
 
   .responsive-body {
     max-width: $body-max-width;
     margin: 32px auto;
-    padding: 0 clamp(32px, calc(100% - $body-max-width - 32px), $sidenav-width)
-      0 32px;
+    padding: 0 clamp(32px, calc(100% - $body-max-width - 32px), $sidenav-width) 0 32px;
 
     &.no-spacing {
       margin: 0;
