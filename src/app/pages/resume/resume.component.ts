@@ -65,7 +65,7 @@ export class ResumeComponent {
       icon: 'assets/aracom.jpg',
       title: 'Frontend Developer',
       subtitle: 'AraCom IT Services AG',
-      timeLine: 'Apr 2021 - Sep 2022',
+      timeLine: 'Apr 2021 - Sep 2022 (1 year 6 months)',
       description: [
         'Projects on Enterprise Resource Planning and Internationalization.',
       ],
@@ -75,7 +75,7 @@ export class ResumeComponent {
       icon: 'assets/ronny.png',
       title: 'IT Administrator (Minijob)',
       subtitle: 'Ronny T-Shirt Druck',
-      timeLine: '2015 - 2021',
+      timeLine: '2015 - 2021 (6 years)',
       description: [
         '● Onlineshop web development',
         '● SEO',
@@ -110,7 +110,6 @@ export class ResumeComponent {
   ];
 
   public downloadCV(): void {
-    // TODO: implement
-    return;
+    window.open('./assets/Resume-Sebastian-Post.pdf', '_blank');
   }
 }
