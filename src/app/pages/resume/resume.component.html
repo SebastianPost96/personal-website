@@ -1,6 +1,6 @@
 <ng-container *ngFor="let item of resumeContent">
   <h2 *ngIf="item.type === 'title'">{{ item.content }}</h2>
-  <p *ngIf="item.type === 'paragraph'">{{ item.content }}</p>
+  <p *ngIf="item.type === 'paragraph'" class="paragraph">{{ item.content }}</p>
   <a *ngIf="item.type === 'imageIcon'" [href]="item.link" class="image-icon">
     <mat-icon
       [svgIcon]="item.svgIcon ?? ''"

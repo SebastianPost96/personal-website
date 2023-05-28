@@ -93,5 +93,18 @@ export class ResumeComponent {
         '● Software projects using mainly Angular and Spring Boot.',
       ],
     },
+    { type: 'section', content: 'Skills' },
+    {
+      type: 'paragraph',
+      content: [
+        'Angular',
+        'React',
+        'TypeScript',
+        'RxJS',
+        'SCSS',
+        'HTML',
+        'SEO',
+      ].join('   •   '),
+    },
   ];
 }
