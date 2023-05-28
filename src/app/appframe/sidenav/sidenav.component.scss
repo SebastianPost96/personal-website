@@ -13,10 +13,18 @@
   }
 
   mat-sidenav-content {
-    background: url(/assets/angular.svg), url(/assets/react.svg);
-    background-size: 20%, 18%, 100%;
+    background-size: 20%, 18%;
     background-repeat: no-repeat, no-repeat;
-    background-position: bottom right, top 4% right 2%;
+    background-position: bottom right, top right 2%;
+
+    &:not(.dark) {
+      background-image: url(/assets/angular-black.svg), url(/assets/react-black.svg);
+      background-color: #f0f0f0;
+    }
+
+    &.dark {
+      background-image: url(/assets/angular.svg), url(/assets/react.svg);
+    }
   }
 
   .responsive-body {
