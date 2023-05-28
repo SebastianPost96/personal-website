@@ -18,11 +18,16 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="responsive-body" [class.no-spacing]="responsive.isMobile()">
-      <mat-card [style.border-radius]="responsive.isMobile() ? 0 : ''">
+      <mat-card *ngIf="!responsive.isMobile(); else noCard">
         <mat-card-content>
           <router-outlet></router-outlet>
         </mat-card-content>
       </mat-card>
+      <ng-template #noCard>
+        <div class="body-content">
+          <router-outlet></router-outlet>
+        </div>
+      </ng-template>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

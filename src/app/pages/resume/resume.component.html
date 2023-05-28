@@ -7,13 +7,15 @@
   </div>
 
   <p *ngIf="item.type === 'paragraph'" class="paragraph">{{ item.content }}</p>
-  <a *ngIf="item.type === 'imageIcon'" [href]="item.link" class="image-icon">
-    <mat-icon
-      [svgIcon]="item.svgIcon ?? ''"
-      [fontIcon]="item.fontIcon ?? ''"
-    ></mat-icon>
-    <span> {{ item.content }}</span>
-  </a>
+  <div>
+    <a *ngIf="item.type === 'imageIcon'" [href]="item.link" class="image-icon">
+      <mat-icon
+        [svgIcon]="item.svgIcon ?? ''"
+        [fontIcon]="item.fontIcon ?? ''"
+      ></mat-icon>
+      <span> {{ item.content }}</span>
+    </a>
+  </div>
   <h3 *ngIf="item.type === 'section'">{{ item.content }}</h3>
   <div *ngIf="item.type === 'occupation'" class="occupation">
     <div class="icon">
