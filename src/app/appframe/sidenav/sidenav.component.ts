@@ -29,7 +29,7 @@ export class SidenavComponent {
 
   public readonly pages: Page[] = [
     { route: '/', title: 'About' },
-    { route: '/resume', title: 'Resume' },
+    { route: '/cv', title: 'CV' },
     { route: '/projects', title: 'Personal Projects' },
     { route: '/contact', title: 'Contact' },
   ];
