@@ -61,7 +61,7 @@ export class ResumeComponent {
     },
     {
       type: 'occupation',
-      icon: 'assets/aracom.jfif',
+      icon: 'assets/aracom.jpg',
       title: 'Frontend Developer',
       subtitle: 'AraCom IT Services AG',
       timeLine: 'Apr 2021 - Sep 2022',
