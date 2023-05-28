@@ -2,6 +2,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { CONTACT_INFORMATION } from '../../constants/contact-information';
+import { MatButtonModule } from '@angular/material/button';
 
 type ResumeFragment =
   | { type: 'title'; content: string }
@@ -29,7 +30,7 @@ type ResumeFragment =
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [CommonModule, MatIconModule, NgOptimizedImage],
+  imports: [CommonModule, MatIconModule, NgOptimizedImage, MatButtonModule],
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -107,4 +108,9 @@ export class ResumeComponent {
       ].join('   •   '),
     },
   ];
+
+  public downloadCV(): void {
+    // TODO: implement
+    return;
+  }
 }

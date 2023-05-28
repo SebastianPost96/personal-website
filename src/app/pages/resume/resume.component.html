@@ -1,5 +1,9 @@
 <ng-container *ngFor="let item of resumeContent">
-  <h2 *ngIf="item.type === 'title'">{{ item.content }}</h2>
+  <div *ngIf="item.type === 'title'" class="title">
+    <h2>{{ item.content }}</h2>
+    <button (click)="downloadCV()" mat-icon-button><mat-icon>download</mat-icon></button>
+  </div>
+
   <p *ngIf="item.type === 'paragraph'" class="paragraph">{{ item.content }}</p>
   <a *ngIf="item.type === 'imageIcon'" [href]="item.link" class="image-icon">
     <mat-icon
