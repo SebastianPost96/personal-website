@@ -110,6 +110,9 @@ export class ResumeComponent {
   ];
 
   public downloadCV(): void {
-    window.open('./assets/Resume-Sebastian-Post.pdf', '_blank');
+    var link = document.createElement('a');
+    link.download = 'Resume-Sebastian-Post.pdf';
+    link.href = 'assets/Resume-Sebastian-Post.pdf';
+    link.click();
   }
 }
