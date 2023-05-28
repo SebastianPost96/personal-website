@@ -110,7 +110,7 @@ export class ResumeComponent {
   ];
 
   public downloadCV(): void {
-    var link = document.createElement('a');
+    const link = document.createElement('a');
     link.download = 'Resume-Sebastian-Post.pdf';
     link.href = 'assets/Resume-Sebastian-Post.pdf';
     link.click();
