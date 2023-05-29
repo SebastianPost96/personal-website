@@ -27,6 +27,9 @@ export class SidenavComponent {
     { route: '/cv', title: 'CV' },
     { route: '/projects', title: 'Personal Projects' },
     { route: '/contact', title: 'Contact' },
+
+    { route: '/imprint', title: 'Imprint' },
+    { route: '/privacy', title: 'Privacy Notice' },
   ];
 
   activePage = toSignal(

@@ -16,6 +16,14 @@ const routes: Routes = [
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact.component').then((m) => m.ContactComponent),
   },
+  {
+    path: 'imprint',
+    loadComponent: () => import('./pages/imprint/imprint.component').then((m) => m.ImprintComponent),
+  },
+  {
+    path: 'privacy',
+    loadComponent: () => import('./pages/privacy/privacy.component').then((m) => m.PrivacyComponent),
+  },
 ];
 
 @NgModule({
