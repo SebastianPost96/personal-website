@@ -2,8 +2,8 @@
   <button *ngIf="responsive.isMobile()" mat-icon-button (click)="toggleSideNav.emit()">
     <mat-icon>menu</mat-icon>
   </button>
-  <div class="toolbar-left">
-    <span *ngIf="!responsive.isMobile()">Sebastian Post</span>
+  <div *ngIf="!responsive.isMobile()" class="toolbar-left">
+    <span>Sebastian Post</span> <span class="big">|</span> <small>Software Developer</small>
   </div>
 
   <div class="toolbar-spacer gap"></div>
