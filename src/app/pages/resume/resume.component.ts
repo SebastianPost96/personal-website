@@ -91,7 +91,7 @@ export class ResumeComponent {
     { type: 'section', content: 'Skills' },
     {
       type: 'paragraph',
-      content: ['Angular', 'React', 'TypeScript', 'RxJS', 'SCSS', 'HTML', 'SEO'].join('   •   '),
+      content: ['Angular', 'Nx', 'TypeScript', 'RxJS', 'SCSS', 'HTML', 'SEO'].join('   •   '),
     },
   ];
 
