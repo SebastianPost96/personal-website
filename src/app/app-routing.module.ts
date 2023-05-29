@@ -9,8 +9,8 @@ const routes: Routes = [
     loadComponent: () => import('./pages/resume/resume.component').then((m) => m.ResumeComponent),
   },
   {
-    path: 'projects',
-    loadComponent: () => import('./pages/projects/projects.component').then((m) => m.ProjectsComponent),
+    path: 'portfolio',
+    loadComponent: () => import('./pages/projects/portfolio.component').then((m) => m.PortfolioComponent),
   },
   {
     path: 'contact',

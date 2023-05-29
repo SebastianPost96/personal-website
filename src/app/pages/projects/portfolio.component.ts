@@ -4,11 +4,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MinesweeperComponent } from './minesweeper/minesweeper.component';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-portfolio',
   standalone: true,
   imports: [CommonModule, MatTabsModule, MinesweeperComponent],
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
+  templateUrl: './portfolio.component.html',
+  styleUrls: ['./portfolio.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectsComponent {}
+export class PortfolioComponent {}
