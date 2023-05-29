@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CONTACT_INFORMATION } from '../../constants/contact-information';
 
 @Component({
   selector: 'app-contact',
@@ -9,4 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./contact.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactComponent {}
+export class ContactComponent {
+  email = CONTACT_INFORMATION.email;
+}
