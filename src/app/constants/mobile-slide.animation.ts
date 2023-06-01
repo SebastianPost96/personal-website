@@ -3,13 +3,13 @@ import { animate, group, query, style, transition, trigger } from '@angular/anim
 const slide = (direction: 'up' | 'down', selector: 'enter' | 'leave') => {
   const position = selector === 'leave' ? 'fixed' : 'static';
   const initialTransform =
-    selector === 'leave' ? 'translateY(0)' : direction === 'up' ? 'translateY(100vh)' : 'translateY(-100vh)';
+    selector === 'leave' ? 'translateY(0)' : direction === 'up' ? 'translateY(150vh)' : 'translateY(-150vh)';
   const transitionTransform =
-    selector === 'enter' ? 'translateY(0)' : direction === 'up' ? 'translateY(-100vh)' : 'translateY(100vh)';
+    selector === 'enter' ? 'translateY(0)' : direction === 'up' ? 'translateY(-150vh)' : 'translateY(150vh)';
 
   return [
     style({ transform: initialTransform, position, overflow: 'hidden', height: '90%' }),
-    animate('0.5s ease-in-out', style({ transform: transitionTransform })),
+    animate('0.6s ease-out', style({ transform: transitionTransform })),
   ];
 };
 
