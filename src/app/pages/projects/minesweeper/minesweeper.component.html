@@ -12,9 +12,9 @@
   </div>
 
   <iframe
-    [hidden]="loading()"
-    (load)="loading.set(false)"
+    [hidden]="!(hasLoaded$ | async)"
+    (load)="hasData$.next(true)"
     src="https://sebastianpost96.github.io/rx-boilerstate/"
   ></iframe>
-  <mat-spinner *ngIf="loading()" [diameter]="300" [strokeWidth]="20"></mat-spinner>
+  <mat-spinner *ngIf="!(hasLoaded$ | async)" [diameter]="300" [strokeWidth]="20"></mat-spinner>
 </div>
