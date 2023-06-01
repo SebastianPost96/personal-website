@@ -51,7 +51,7 @@ export class SidenavComponent {
 
   activePageIndex = computed(() => {
     const activePage = this.activePage();
-    return activePage ? this.pages.indexOf(activePage) : -1;
+    return activePage && this.pages.indexOf(activePage);
   });
 
   constructor(public responsive: ResponsivenessService, private router: Router) {}
