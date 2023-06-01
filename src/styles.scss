@@ -16,7 +16,7 @@ $personal-website-theme: mat.define-light-theme(
 );
 @include mat.all-component-themes($personal-website-theme);
 
-body.dark {
+app-root.dark {
   $personal-website-theme-dark: mat.define-dark-theme(
     (
       color: (

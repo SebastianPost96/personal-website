@@ -14,8 +14,8 @@
       </ng-container>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content [class.dark]="responsive.isDarkMode()" [class.desktop]="!responsive.isMobile()">
-    <div class="responsive-body" [class.no-spacing]="responsive.isMobile()">
+  <mat-sidenav-content>
+    <div class="responsive-body">
       <mat-card *ngIf="!responsive.isMobile(); else noCard">
         <mat-card-content>
           <router-outlet></router-outlet>

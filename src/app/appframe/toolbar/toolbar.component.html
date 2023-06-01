@@ -13,7 +13,7 @@
       <mat-icon>{{ responsive.isDarkMode() ? "dark_mode" : "light_mode" }}</mat-icon>
     </button>
     <mat-divider [inset]="false" [vertical]="true"></mat-divider>
-    <div [class.gap]="!responsive.isMobile()">
+    <div class="buttons">
       <a
         *ngIf="!responsive.isMobile(); else mobileGitHub"
         class="fab-small"
