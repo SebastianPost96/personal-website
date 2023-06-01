@@ -31,13 +31,15 @@ export class ResponsivenessService {
     toObservable(this.isDarkMode)
       .pipe(takeUntilDestroyed())
       .subscribe(() => {
-        const toolbar = document.getElementById('toolbar');
-        const headerElem = document.getElementById('theme-color');
+        queueMicrotask(() => {
+          const toolbar = document.getElementById('toolbar');
+          const headerElem = document.getElementById('theme-color');
 
-        if (toolbar && headerElem) {
-          const color = getComputedStyle(toolbar).backgroundColor;
-          headerElem.setAttribute('content', color);
-        }
+          if (toolbar && headerElem) {
+            const color = getComputedStyle(toolbar).backgroundColor;
+            headerElem.setAttribute('content', color);
+          }
+        });
       });
   }
 
