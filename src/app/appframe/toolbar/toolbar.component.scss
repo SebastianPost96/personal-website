@@ -1,5 +1,9 @@
 :host {
   display: contents;
+
+  mat-toolbar {
+    z-index: 2;
+  }
   .toolbar-left {
     margin-left: 10px;
     display: flex;

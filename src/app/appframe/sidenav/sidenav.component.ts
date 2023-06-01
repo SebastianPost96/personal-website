@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, EventEmitter, Input, Output } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -9,6 +9,7 @@ import { filter, map } from 'rxjs';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ResponsivenessService } from 'src/app/services/responsiveness.service';
 import { Page } from 'src/app/types/page';
+import { mobileSlideAnimation } from '../../constants/mobile-slide.animation';
 
 @Component({
   selector: 'app-sidenav',
@@ -16,6 +17,7 @@ import { Page } from 'src/app/types/page';
   imports: [CommonModule, MatSidenavModule, MatListModule, AppRoutingModule, MatCardModule],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
+  animations: [mobileSlideAnimation],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavComponent {
@@ -46,6 +48,11 @@ export class SidenavComponent {
       )
     )
   );
+
+  activePageIndex = computed(() => {
+    const activePage = this.activePage();
+    return activePage ? this.pages.indexOf(activePage) : -1;
+  });
 
   constructor(public responsive: ResponsivenessService, private router: Router) {}
 
