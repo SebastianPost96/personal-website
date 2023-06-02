@@ -1,18 +1,14 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
-const slide = (direction: 'left' | 'right') => {
-  const initialTransform = direction === 'left' ? 'translateX(100vw)' : 'translateX(-100vw)';
-  const transitionTransform = 'translateX(0)';
+const flyIn = (direction: 'up' | 'left') => {
+  const initialTransform = direction === 'up' ? 'translateY(100vh)' : 'translateX(100vw)';
 
-  return [
-    style({ transform: initialTransform }),
-    stagger(50, animate('.3s ease-out', style({ transform: transitionTransform }))),
-  ];
+  return [style({ transform: initialTransform }), stagger(35, animate('.25s ease-out'))];
 };
 
 export const mobileSlideAnimation = trigger('mobileSlide', [
   transition('* => *', [
-    query(':enter > *', slide('left'), {
+    query(':enter > *', flyIn('left'), {
       optional: true,
     }),
   ]),
