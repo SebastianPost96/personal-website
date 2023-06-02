@@ -9,7 +9,7 @@ const slide = (direction: 'up' | 'down', selector: 'enter' | 'leave') => {
 
   return [
     style({ transform: initialTransform, position, overflow: 'hidden', height: '100vh' }),
-    animate('.4s ease-out', style({ transform: transitionTransform })),
+    animate('.3s ease-out', style({ transform: transitionTransform })),
   ];
 };
 
