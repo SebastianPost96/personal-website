@@ -8,28 +8,19 @@ const slide = (direction: 'up' | 'down', selector: 'enter' | 'leave') => {
     selector === 'enter' ? 'translateY(0)' : direction === 'up' ? 'translateY(-150vh)' : 'translateY(150vh)';
 
   return [
-    style({ transform: initialTransform, position, overflow: 'hidden', height: '90%' }),
-    animate('0.4s ease-out', style({ transform: transitionTransform })),
+    style({ transform: initialTransform, position, overflow: 'hidden', height: '100vh' }),
+    animate('.4s ease-out', style({ transform: transitionTransform })),
   ];
 };
 
 export const mobileSlideAnimation = trigger('mobileSlide', [
-  transition(':decrement', [
+  transition(':enter', []),
+  transition('* => *', [
     group([
       query(':enter', slide('down', 'enter'), {
         optional: true,
       }),
       query(':leave', slide('down', 'leave'), {
-        optional: true,
-      }),
-    ]),
-  ]),
-  transition(':increment', [
-    group([
-      query(':enter', slide('up', 'enter'), {
-        optional: true,
-      }),
-      query(':leave', slide('up', 'leave'), {
         optional: true,
       }),
     ]),
