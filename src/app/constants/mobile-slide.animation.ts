@@ -1,28 +1,19 @@
-import { animate, group, query, style, transition, trigger } from '@angular/animations';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
-const slide = (direction: 'up' | 'down', selector: 'enter' | 'leave') => {
-  const position = selector === 'leave' ? 'fixed' : 'static';
-  const initialTransform =
-    selector === 'leave' ? 'translateX(0)' : direction === 'up' ? 'translateX(150vw)' : 'translateX(-150vw)';
-  const transitionTransform =
-    selector === 'enter' ? 'translateX(0)' : direction === 'up' ? 'translateX(-150vw)' : 'translateX(150vw)';
+const slide = (direction: 'left' | 'right') => {
+  const initialTransform = direction === 'left' ? 'translateX(100vw)' : 'translateX(-100vw)';
+  const transitionTransform = 'translateX(0)';
 
   return [
-    style({ transform: initialTransform, position, overflow: 'hidden', height: '100vh' }),
-    animate('.15s ease-out', style({ transform: transitionTransform })),
+    style({ transform: initialTransform }),
+    stagger(50, animate('.3s ease-out', style({ transform: transitionTransform }))),
   ];
 };
 
 export const mobileSlideAnimation = trigger('mobileSlide', [
-  transition(':enter', []),
   transition('* => *', [
-    group([
-      query(':enter', slide('down', 'enter'), {
-        optional: true,
-      }),
-      query(':leave', slide('down', 'leave'), {
-        optional: true,
-      }),
-    ]),
+    query(':enter > *', slide('left'), {
+      optional: true,
+    }),
   ]),
 ]);
