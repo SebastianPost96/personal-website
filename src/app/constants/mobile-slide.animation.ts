@@ -3,9 +3,9 @@ import { animate, group, query, style, transition, trigger } from '@angular/anim
 const slide = (direction: 'up' | 'down', selector: 'enter' | 'leave') => {
   const position = selector === 'leave' ? 'fixed' : 'static';
   const initialTransform =
-    selector === 'leave' ? 'translateY(0)' : direction === 'up' ? 'translateY(150vh)' : 'translateY(-150vh)';
+    selector === 'leave' ? 'translateX(0)' : direction === 'up' ? 'translateX(150vw)' : 'translateX(-150vw)';
   const transitionTransform =
-    selector === 'enter' ? 'translateY(0)' : direction === 'up' ? 'translateY(-150vh)' : 'translateY(150vh)';
+    selector === 'enter' ? 'translateX(0)' : direction === 'up' ? 'translateX(-150vw)' : 'translateX(150vw)';
 
   return [
     style({ transform: initialTransform, position, overflow: 'hidden', height: '100vh' }),
