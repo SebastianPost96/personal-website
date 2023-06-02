@@ -36,6 +36,11 @@
       background-image: url("~src/assets/angular.svg"), url("~src/assets/rx-js.svg");
       background-color: #202020;
     }
+
+    ::ng-deep .fade-in router-outlet + * {
+      -webkit-mask-repeat: no-repeat;
+      animation: fadeIn 1.5s ease-in;
+    }
   }
 
   .responsive-body {
@@ -50,5 +55,17 @@
     .content-padding {
       padding: 16px;
     }
+  }
+}
+
+// Created as css because angular doesn't support webkit animations
+@keyframes fadeIn {
+  0% {
+    -webkit-mask-image: linear-gradient(to top, transparent, black 90%);
+    -webkit-mask-size: 100% 0;
+  }
+  100% {
+    -webkit-mask-image: linear-gradient(to top, transparent, black 90%);
+    -webkit-mask-size: 100% 1000vh;
   }
 }

@@ -17,7 +17,7 @@
   <mat-sidenav-content #container>
     <div class="responsive-body">
       <mat-card *ngIf="!responsive.isMobile(); else noCard">
-        <mat-card-content *ngIf="activePage()">
+        <mat-card-content *ngIf="activePage()" class="fade-in">
           <router-outlet (activate)="container.getElementRef().nativeElement.scrollTo(0, 0)"></router-outlet>
         </mat-card-content>
       </mat-card>
