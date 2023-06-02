@@ -9,7 +9,7 @@ import { filter, map } from 'rxjs';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ResponsivenessService } from 'src/app/services/responsiveness.service';
 import { Page } from 'src/app/types/page';
-import { mobileSlideAnimation } from '../../constants/mobile-slide.animation';
+import { flyInAnimation } from '../../constants/fly-in.animation';
 
 @Component({
   selector: 'app-sidenav',
@@ -17,7 +17,7 @@ import { mobileSlideAnimation } from '../../constants/mobile-slide.animation';
   imports: [CommonModule, MatSidenavModule, MatListModule, AppRoutingModule, MatCardModule],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
-  animations: [mobileSlideAnimation],
+  animations: [flyInAnimation],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavComponent {
