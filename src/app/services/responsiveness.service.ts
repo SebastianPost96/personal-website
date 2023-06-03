@@ -1,7 +1,7 @@
 import { BreakpointObserver, Breakpoints, MediaMatcher } from '@angular/cdk/layout';
 import { inject, Injectable, signal } from '@angular/core';
 import { takeUntilDestroyed, toObservable, toSignal } from '@angular/core/rxjs-interop';
-import { map } from 'rxjs';
+import { delay, map } from 'rxjs';
 
 const DARK_MODE = 'darkmode';
 
@@ -29,17 +29,15 @@ export class ResponsivenessService {
 
   private syncMobileHeaderColor() {
     toObservable(this.isDarkMode)
-      .pipe(takeUntilDestroyed())
+      .pipe(takeUntilDestroyed(), delay(0))
       .subscribe(() => {
-        setTimeout(() => {
-          const toolbar = document.getElementById('toolbar');
-          const headerElem = document.getElementById('theme-color');
+        const toolbar = document.getElementById('toolbar');
+        const headerElem = document.getElementById('theme-color');
 
-          if (toolbar && headerElem) {
-            const color = getComputedStyle(toolbar).backgroundColor;
-            headerElem.setAttribute('content', color);
-          }
-        });
+        if (toolbar && headerElem) {
+          const color = getComputedStyle(toolbar).backgroundColor;
+          headerElem.setAttribute('content', color);
+        }
       });
   }
 
