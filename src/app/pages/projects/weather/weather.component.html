@@ -1,1 +1,41 @@
-<p>weather works!</p>
+<div class="weather">
+  <div class="description">
+    <p>App that displays the local weather by using a public API. UI components were built from the ground up with Tailwind.</p>
+
+    <div class="buttons">
+      <a
+        href="https://sebastianpost96.github.io/tailwind-weather-app/"
+        target="_blank"
+        [matTooltip]="'Open'"
+        mat-icon-button
+        ><mat-icon>open_in_new</mat-icon></a
+      >
+      <a
+        href="https://github.com/SebastianPost96/tailwind-weather-app"
+        target="_blank"
+        [matTooltip]="'Source code'"
+        mat-icon-button
+        ><mat-icon>code</mat-icon></a
+      >
+    </div>
+  </div>
+
+  <a href="https://sebastianpost96.github.io/tailwind-weather-app/">
+    <img
+      *ngIf="!responsive.isMobile()"
+      [width]="554.5"
+      [height]="179"
+      ngSrc="assets/screenshots/weather_desktop.gif"
+      alt="weather app screenshot"
+    />
+
+    <img
+      *ngIf="responsive.isMobile()"
+      [width]="725 / 2.2"
+      [height]="407 / 2.2"
+      ngSrc="assets/screenshots/weather_mobile.gif"
+      alt="weather app screenshot"
+    />
+  </a>
+
+</div>
