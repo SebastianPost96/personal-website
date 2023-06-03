@@ -31,7 +31,7 @@ export class ResponsivenessService {
     toObservable(this.isDarkMode)
       .pipe(takeUntilDestroyed())
       .subscribe(() => {
-        queueMicrotask(() => {
+        setTimeout(() => {
           const toolbar = document.getElementById('toolbar');
           const headerElem = document.getElementById('theme-color');
 
