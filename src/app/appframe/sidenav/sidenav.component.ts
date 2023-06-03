@@ -26,8 +26,8 @@ export class SidenavComponent {
 
   public readonly pages: Page[] = [
     { route: '/', title: 'About' },
-    { route: '/cv', title: 'CV' },
     { route: '/portfolio', title: 'Portfolio' },
+    { route: '/cv', title: 'CV' },
     { route: '/contact', title: 'Contact' },
 
     { route: '/imprint', title: 'Imprint' },

@@ -5,12 +5,12 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'cv',
-    loadComponent: () => import('./pages/resume/resume.component').then((m) => m.ResumeComponent),
-  },
-  {
     path: 'portfolio',
     loadComponent: () => import('./pages/projects/portfolio.component').then((m) => m.PortfolioComponent),
+  },
+  {
+    path: 'cv',
+    loadComponent: () => import('./pages/resume/resume.component').then((m) => m.ResumeComponent),
   },
   {
     path: 'contact',
