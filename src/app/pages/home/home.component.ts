@@ -37,23 +37,23 @@ export class HomeComponent {
     ],
     Frameworks: [
       { label: 'Angular', icon: 'angular.png', experience: 5 },
-      { label: 'Nrwl Nx', icon: 'nx.png', experience: 3 },
-      { label: 'Ionic', icon: 'ionic.png', experience: 2 },
-      { label: 'React', icon: 'react.png', experience: 2 },
+      { label: 'Nrwl Nx', icon: 'nx.png', experience: 4 },
+      { label: 'Ionic', icon: 'ionic.png', experience: 3 },
+      { label: 'React', icon: 'react.png', experience: 3 },
       { label: 'NestJS', icon: 'nest.svg', experience: 2 },
     ],
     'UI Libraries': [
       { label: 'Material', icon: 'material.svg', experience: 5 },
       { label: 'PrimeNG', icon: 'primeng.png', experience: 4 },
-      { label: 'Bootstrap', icon: 'bootstrap.png', experience: 3 },
-      { label: 'Tailwind', icon: 'tailwind.png', experience: 2 },
+      { label: 'Bootstrap', icon: 'bootstrap.png', experience: 4 },
+      { label: 'Tailwind', icon: 'tailwind.png', experience: 3 },
     ],
     Skills: [
       { label: 'Reactive Programming', icon: 'rxjs.png', experience: 5 },
       { label: 'Unit Testing', icon: 'jest.webp', experience: 3 },
       { label: 'Progressive Web Apps', icon: 'pwa.png', experience: 3 },
       { label: 'DevOps', icon: 'aws.webp', experience: 3 },
-      { label: 'Search Engine Optimization', icon: 'seo.png', experience: 2 },
+      { label: 'Search Engine Optimization', icon: 'seo.png', experience: 3 },
     ],
   };
 
