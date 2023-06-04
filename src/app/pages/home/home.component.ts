@@ -31,7 +31,7 @@ export class HomeComponent {
     Languages: [
       { label: 'TypeScript', icon: 'typescript.png', experience: 5 },
       { label: 'JavaScript', icon: 'javascript.webp', experience: 5 },
-      { label: 'HTML', icon: 'html.png', experience: 4 },
+      { label: 'HTML 5', icon: 'html.png', experience: 4 },
       { label: 'SCSS', icon: 'scss.png', experience: 4 },
       { label: 'C#', icon: 'c_sharp.png', experience: 2 },
     ],
@@ -43,7 +43,7 @@ export class HomeComponent {
       { label: 'NestJS', icon: 'nest.svg', experience: 2 },
     ],
     'UI Libraries': [
-      { label: 'Material', icon: 'material.svg', experience: 4 },
+      { label: 'Material', icon: 'material.svg', experience: 5 },
       { label: 'PrimeNG', icon: 'primeng.png', experience: 4 },
       { label: 'Bootstrap', icon: 'bootstrap.png', experience: 3 },
       { label: 'Tailwind', icon: 'tailwind.png', experience: 2 },
