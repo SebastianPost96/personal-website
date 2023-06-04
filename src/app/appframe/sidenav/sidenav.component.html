@@ -7,7 +7,9 @@
     <mat-nav-list>
       <ng-container *ngFor="let page of pages; let i = index">
         <mat-list-item [activated]="activePage() === page" (click)="navigateToPage(page)">
-          {{ page.title }}
+          <div class="nav-item">
+            <mat-icon *ngIf="page.icon as icon">{{ icon }} </mat-icon>{{ page.title }}
+          </div>
         </mat-list-item>
         <mat-divider *ngIf="i === 0"></mat-divider>
         <div *ngIf="i === 3" class="spacer"></div>

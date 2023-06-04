@@ -8,13 +8,19 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ResponsivenessService } from 'src/app/services/responsiveness.service';
-import { Page } from 'src/app/types/page';
 import { flyInAnimation } from '../../constants/fly-in.animation';
+import { MatIconModule } from '@angular/material/icon';
+
+interface Page {
+  route: string;
+  title: string;
+  icon?: string;
+}
 
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [CommonModule, MatSidenavModule, MatListModule, AppRoutingModule, MatCardModule],
+  imports: [CommonModule, MatSidenavModule, MatListModule, AppRoutingModule, MatCardModule, MatIconModule],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   animations: [flyInAnimation],
@@ -25,10 +31,10 @@ export class SidenavComponent {
   @Output() toggleSideNav = new EventEmitter<boolean>();
 
   public readonly pages: Page[] = [
-    { route: '/', title: 'About' },
-    { route: '/resume', title: 'Resume' },
-    { route: '/portfolio', title: 'Code Samples' },
-    { route: '/contact', title: 'Contact' },
+    { route: '/', title: 'About', icon: 'person' },
+    { route: '/resume', title: 'Resume', icon: 'description' },
+    { route: '/portfolio', title: 'Code Samples', icon: 'code' },
+    { route: '/contact', title: 'Contact', icon: 'mail' },
     { route: '/imprint', title: 'Imprint' },
     { route: '/privacy', title: 'Privacy Notice' },
   ];
