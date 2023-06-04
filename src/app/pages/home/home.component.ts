@@ -50,7 +50,7 @@ export class HomeComponent {
     ],
     Skills: [
       { label: 'Reactive Programming', icon: 'rxjs.png', experience: 5 },
-      { label: 'Unit Testing', icon: 'jest.webp', experience: 3 },
+      { label: 'Unit Testing', icon: 'jest.webp', experience: 4 },
       { label: 'Progressive Web Apps', icon: 'pwa.png', experience: 3 },
       { label: 'DevOps', icon: 'aws.webp', experience: 3 },
       { label: 'Search Engine Optimization', icon: 'seo.png', experience: 3 },
