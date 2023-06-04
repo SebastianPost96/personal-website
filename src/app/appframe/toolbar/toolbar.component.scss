@@ -21,6 +21,16 @@
     }
     :host-context(.desktop) .buttons {
       @extend .gap;
+      .button-label {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        :host-context(.dark) & {
+          color: black;
+        }
+      }
     }
   }
   .gap {

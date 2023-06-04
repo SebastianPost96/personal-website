@@ -14,31 +14,19 @@
     </button>
     <mat-divider [inset]="false" [vertical]="true"></mat-divider>
     <div class="buttons">
-      <a
-        *ngIf="!responsive.isMobile(); else mobileGitHub"
-        class="fab-small"
-        href="https://github.com/SebastianPost96"
-        mat-fab
-        extended
-      >
-        <mat-icon [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"></mat-icon>
-        GitHub
-      </a>
-      <ng-template #mobileGitHub>
-        <a href="https://github.com/SebastianPost96" mat-icon-button>
-          <mat-icon [svgIcon]="responsive.isDarkMode() ? 'github' : 'github-white'"></mat-icon>
+      <ng-container *ngFor="let button of buttons">
+        <a *ngIf="!responsive.isMobile(); else mobileButton" [href]="button.link" mat-button>
+          <div class="button-label">
+            <mat-icon [svgIcon]="responsive.isDarkMode() ? button.iconDark : button.iconLight"></mat-icon>
+            {{ button.label }}
+          </div>
         </a>
-      </ng-template>
-
-      <a *ngIf="!responsive.isMobile(); else mobileLinkedIn" class="fab-small" [href]="linkedinUrl" mat-fab extended>
-        <mat-icon [svgIcon]="'linkedin'"></mat-icon>
-        LinkedIn
-      </a>
-      <ng-template #mobileLinkedIn>
-        <a [href]="linkedinUrl" mat-icon-button>
-          <mat-icon [svgIcon]="'linkedin'"></mat-icon>
-        </a>
-      </ng-template>
+        <ng-template #mobileButton>
+          <a [href]="button.link" mat-icon-button>
+            <mat-icon [svgIcon]="responsive.isDarkMode() ? button.iconDark : button.iconLight"></mat-icon>
+          </a>
+        </ng-template>
+      </ng-container>
     </div>
   </div>
 </mat-toolbar>

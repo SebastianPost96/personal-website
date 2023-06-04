@@ -20,5 +20,15 @@ export class ToolbarComponent {
 
   public readonly linkedinUrl = 'https://' + CONTACT_INFORMATION.linkedin;
 
+  public readonly buttons: { label: string; iconLight: string; iconDark: string; link: string }[] = [
+    { label: 'GitHub', iconLight: 'github-white', iconDark: 'github', link: 'https://' + CONTACT_INFORMATION.github },
+    {
+      label: 'LinkedIn',
+      iconLight: 'linkedin',
+      iconDark: 'linkedin',
+      link: 'https://' + CONTACT_INFORMATION.linkedin,
+    },
+  ];
+
   constructor(public responsive: ResponsivenessService) {}
 }

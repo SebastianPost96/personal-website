@@ -12,13 +12,13 @@ export class IconsService {
 
   private _registerIcons() {
     this._iconRegistry
-      .addSvgIcon('github', this._sanitizer.bypassSecurityTrustResourceUrl('assets/github-mark.svg'), {
+      .addSvgIcon('github', this._sanitizer.bypassSecurityTrustResourceUrl('assets/github.svg'), {
         viewBox: '0 0 98 96',
       })
-      .addSvgIcon('github-white', this._sanitizer.bypassSecurityTrustResourceUrl('assets/github-mark-white.svg'), {
+      .addSvgIcon('github-white', this._sanitizer.bypassSecurityTrustResourceUrl('assets/github-white.svg'), {
         viewBox: '0 0 98 96',
       })
-      .addSvgIcon('linkedin', this._sanitizer.bypassSecurityTrustResourceUrl('assets/LinkedIn_logo_In-Black.svg'), {
+      .addSvgIcon('linkedin', this._sanitizer.bypassSecurityTrustResourceUrl('assets/linkedin.svg'), {
         viewBox: '0 0 36 36',
       });
   }
