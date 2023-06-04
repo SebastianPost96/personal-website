@@ -1,5 +1,15 @@
-<div (contextmenu)="$event.preventDefault()" [matTooltip]="proficiency.label" class="container mat-elevation-z2">
-  <img priority [ngSrc]="'assets/skills_icons/' + proficiency.icon" height="40" width="40" [alt]="proficiency.label" />
+<div (contextmenu)="$event.preventDefault()" class="container mat-elevation-z2">
+  <img
+    [matTooltip]="proficiency.label"
+    #tooltip="matTooltip"
+    matTooltipTouchGestures="off"
+    (click)="tooltip.toggle()"
+    priority
+    [ngSrc]="'assets/skills_icons/' + proficiency.icon"
+    height="40"
+    width="40"
+    [alt]="proficiency.label"
+  />
   <div class="stars">
     <ng-container *ngFor="let _ of [].constructor(5); let i = index">
       <mat-icon *ngIf="i < proficiency.experience; else empty">star</mat-icon>
