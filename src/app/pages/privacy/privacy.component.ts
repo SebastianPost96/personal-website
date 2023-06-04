@@ -11,5 +11,5 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PrivacyComponent {
-  url = window.location.origin;
+  public readonly url = window.location.origin;
 }

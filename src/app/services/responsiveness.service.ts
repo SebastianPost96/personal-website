@@ -9,7 +9,8 @@ const DARK_MODE = 'darkmode';
   providedIn: 'root',
 })
 export class ResponsivenessService {
-  public isDarkMode = signal(inject(MediaMatcher).matchMedia('(prefers-color-scheme: dark)').matches);
+  public _isDarkMode = signal(inject(MediaMatcher).matchMedia('(prefers-color-scheme: dark)').matches);
+  public isDarkMode = this._isDarkMode.asReadonly();
   public isMobile = toSignal(
     inject(BreakpointObserver)
       .observe(Breakpoints.Handset)
@@ -17,18 +18,18 @@ export class ResponsivenessService {
   );
 
   constructor() {
-    this.syncMobileHeaderColor();
-    this.loadAndPersistDarkMode();
+    this._syncMobileHeaderColor();
+    this._loadAndPersistDarkMode();
   }
 
   public toggleDarkMode() {
-    const newTheme = !this.isDarkMode();
+    const newTheme = !this._isDarkMode();
     localStorage.setItem(DARK_MODE, newTheme.toString());
-    this.isDarkMode.set(newTheme);
+    this._isDarkMode.set(newTheme);
   }
 
-  private syncMobileHeaderColor() {
-    toObservable(this.isDarkMode)
+  private _syncMobileHeaderColor() {
+    toObservable(this._isDarkMode)
       .pipe(takeUntilDestroyed(), delay(0))
       .subscribe(() => {
         const toolbar = document.getElementById('toolbar');
@@ -41,10 +42,10 @@ export class ResponsivenessService {
       });
   }
 
-  private loadAndPersistDarkMode(): void {
+  private _loadAndPersistDarkMode(): void {
     const stored = localStorage.getItem(DARK_MODE);
     if (stored) {
-      this.isDarkMode.set(stored === 'true');
+      this._isDarkMode.set(stored === 'true');
     }
   }
 }

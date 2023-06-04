@@ -15,10 +15,10 @@ import { BehaviorSubject, combineLatest, map, shareReplay, timer } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MinesweeperComponent {
-  hasData$ = new BehaviorSubject(false);
-  minimumLoadTime$ = timer(500);
+  public hasData$ = new BehaviorSubject(false);
+  private _minimumLoadTime$ = timer(500);
 
-  hasLoaded$ = combineLatest([this.hasData$, this.minimumLoadTime$]).pipe(
+  public hasLoaded$ = combineLatest([this.hasData$, this._minimumLoadTime$]).pipe(
     map(([hasData]) => hasData),
     shareReplay(0)
   );

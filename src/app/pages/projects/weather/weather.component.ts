@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ResponsivenessService } from '../../../services/responsiveness.service';
@@ -14,5 +14,5 @@ import { MatIconModule } from '@angular/material/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WeatherComponent {
-  responsive = inject(ResponsivenessService);
+  constructor(public responsive: ResponsivenessService) {}
 }

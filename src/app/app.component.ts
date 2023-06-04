@@ -12,15 +12,15 @@ import { ResponsivenessService } from './services/responsiveness.service';
 export class AppComponent {
   @HostBinding('class')
   get rootClass() {
-    const theme = this.responsive.isDarkMode() ? 'dark' : 'light';
-    const device = this.responsive.isMobile() ? 'mobile' : 'desktop';
+    const theme = this._responsive.isDarkMode() ? 'dark' : 'light';
+    const device = this._responsive.isMobile() ? 'mobile' : 'desktop';
 
     return `${theme} ${device}`;
   }
 
   public sideNavOpen = signal(false);
 
-  constructor(private icons: IconsService, private responsive: ResponsivenessService) {}
+  constructor(private _icons: IconsService, private _responsive: ResponsivenessService) {}
 
   toggleSideNav(explicit?: boolean): void {
     this.sideNavOpen.update((open) => (typeof explicit === 'boolean' ? explicit : !open));

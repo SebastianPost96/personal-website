@@ -18,7 +18,7 @@ import { CONTACT_INFORMATION } from 'src/app/constants/contact-information';
 export class ToolbarComponent {
   @Output() toggleSideNav = new EventEmitter<void>();
 
-  linkedinUrl = 'https://' + CONTACT_INFORMATION.linkedin;
+  public readonly linkedinUrl = 'https://' + CONTACT_INFORMATION.linkedin;
 
   constructor(public responsive: ResponsivenessService) {}
 }

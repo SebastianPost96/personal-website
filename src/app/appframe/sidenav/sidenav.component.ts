@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -26,16 +26,15 @@ export class SidenavComponent {
 
   public readonly pages: Page[] = [
     { route: '/', title: 'About' },
-    { route: '/portfolio', title: 'Portfolio' },
     { route: '/cv', title: 'CV' },
+    { route: '/portfolio', title: 'Code Samples' },
     { route: '/contact', title: 'Contact' },
-
     { route: '/imprint', title: 'Imprint' },
     { route: '/privacy', title: 'Privacy Notice' },
   ];
 
-  activePage = toSignal(
-    this.router.events.pipe(
+  public activePage = toSignal(
+    this._router.events.pipe(
       filter((e): e is NavigationEnd => e instanceof NavigationEnd),
       map(({ url }) =>
         this.pages.find((page) => {
@@ -49,17 +48,12 @@ export class SidenavComponent {
     )
   );
 
-  activePageIndex = computed(() => {
-    const activePage = this.activePage();
-    return activePage && this.pages.indexOf(activePage);
-  });
+  constructor(public responsive: ResponsivenessService, private _router: Router) {}
 
-  constructor(public responsive: ResponsivenessService, private router: Router) {}
-
-  navigateToPage(page: Page): void {
+  public navigateToPage(page: Page): void {
     if (page === this.activePage()) return;
 
-    this.router.navigate([page.route]);
+    this._router.navigate([page.route]);
     this.toggleSideNav.emit(false);
   }
 }

@@ -6,19 +6,19 @@ import { DomSanitizer } from '@angular/platform-browser';
   providedIn: 'root',
 })
 export class IconsService {
-  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
-    this.registerIcons();
+  constructor(private _iconRegistry: MatIconRegistry, private _sanitizer: DomSanitizer) {
+    this._registerIcons();
   }
 
-  private registerIcons() {
-    this.iconRegistry
-      .addSvgIcon('github', this.sanitizer.bypassSecurityTrustResourceUrl('assets/github-mark.svg'), {
+  private _registerIcons() {
+    this._iconRegistry
+      .addSvgIcon('github', this._sanitizer.bypassSecurityTrustResourceUrl('assets/github-mark.svg'), {
         viewBox: '0 0 98 96',
       })
-      .addSvgIcon('github-white', this.sanitizer.bypassSecurityTrustResourceUrl('assets/github-mark-white.svg'), {
+      .addSvgIcon('github-white', this._sanitizer.bypassSecurityTrustResourceUrl('assets/github-mark-white.svg'), {
         viewBox: '0 0 98 96',
       })
-      .addSvgIcon('linkedin', this.sanitizer.bypassSecurityTrustResourceUrl('assets/LinkedIn_logo_In-Black.svg'), {
+      .addSvgIcon('linkedin', this._sanitizer.bypassSecurityTrustResourceUrl('assets/LinkedIn_logo_In-Black.svg'), {
         viewBox: '0 0 36 36',
       });
   }

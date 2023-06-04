@@ -7,8 +7,6 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './imprint.component.html',
   styleUrls: ['./imprint.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ImprintComponent {
-
-}
+export class ImprintComponent {}

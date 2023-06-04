@@ -12,5 +12,5 @@ import { MatIconModule } from '@angular/material/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactComponent {
-  email = CONTACT_INFORMATION.email;
+  public readonly email = CONTACT_INFORMATION.email;
 }

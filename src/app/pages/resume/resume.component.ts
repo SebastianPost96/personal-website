@@ -36,7 +36,7 @@ type ResumeFragment =
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ResumeComponent {
-  public resumeContent: ResumeFragment[] = [
+  public readonly resumeContent: ResumeFragment[] = [
     { type: 'title', content: 'Sebastian Post' },
     { type: 'paragraph', content: 'Schweinfurt, Bavaria, Germany' },
     {
