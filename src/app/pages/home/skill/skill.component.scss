@@ -14,7 +14,7 @@
 
   background-color: map.get(mat.$grey-palette, 300);
   &:host-context(.dark) & {
-    background-color: map.get(mat.$grey-palette, 600);
+    background-color: map.get(mat.$grey-palette, 700);
   }
 
   > .stars {
