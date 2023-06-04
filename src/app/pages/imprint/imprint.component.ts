@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CONTACT_INFORMATION } from '../../constants/contact-information';
 
 @Component({
   selector: 'app-imprint',
@@ -9,4 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./imprint.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ImprintComponent {}
+export class ImprintComponent {
+  public readonly mail = CONTACT_INFORMATION.email;
+}

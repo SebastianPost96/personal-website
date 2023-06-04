@@ -1,20 +1,18 @@
-<div class="minesweeper">
-  <div class="description">
-    <p>Minesweeper built with Angular. Sample project for an RxJS state management framework.</p>
+<div class="description">
+  <p>Minesweeper built with Angular. Sample project for an RxJS state management framework.</p>
 
-    <a
-      href="https://github.com/SebastianPost96/rx-boilerstate"
-      target="_blank"
-      [matTooltip]="'Source code'"
-      mat-icon-button
-      ><mat-icon>code</mat-icon></a
-    >
-  </div>
-
-  <iframe
-    [hidden]="!(hasLoaded$ | async)"
-    (load)="hasData$.next(true)"
-    src="https://sebastianpost96.github.io/rx-boilerstate/"
-  ></iframe>
-  <mat-spinner *ngIf="!(hasLoaded$ | async)" [diameter]="300" [strokeWidth]="20"></mat-spinner>
+  <a
+    href="https://github.com/SebastianPost96/rx-boilerstate"
+    target="_blank"
+    [matTooltip]="'Source code'"
+    mat-icon-button
+    ><mat-icon>code</mat-icon></a
+  >
 </div>
+
+<iframe
+  [hidden]="!(hasLoaded$ | async)"
+  (load)="hasData$.next(true)"
+  src="https://sebastianpost96.github.io/rx-boilerstate/"
+></iframe>
+<mat-spinner *ngIf="!(hasLoaded$ | async)" [diameter]="300" [strokeWidth]="20"></mat-spinner>

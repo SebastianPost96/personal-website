@@ -1,19 +1,21 @@
-.weather {
-  .description {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    gap: 10px;;
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 10px;
 
-    .buttons {
-      white-space: nowrap;
-    }
+  > p {
+    flex: 1;
   }
 
-  img {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
+  .buttons {
+    white-space: nowrap;
   }
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
 }
