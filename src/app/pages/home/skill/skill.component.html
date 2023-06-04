@@ -1,0 +1,9 @@
+<div [matTooltip]="proficiency.label" class="container mat-elevation-z2">
+  <img [ngSrc]="'assets/skills_icons/' + proficiency.icon" height="40" width="40" [alt]="proficiency.label" />
+  <div class="stars">
+    <ng-container *ngFor="let _ of [].constructor(5); let i = index">
+      <mat-icon *ngIf="i < proficiency.experience; else empty">star</mat-icon>
+      <ng-template #empty><mat-icon>star_outline</mat-icon></ng-template>
+    </ng-container>
+  </div>
+</div>

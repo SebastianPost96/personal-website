@@ -1,0 +1,29 @@
+@use "@angular/material" as mat;
+@use "sass:map";
+
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 8px;
+  border-radius: 8px;
+
+  background-color: map.get(mat.$grey-palette, 300);
+  &:host-context(.dark) & {
+    background-color: map.get(mat.$grey-palette, 600);
+  }
+
+  > .stars {
+    display: flex;
+    mat-icon {
+      $size: 18px;
+      font-size: $size;
+      height: $size;
+      width: $size;
+    }
+  }
+}
