@@ -1,9 +1,13 @@
 <ng-container *ngFor="let item of resumeContent">
   <div *ngIf="item.type === 'title'" class="title">
     <h2>{{ item.content }}</h2>
-    <button color="primary" (click)="downloadCV()" mat-icon-button>
+    <button *ngIf="!responsive.isMobile(); else justIcon" (click)="downloadCV()" mat-flat-button color="accent">
+      Download
       <mat-icon>download</mat-icon>
     </button>
+    <ng-template #justIcon>
+      <mat-icon (click)="downloadCV()">download</mat-icon>
+    </ng-template>
   </div>
 
   <p *ngIf="item.type === 'paragraph'" class="paragraph">{{ item.content }}</p>

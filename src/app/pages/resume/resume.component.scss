@@ -34,6 +34,14 @@
   align-items: center;
   justify-content: space-between;
 
+  mat-icon {
+    cursor: pointer;
+  }
+
+  button {
+    box-sizing: border-box;
+  }
+
   > h2 {
     margin: 0;
   }
