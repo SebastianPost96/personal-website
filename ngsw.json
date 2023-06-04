@@ -1,0 +1,121 @@
+{
+  "configVersion": 1,
+  "timestamp": 1685894722090,
+  "index": "/personal-website/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/personal-website/189.1ca44f9a6d6b9531.js",
+        "/personal-website/351.c1b0f964114c7b21.js",
+        "/personal-website/416.1aa2a38fc61c913b.js",
+        "/personal-website/711.a3d2d93838b6ec41.js",
+        "/personal-website/996.731c5b877250f4c5.js",
+        "/personal-website/favicon.ico",
+        "/personal-website/index.html",
+        "/personal-website/main.74dacc6bd33bb246.js",
+        "/personal-website/manifest.webmanifest",
+        "/personal-website/polyfills.18e0c4b7fb11c0a6.js",
+        "/personal-website/runtime.574860945f162f18.js",
+        "/personal-website/styles.8da8abca4384bb33.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/personal-website/angular-black.4489a17e8940380f.svg",
+        "/personal-website/angular.2e9a10a3fb5516da.svg",
+        "/personal-website/assets/Resume-Sebastian-Post.pdf",
+        "/personal-website/assets/angular-black.svg",
+        "/personal-website/assets/angular.svg",
+        "/personal-website/assets/aracom.jpg",
+        "/personal-website/assets/bg.png",
+        "/personal-website/assets/github-white.svg",
+        "/personal-website/assets/github.svg",
+        "/personal-website/assets/icons/icon-192x192.png",
+        "/personal-website/assets/icons/icon-512x512.png",
+        "/personal-website/assets/linkedin.svg",
+        "/personal-website/assets/nerdware.jfif",
+        "/personal-website/assets/react-black.svg",
+        "/personal-website/assets/react.svg",
+        "/personal-website/assets/ronny.png",
+        "/personal-website/assets/rx-js-black.svg",
+        "/personal-website/assets/rx-js.svg",
+        "/personal-website/assets/screenshots/weather_desktop.gif",
+        "/personal-website/assets/screenshots/weather_mobile.gif",
+        "/personal-website/assets/uni_bamberg.jfif",
+        "/personal-website/rx-js-black.b795cddb3a6dedf7.svg",
+        "/personal-website/rx-js.ae6b51f4977da020.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/personal-website/189.1ca44f9a6d6b9531.js": "a40a3d0cc52ede1959178fd7162f0c3080263c28",
+    "/personal-website/351.c1b0f964114c7b21.js": "dd7dd5055d48a5116ddae72d83c66733350a9c8a",
+    "/personal-website/416.1aa2a38fc61c913b.js": "ac001ee90b642d129f447525e7dd25ede6617c5a",
+    "/personal-website/711.a3d2d93838b6ec41.js": "f7c9e2424addb87c2f5fb29b8e02a035b226d873",
+    "/personal-website/996.731c5b877250f4c5.js": "ac539fe292f8267cc00166aa94cac6eca893259e",
+    "/personal-website/angular-black.4489a17e8940380f.svg": "750e64398ce8de8bae403de7202f1f8792ac203d",
+    "/personal-website/angular.2e9a10a3fb5516da.svg": "bf8fee231c6b848e8febdfbabf2a6f0dca549189",
+    "/personal-website/assets/Resume-Sebastian-Post.pdf": "d0fe666fff20befdb79b96a7f03c351504ba6555",
+    "/personal-website/assets/angular-black.svg": "750e64398ce8de8bae403de7202f1f8792ac203d",
+    "/personal-website/assets/angular.svg": "bf8fee231c6b848e8febdfbabf2a6f0dca549189",
+    "/personal-website/assets/aracom.jpg": "c21b5f519bfafae89cd404494d9caeda61caf683",
+    "/personal-website/assets/bg.png": "9e8028b8f0fff84b30292f488c898a86b4ef69f6",
+    "/personal-website/assets/github-white.svg": "f202b6faccfd5cc46299b976c2635fee60b55aa0",
+    "/personal-website/assets/github.svg": "6b232428006160df976af8f0585a2bee5b1059de",
+    "/personal-website/assets/icons/icon-192x192.png": "f1ff61db079a5c1161dac6098e34541e3b6e2b7e",
+    "/personal-website/assets/icons/icon-512x512.png": "d042aeccd3e227d82307db4d899df34fdcfc6160",
+    "/personal-website/assets/linkedin.svg": "2129b6ff6ad7d0a679bcde4a6d1f3498d2c5c2c3",
+    "/personal-website/assets/nerdware.jfif": "f21ae2aeb6cdf0fc9324d54e5b4422ff6b290305",
+    "/personal-website/assets/react-black.svg": "77754e3cdb9c87450f7f868f88e8fb93c817f135",
+    "/personal-website/assets/react.svg": "013086c42abd5fafdc421f04bd14cc517585c4b2",
+    "/personal-website/assets/ronny.png": "527e07c1462ae6be3ba19c6b4193858385df4b36",
+    "/personal-website/assets/rx-js-black.svg": "eeab381c43fc31c767fb509c1198de26c0d05ee0",
+    "/personal-website/assets/rx-js.svg": "5e9eade42ac9d933fd8192a0c029735b46d9c9f8",
+    "/personal-website/assets/screenshots/weather_desktop.gif": "ca289064689615735c57aee6ebd976b3f1fa8235",
+    "/personal-website/assets/screenshots/weather_mobile.gif": "9ac2e66296abeb6ebdce96c83b412c6f731ed085",
+    "/personal-website/assets/uni_bamberg.jfif": "8df596bb6ada0b1b33472d2260847843dbab9702",
+    "/personal-website/favicon.ico": "e033ecd3762b76a22b8b5e1371c980b06b6ac2d9",
+    "/personal-website/index.html": "0a450f881b6bac85b9122940d124ad53678d2d24",
+    "/personal-website/main.74dacc6bd33bb246.js": "23d0a92561b74d2d92176e6a7a41362e62b9765f",
+    "/personal-website/manifest.webmanifest": "a50c6542f4e4793071db69917ed0784ec12a368a",
+    "/personal-website/polyfills.18e0c4b7fb11c0a6.js": "516bbde08d319098ad925c6919139c52d7e0be62",
+    "/personal-website/runtime.574860945f162f18.js": "faa1a14089866b88b14fb56e8a44f20f29ad07dd",
+    "/personal-website/rx-js-black.b795cddb3a6dedf7.svg": "eeab381c43fc31c767fb509c1198de26c0d05ee0",
+    "/personal-website/rx-js.ae6b51f4977da020.svg": "5e9eade42ac9d933fd8192a0c029735b46d9c9f8",
+    "/personal-website/styles.8da8abca4384bb33.css": "7a6be6758f806138ce0f5dc0b2a14911d08032be"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
