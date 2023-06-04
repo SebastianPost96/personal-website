@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1685895091559,
+  "timestamp": 1685895468705,
   "index": "/personal-website/index.html",
   "assetGroups": [
     {
@@ -92,7 +92,7 @@
     "/personal-website/favicon.ico": "e033ecd3762b76a22b8b5e1371c980b06b6ac2d9",
     "/personal-website/index.html": "0a450f881b6bac85b9122940d124ad53678d2d24",
     "/personal-website/main.74dacc6bd33bb246.js": "23d0a92561b74d2d92176e6a7a41362e62b9765f",
-    "/personal-website/manifest.webmanifest": "4eb113fed5aa4c4a88d82c93be225afe5b7d4b23",
+    "/personal-website/manifest.webmanifest": "350f685daf723a60791687bb6aa633461650f979",
     "/personal-website/polyfills.18e0c4b7fb11c0a6.js": "516bbde08d319098ad925c6919139c52d7e0be62",
     "/personal-website/runtime.574860945f162f18.js": "faa1a14089866b88b14fb56e8a44f20f29ad07dd",
     "/personal-website/rx-js-black.b795cddb3a6dedf7.svg": "eeab381c43fc31c767fb509c1198de26c0d05ee0",
