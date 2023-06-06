@@ -29,25 +29,23 @@ export class HomeComponent {
       { label: 'HTML 5', icon: 'html.png' },
       { label: 'SCSS', icon: 'scss.png' },
     ],
-    UI: [
-      { label: 'Material', icon: 'material.svg' },
-      { label: 'PrimeNG', icon: 'primeng.png' },
-      { label: 'Bootstrap', icon: 'bootstrap.png' },
-      { label: 'Tailwind', icon: 'tailwind.png' },
-    ],
     Technologies: [
       { label: 'RxJS', icon: 'rxjs.png' },
       { label: 'Jest', icon: 'jest.webp' },
       { label: 'Nx', icon: 'nx.png' },
       { label: 'PWA', icon: 'pwa.png' },
     ],
+    UI: [
+      { label: 'Material', icon: 'material.svg' },
+      { label: 'PrimeNG', icon: 'primeng.png' },
+      { label: 'Bootstrap', icon: 'bootstrap.png' },
+      { label: 'Tailwind', icon: 'tailwind.png' },
+    ],
     Tools: [
       { label: 'Windows', icon: 'windows.png' },
       { label: 'WebStorm', icon: 'webstorm.png' },
       { label: 'Git', icon: 'git.png' },
       { label: 'AWS', icon: 'aws.webp' },
-      { label: 'Docker', icon: 'docker.png' },
-      { label: 'Insomnia', icon: 'insomnia.png' },
     ],
   };
 
