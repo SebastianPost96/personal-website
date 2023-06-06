@@ -33,7 +33,7 @@
     }
   }
 
-  mat-sidenav-content {
+  :host-context(.desktop) mat-sidenav-content {
     background-size: 20%, 17%;
     background-repeat: no-repeat, no-repeat;
     background-position: bottom right, top 3% right 2%;
@@ -46,11 +46,6 @@
     :host-context(.dark) & {
       background-image: url("~src/assets/angular.svg"), url("~src/assets/rx-js.svg");
       background-color: #202020;
-    }
-
-    ::ng-deep .fade-in router-outlet + * {
-      -webkit-mask-repeat: no-repeat;
-      animation: fadeIn 1.5s ease-in;
     }
   }
 
@@ -79,4 +74,8 @@
     -webkit-mask-image: linear-gradient(to top, transparent, black 90%);
     -webkit-mask-size: 100% 1000vh;
   }
+}
+::ng-deep .fade-in router-outlet + * {
+  -webkit-mask-repeat: no-repeat;
+  animation: fadeIn 1.5s ease-in;
 }
