@@ -2,20 +2,10 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkillComponent } from './skill/skill.component';
 
-export type Proficiency = {
+export type Skill = {
   icon: string;
   label: string;
-  experience: 1 | 2 | 3 | 4 | 5;
-};
-
-type Reference = {
-  icon: string;
-  label: string;
-};
-
-type Tool = {
-  icon: string;
-  label: string;
+  experience?: 1 | 2 | 3 | 4 | 5;
 };
 
 @Component({
@@ -27,7 +17,7 @@ type Tool = {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  public readonly proficiencies: Record<string, Proficiency[]> = {
+  public readonly proficiencies: Record<string, Skill[]> = {
     Languages: [
       { label: 'TypeScript', icon: 'typescript.png', experience: 5 },
       { label: 'JavaScript', icon: 'javascript.webp', experience: 5 },
@@ -50,20 +40,20 @@ export class HomeComponent {
     ],
     Skills: [
       { label: 'Reactive Programming', icon: 'rxjs.png', experience: 5 },
-      { label: 'Unit Testing', icon: 'jest.webp', experience: 3 },
+      { label: 'Unit Testing', icon: 'jest.webp', experience: 4 },
       { label: 'Progressive Web Apps', icon: 'pwa.png', experience: 3 },
       { label: 'DevOps', icon: 'aws.webp', experience: 3 },
       { label: 'Search Engine Optimization', icon: 'seo.png', experience: 3 },
     ],
   };
 
-  public readonly references: Reference[] = [];
+  public readonly references: Skill[] = [];
 
-  public readonly tools: Tool[] = [
-    { label: 'WebStorm', icon: '' },
-    { label: 'Docker', icon: '' },
-    { label: 'GitHub', icon: '' },
-    { label: 'Windows', icon: '' },
-    { label: 'Insomnia', icon: '' },
+  public readonly tools: Skill[] = [
+    { label: 'Windows', icon: 'windows.png' },
+    { label: 'WebStorm', icon: 'webstorm.png' },
+    { label: 'Git', icon: 'git.png' },
+    { label: 'Docker', icon: 'docker.png' },
+    { label: 'Insomnia', icon: 'insomnia.png' },
   ];
 }

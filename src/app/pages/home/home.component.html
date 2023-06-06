@@ -1,6 +1,12 @@
+<h2>Skills</h2>
 <ng-container *ngFor="let section of proficiencies | keyvalue">
-  <h2>{{ section.key }}</h2>
+  <h4>{{ section.key }}</h4>
   <div class="skills">
-    <app-skill *ngFor="let proficiency of section.value" [proficiency]="proficiency"></app-skill>
+    <app-skill *ngFor="let proficiency of section.value" [skill]="proficiency"></app-skill>
   </div>
 </ng-container>
+
+<h2>Tools</h2>
+<div class="skills">
+  <app-skill *ngFor="let tool of tools" [skill]="tool"></app-skill>
+</div>
