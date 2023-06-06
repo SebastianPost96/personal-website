@@ -5,7 +5,6 @@ import { SkillComponent } from './skill/skill.component';
 export type Skill = {
   icon: string;
   label: string;
-  experience?: 1 | 2 | 3 | 4 | 5;
 };
 
 @Component({
@@ -19,31 +18,31 @@ export type Skill = {
 export class HomeComponent {
   public readonly proficiencies: Record<string, Skill[]> = {
     Languages: [
-      { label: 'TypeScript', icon: 'typescript.png', experience: 5 },
-      { label: 'JavaScript', icon: 'javascript.webp', experience: 5 },
-      { label: 'HTML 5', icon: 'html.png', experience: 4 },
-      { label: 'SCSS', icon: 'scss.png', experience: 4 },
-      { label: 'C#', icon: 'c_sharp.png', experience: 2 },
+      { label: 'TypeScript', icon: 'typescript.png' },
+      { label: 'JavaScript', icon: 'javascript.webp' },
+      { label: 'HTML 5', icon: 'html.png' },
+      { label: 'SCSS', icon: 'scss.png' },
+      { label: 'C#', icon: 'c_sharp.png' },
     ],
     Frameworks: [
-      { label: 'Angular', icon: 'angular.png', experience: 5 },
-      { label: 'Nrwl Nx', icon: 'nx.png', experience: 4 },
-      { label: 'Ionic', icon: 'ionic.png', experience: 3 },
-      { label: 'React', icon: 'react.png', experience: 3 },
-      { label: 'NestJS', icon: 'nest.svg', experience: 2 },
+      { label: 'Angular', icon: 'angular.png' },
+      { label: 'Nrwl Nx', icon: 'nx.png' },
+      { label: 'Ionic', icon: 'ionic.png' },
+      { label: 'React', icon: 'react.png' },
+      { label: 'NestJS', icon: 'nest.svg' },
     ],
     'UI Libraries': [
-      { label: 'Material', icon: 'material.svg', experience: 5 },
-      { label: 'PrimeNG', icon: 'primeng.png', experience: 4 },
-      { label: 'Bootstrap', icon: 'bootstrap.png', experience: 4 },
-      { label: 'Tailwind', icon: 'tailwind.png', experience: 3 },
+      { label: 'Material', icon: 'material.svg' },
+      { label: 'PrimeNG', icon: 'primeng.png' },
+      { label: 'Bootstrap', icon: 'bootstrap.png' },
+      { label: 'Tailwind', icon: 'tailwind.png' },
     ],
     Skills: [
-      { label: 'Reactive Programming', icon: 'rxjs.png', experience: 5 },
-      { label: 'Unit Testing', icon: 'jest.webp', experience: 4 },
-      { label: 'Progressive Web Apps', icon: 'pwa.png', experience: 3 },
-      { label: 'DevOps', icon: 'aws.webp', experience: 3 },
-      { label: 'Search Engine Optimization', icon: 'seo.png', experience: 3 },
+      { label: 'Reactive Programming', icon: 'rxjs.png' },
+      { label: 'Unit Testing', icon: 'jest.webp' },
+      { label: 'Progressive Web Apps', icon: 'pwa.png' },
+      { label: 'DevOps', icon: 'aws.webp' },
+      { label: 'Search Engine Optimization', icon: 'seo.png' },
     ],
   };
 

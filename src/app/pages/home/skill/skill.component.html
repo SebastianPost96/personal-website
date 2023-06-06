@@ -7,11 +7,4 @@
   class="container mat-elevation-z2"
 >
   <img priority [ngSrc]="'assets/skills_icons/' + skill.icon" height="40" width="40" [alt]="skill.label" />
-
-  <div *ngIf="skill.experience" class="stars">
-    <ng-container *ngFor="let _ of [].constructor(5); let i = index">
-      <mat-icon *ngIf="i < skill.experience; else empty">star</mat-icon>
-      <ng-template #empty><mat-icon>star_outline</mat-icon></ng-template>
-    </ng-container>
-  </div>
 </div>
