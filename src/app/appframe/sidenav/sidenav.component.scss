@@ -25,6 +25,12 @@
       align-items: center;
       gap: 8px;
     }
+    ::ng-deep .no-events {
+      pointer-events: none !important;
+      * {
+        pointer-events: none !important;
+      }
+    }
   }
 
   mat-sidenav-content {
