@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1686075165520,
+  "timestamp": 1686082739896,
   "index": "/personal-website/index.html",
   "assetGroups": [
     {
@@ -18,10 +18,10 @@
         "/personal-website/996.731c5b877250f4c5.js",
         "/personal-website/favicon.ico",
         "/personal-website/index.html",
-        "/personal-website/main.46962a2fb338f1c1.js",
+        "/personal-website/main.b9e6f4c8e7472e08.js",
         "/personal-website/manifest.webmanifest",
         "/personal-website/polyfills.18e0c4b7fb11c0a6.js",
-        "/personal-website/runtime.49b2eeded8589daf.js",
+        "/personal-website/runtime.6eaf7bea75eff6b4.js",
         "/personal-website/styles.8da8abca4384bb33.css"
       ],
       "patterns": []
@@ -138,11 +138,11 @@
     "/personal-website/assets/skills_icons/windows.png": "9187f1a95d7d0893ff127d5e8ec477e69e99e79f",
     "/personal-website/assets/uni_bamberg.jfif": "8df596bb6ada0b1b33472d2260847843dbab9702",
     "/personal-website/favicon.ico": "e033ecd3762b76a22b8b5e1371c980b06b6ac2d9",
-    "/personal-website/index.html": "c278d45b0fef24de86c17b07a5900481505ea10f",
-    "/personal-website/main.46962a2fb338f1c1.js": "c5bcdbe7c6c414ebeebd734bfb8770e607b2e57b",
+    "/personal-website/index.html": "cbb0f854ef617fe02b191d67ec195e71e1ebd814",
+    "/personal-website/main.b9e6f4c8e7472e08.js": "fe0e26f5ad50cb9fa79162d59cac2ac09b2a204e",
     "/personal-website/manifest.webmanifest": "350f685daf723a60791687bb6aa633461650f979",
     "/personal-website/polyfills.18e0c4b7fb11c0a6.js": "516bbde08d319098ad925c6919139c52d7e0be62",
-    "/personal-website/runtime.49b2eeded8589daf.js": "c16291fba993b9976b9eb03e83ee9c0244797445",
+    "/personal-website/runtime.6eaf7bea75eff6b4.js": "a001797e5ed547b94893ab628af32daaec6d2b1e",
     "/personal-website/rx-js-black.b795cddb3a6dedf7.svg": "eeab381c43fc31c767fb509c1198de26c0d05ee0",
     "/personal-website/rx-js.ae6b51f4977da020.svg": "5e9eade42ac9d933fd8192a0c029735b46d9c9f8",
     "/personal-website/styles.8da8abca4384bb33.css": "7a6be6758f806138ce0f5dc0b2a14911d08032be"
