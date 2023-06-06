@@ -8,7 +8,6 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ResponsivenessService } from 'src/app/services/responsiveness.service';
-import { flyInAnimation } from '../../constants/fly-in.animation';
 import { MatIconModule } from '@angular/material/icon';
 
 interface Page {
@@ -23,7 +22,6 @@ interface Page {
   imports: [CommonModule, MatSidenavModule, MatListModule, AppRoutingModule, MatCardModule, MatIconModule],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
-  animations: [flyInAnimation],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavComponent {
