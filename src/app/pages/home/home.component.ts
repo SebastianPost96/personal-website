@@ -17,17 +17,17 @@ export type Skill = {
 })
 export class HomeComponent {
   public readonly proficiencies: Record<string, Skill[]> = {
-    Languages: [
-      { label: 'TypeScript', icon: 'typescript.png' },
-      { label: 'JavaScript', icon: 'javascript.webp' },
-      { label: 'HTML 5', icon: 'html.png' },
-      { label: 'SCSS', icon: 'scss.png' },
-    ],
     Frameworks: [
       { label: 'Angular', icon: 'angular.png' },
       { label: 'Ionic', icon: 'ionic.png' },
       { label: 'React', icon: 'react.png' },
       { label: 'NestJS', icon: 'nest.svg' },
+    ],
+    Languages: [
+      { label: 'TypeScript', icon: 'typescript.png' },
+      { label: 'JavaScript', icon: 'javascript.webp' },
+      { label: 'HTML 5', icon: 'html.png' },
+      { label: 'SCSS', icon: 'scss.png' },
     ],
     UI: [
       { label: 'Material', icon: 'material.svg' },
@@ -41,16 +41,15 @@ export class HomeComponent {
       { label: 'Nx', icon: 'nx.png' },
       { label: 'PWA', icon: 'pwa.png' },
     ],
+    Tools: [
+      { label: 'Windows', icon: 'windows.png' },
+      { label: 'WebStorm', icon: 'webstorm.png' },
+      { label: 'Git', icon: 'git.png' },
+      { label: 'AWS', icon: 'aws.webp' },
+      { label: 'Docker', icon: 'docker.png' },
+      { label: 'Insomnia', icon: 'insomnia.png' },
+    ],
   };
 
-  public readonly references: Skill[] = [];
-
-  public readonly tools: Skill[] = [
-    { label: 'Windows', icon: 'windows.png' },
-    { label: 'WebStorm', icon: 'webstorm.png' },
-    { label: 'Git', icon: 'git.png' },
-    { label: 'AWS', icon: 'aws.webp' },
-    { label: 'Docker', icon: 'docker.png' },
-    { label: 'Insomnia', icon: 'insomnia.png' },
-  ];
+  noSort = () => 0;
 }
