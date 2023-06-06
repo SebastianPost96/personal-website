@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1686088938322,
+  "timestamp": 1686089029664,
   "index": "/personal-website/index.html",
   "assetGroups": [
     {
@@ -18,7 +18,7 @@
         "/personal-website/996.731c5b877250f4c5.js",
         "/personal-website/favicon.ico",
         "/personal-website/index.html",
-        "/personal-website/main.6d45bc96f56ce862.js",
+        "/personal-website/main.c7fc560d19fbb5b5.js",
         "/personal-website/manifest.webmanifest",
         "/personal-website/polyfills.18e0c4b7fb11c0a6.js",
         "/personal-website/runtime.0f203bc42a8d7d1a.js",
@@ -136,8 +136,8 @@
     "/personal-website/assets/skills_icons/windows.png": "9187f1a95d7d0893ff127d5e8ec477e69e99e79f",
     "/personal-website/assets/uni_bamberg.jfif": "8df596bb6ada0b1b33472d2260847843dbab9702",
     "/personal-website/favicon.ico": "e033ecd3762b76a22b8b5e1371c980b06b6ac2d9",
-    "/personal-website/index.html": "bafed8a898a1044348835941b0f202d927d822c0",
-    "/personal-website/main.6d45bc96f56ce862.js": "68409d8903f2d3295a99b06dc0b1fd5138314631",
+    "/personal-website/index.html": "f7bbc9c598f565c2ea157354f4250fc50f5b4dcc",
+    "/personal-website/main.c7fc560d19fbb5b5.js": "9f39e78b9077f29af7dc93c0bfdf1aca5de9b51d",
     "/personal-website/manifest.webmanifest": "350f685daf723a60791687bb6aa633461650f979",
     "/personal-website/polyfills.18e0c4b7fb11c0a6.js": "516bbde08d319098ad925c6919139c52d7e0be62",
     "/personal-website/runtime.0f203bc42a8d7d1a.js": "726e7aeaaddf9905ab880db60adf75f8bd7e6ca1",
