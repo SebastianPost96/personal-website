@@ -33,5 +33,5 @@
     </div>
   </div>
 
-  <app-spacer *ngIf="item.type === 'spacer'" [margin]="2"> </app-spacer>
+  <app-spacer *ngIf="item.type === 'spacer'" [margin]="item.size" [hide]="!!item.hide"> </app-spacer>
 </ng-container>

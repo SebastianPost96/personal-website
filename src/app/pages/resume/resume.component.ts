@@ -32,7 +32,7 @@ type ResumeFragment =
       timeLine: Translation;
       description: Translation[];
     }
-  | { type: 'spacer' };
+  | { type: 'spacer'; size: 1 | 2 | 3; hide?: true };
 
 @Component({
   selector: 'app-resume',
@@ -66,7 +66,7 @@ export class ResumeComponent {
       link: 'https://' + CONTACT_INFORMATION.linkedin,
       svgIcon: 'linkedin',
     },
-    { type: 'spacer' },
+    { type: 'spacer', size: 2 },
     { type: 'section', content: translations.experience },
     {
       type: 'occupation',
@@ -78,6 +78,7 @@ export class ResumeComponent {
         { de: 'Arbeit an einem multinationalen HR-Support System.', en: 'Working on multinational HR support system.' },
       ],
     },
+    { type: 'spacer', size: 1, hide: true },
     {
       type: 'occupation',
       icon: 'assets/aracom.jpg',
@@ -91,6 +92,7 @@ export class ResumeComponent {
         },
       ],
     },
+    { type: 'spacer', size: 1, hide: true },
     {
       type: 'occupation',
       icon: 'assets/ronny.png',
@@ -103,7 +105,7 @@ export class ResumeComponent {
         { en: '● Maintenance of soft- and hardware', de: '● Wartung von Soft- und Hardware' },
       ],
     },
-    { type: 'spacer' },
+    { type: 'spacer', size: 2 },
     { type: 'section', content: { de: 'Ausbildung', en: 'Education' } },
     {
       type: 'occupation',

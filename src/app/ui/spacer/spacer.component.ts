@@ -12,4 +12,5 @@ import { MatDividerModule } from '@angular/material/divider';
 })
 export class SpacerComponent {
   @Input() margin: 1 | 2 | 3 = 1;
+  @Input() hide = false;
 }
