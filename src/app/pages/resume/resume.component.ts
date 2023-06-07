@@ -25,7 +25,7 @@ type ResumeFragment =
   | {
       type: 'occupation';
       icon: string;
-      title: Translation;
+      title: Translation | string;
       subtitle: Translation | string;
       timeLine: Translation;
       description: Translation[];
@@ -82,7 +82,7 @@ export class ResumeComponent {
     {
       type: 'occupation',
       icon: 'assets/ronny.png',
-      title: { en: 'IT Administrator (Minijob)', de: 'IT Administrator (Minijob)' },
+      title: 'IT Administrator (Minijob)',
       subtitle: 'Ronny T-Shirt Druck',
       timeLine: { en: '2015 - 2021 (6 years)', de: '2015 - 2021 (6 Jahre)' },
       description: [
