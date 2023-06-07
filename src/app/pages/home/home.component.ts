@@ -19,8 +19,8 @@ export class HomeComponent {
   public readonly proficiencies: Record<string, Skill[]> = {
     Frameworks: [
       { label: 'Angular', icon: 'angular.png' },
-      { label: 'Ionic', icon: 'ionic.png' },
       { label: 'React', icon: 'react.png' },
+      { label: 'Ionic', icon: 'ionic.png' },
       { label: 'NestJS', icon: 'nest.svg' },
     ],
     Languages: [
