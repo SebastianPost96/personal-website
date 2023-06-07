@@ -1,178 +1,316 @@
-<h2>Privacy Notice</h2>
+<ng-container *ngIf="config.language() === 'de'; then german; else english"></ng-container>
 
-<p>
-  At this website, accessible from <a [href]="url">{{ url }}</a
-  >, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of
-  information that is collected and recorded by this website and how we use it.
-</p>
+<ng-template #english
+  ><h2>Privacy Notice</h2>
 
-<p>
-  If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
-</p>
+  <p>
+    At this website, accessible from <a [href]="url">{{ url }}</a
+    >, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of
+    information that is collected and recorded by this website and how we use it.
+  </p>
 
-<p>
-  This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the
-  information that they shared and/or collect in this website. This policy is not applicable to any information
-  collected offline or via channels other than this website.
-</p>
+  <p>
+    If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact
+    us.
+  </p>
 
-<h3>Consent</h3>
+  <p>
+    This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to
+    the information that they shared and/or collect in this website. This policy is not applicable to any information
+    collected offline or via channels other than this website.
+  </p>
 
-<p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+  <h3>Consent</h3>
 
-<h3>Information we collect</h3>
+  <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
 
-<p>
-  The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made
-  clear to you at the point we ask you to provide your personal information.
-</p>
-<p>
-  If you contact us directly, we may receive additional information about you such as your name, email address, phone
-  number, the contents of the message and/or attachments you may send us, and any other information you may choose to
-  provide.
-</p>
-<p>
-  When you register for an Account, we may ask for your contact information, including items such as name, company name,
-  address, email address, and telephone number.
-</p>
+  <h3>Information we collect</h3>
 
-<h3>How we use your information</h3>
+  <p>
+    The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be
+    made clear to you at the point we ask you to provide your personal information.
+  </p>
+  <p>
+    If you contact us directly, we may receive additional information about you such as your name, email address, phone
+    number, the contents of the message and/or attachments you may send us, and any other information you may choose to
+    provide.
+  </p>
+  <p>
+    When you register for an Account, we may ask for your contact information, including items such as name, company
+    name, address, email address, and telephone number.
+  </p>
 
-<p>We use the information we collect in various ways, including to:</p>
+  <h3>How we use your information</h3>
 
-<ul>
-  <li>Provide, operate, and maintain our website</li>
-  <li>Improve, personalize, and expand our website</li>
-  <li>Understand and analyze how you use our website</li>
-  <li>Develop new products, services, features, and functionality</li>
-  <li>
-    Communicate with you, either directly or through one of our partners, including for customer service, to provide you
-    with updates and other information relating to the website, and for marketing and promotional purposes
-  </li>
-  <li>Send you emails</li>
-  <li>Find and prevent fraud</li>
-</ul>
+  <p>We use the information we collect in various ways, including to:</p>
 
-<h3>Log Files</h3>
+  <ul>
+    <li>Provide, operate, and maintain our website</li>
+    <li>Improve, personalize, and expand our website</li>
+    <li>Understand and analyze how you use our website</li>
+    <li>Develop new products, services, features, and functionality</li>
+    <li>
+      Communicate with you, either directly or through one of our partners, including for customer service, to provide
+      you with updates and other information relating to the website, and for marketing and promotional purposes
+    </li>
+    <li>Send you emails</li>
+    <li>Find and prevent fraud</li>
+  </ul>
 
-<p>
-  This website follows a standard procedure of using log files. These files log visitors when they visit websites. All
-  hosting companies do this and a part of hosting services' analytics. The information collected by log files include
-  internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit
-  pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The
-  purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website,
-  and gathering demographic information.
-</p>
+  <h3>Log Files</h3>
 
-<h3>Use of Google Fonts</h3>
+  <p>
+    This website follows a standard procedure of using log files. These files log visitors when they visit websites. All
+    hosting companies do this and a part of hosting services' analytics. The information collected by log files include
+    internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit
+    pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable.
+    The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the
+    website, and gathering demographic information.
+  </p>
 
-<p>
-  We use the third-party service Google Fonts on our website and to supplement our online offering. We do this on the
-  basis of our legitimate interests (Art 6 Para 1 lit f GDPR), e.g. our interest in the optimization and economic
-  operation of our online offers. This service assumes that the IP address of the website visitor is perceived. Without
-  the IP address, the related content could not be sent to your browser. The provider is Google LLC, 1600 Amphitheater
-  Parkway, Mountain View, CA 94043, USA. You can find their privacy policy here:
-  <a href="https://www.google.com/policies/privacy">https://www.google.com/policies/privacy</a>. An opt-out would be
-  possible here:
-  <a href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>
-</p>
+  <h3>Use of Google Fonts</h3>
 
-<h3>Advertising Partners Privacy Policies</h3>
+  <p>
+    We use the third-party service Google Fonts on our website and to supplement our online offering. We do this on the
+    basis of our legitimate interests (Art 6 Para 1 lit f GDPR), e.g. our interest in the optimization and economic
+    operation of our online offers. This service assumes that the IP address of the website visitor is perceived.
+    Without the IP address, the related content could not be sent to your browser. The provider is Google LLC, 1600
+    Amphitheater Parkway, Mountain View, CA 94043, USA. You can find their privacy policy here:
+    <a href="https://www.google.com/policies/privacy">https://www.google.com/policies/privacy</a>. An opt-out would be
+    possible here:
+    <a href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>
+  </p>
 
-<P>You may consult this list to find the Privacy Policy for each of the advertising partners of this website.</P>
+  <h3>Advertising Partners Privacy Policies</h3>
 
-<p>
-  Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in
-  their respective advertisements and links that appear on this website, which are sent directly to users' browser. They
-  automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of
-  their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
-</p>
+  <P>You may consult this list to find the Privacy Policy for each of the advertising partners of this website.</P>
 
-<p>Note that this website has no access to or control over these cookies that are used by third-party advertisers.</p>
+  <p>
+    Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in
+    their respective advertisements and links that appear on this website, which are sent directly to users' browser.
+    They automatically receive your IP address when this occurs. These technologies are used to measure the
+    effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites
+    that you visit.
+  </p>
 
-<h3>Third Party Privacy Policies</h3>
+  <p>Note that this website has no access to or control over these cookies that are used by third-party advertisers.</p>
 
-<p>
-  This website's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult
-  the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their
-  practices and instructions about how to opt-out of certain options.
-</p>
+  <h3>Third Party Privacy Policies</h3>
 
-<p>
-  You can choose to disable cookies through your individual browser options. To know more detailed information about
-  cookie management with specific web browsers, it can be found at the browsers' respective websites.
-</p>
+  <p>
+    This website's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult
+    the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their
+    practices and instructions about how to opt-out of certain options.
+  </p>
 
-<h3>CCPA Privacy Rights (Do Not Sell My Personal Information)</h3>
+  <p>
+    You can choose to disable cookies through your individual browser options. To know more detailed information about
+    cookie management with specific web browsers, it can be found at the browsers' respective websites.
+  </p>
 
-<p>Under the CCPA, among other rights, California consumers have the right to:</p>
-<p>
-  Request that a business that collects a consumer's personal data disclose the categories and specific pieces of
-  personal data that a business has collected about consumers.
-</p>
-<p>Request that a business delete any personal data about the consumer that a business has collected.</p>
-<p>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</p>
-<p>
-  If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please
-  contact us.
-</p>
+  <h3>CCPA Privacy Rights (Do Not Sell My Personal Information)</h3>
 
-<h3>GDPR Data Protection Rights</h3>
+  <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+  <p>
+    Request that a business that collects a consumer's personal data disclose the categories and specific pieces of
+    personal data that a business has collected about consumers.
+  </p>
+  <p>Request that a business delete any personal data about the consumer that a business has collected.</p>
+  <p>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</p>
+  <p>
+    If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
+    please contact us.
+  </p>
 
-<p>
-  We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the
-  following:
-</p>
-<p>
-  The right to access – You have the right to request copies of your personal data. We may charge you a small fee for
-  this service.
-</p>
-<p>
-  The right to rectification – You have the right to request that we correct any information you believe is inaccurate.
-  You also have the right to request that we complete the information you believe is incomplete.
-</p>
-<p>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</p>
-<p>
-  The right to restrict processing – You have the right to request that we restrict the processing of your personal
-  data, under certain conditions.
-</p>
-<p>
-  The right to object to processing – You have the right to object to our processing of your personal data, under
-  certain conditions.
-</p>
-<p>
-  The right to data portability – You have the right to request that we transfer the data that we have collected to
-  another organization, or directly to you, under certain conditions.
-</p>
-<p>
-  If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please
-  contact us.
-</p>
+  <h3>GDPR Data Protection Rights</h3>
 
-<h3>Children's Information</h3>
+  <p>
+    We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the
+    following:
+  </p>
+  <p>
+    The right to access – You have the right to request copies of your personal data. We may charge you a small fee for
+    this service.
+  </p>
+  <p>
+    The right to rectification – You have the right to request that we correct any information you believe is
+    inaccurate. You also have the right to request that we complete the information you believe is incomplete.
+  </p>
+  <p>
+    The right to erasure – You have the right to request that we erase your personal data, under certain conditions.
+  </p>
+  <p>
+    The right to restrict processing – You have the right to request that we restrict the processing of your personal
+    data, under certain conditions.
+  </p>
+  <p>
+    The right to object to processing – You have the right to object to our processing of your personal data, under
+    certain conditions.
+  </p>
+  <p>
+    The right to data portability – You have the right to request that we transfer the data that we have collected to
+    another organization, or directly to you, under certain conditions.
+  </p>
+  <p>
+    If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
+    please contact us.
+  </p>
 
-<p>
-  Another part of our priority is adding protection for children while using the internet. We encourage parents and
-  guardians to observe, participate in, and/or monitor and guide their online activity.
-</p>
+  <h3>Children's Information</h3>
 
-<p>
-  This website does not knowingly collect any Personal Identifiable Information from children under the age of 13. If
-  you think that your child provided this kind of information on our website, we strongly encourage you to contact us
-  immediately and we will do our best efforts to promptly remove such information from our records.
-</p>
+  <p>
+    Another part of our priority is adding protection for children while using the internet. We encourage parents and
+    guardians to observe, participate in, and/or monitor and guide their online activity.
+  </p>
 
-<h3>Changes to This Privacy Policy</h3>
+  <p>
+    This website does not knowingly collect any Personal Identifiable Information from children under the age of 13. If
+    you think that your child provided this kind of information on our website, we strongly encourage you to contact us
+    immediately and we will do our best efforts to promptly remove such information from our records.
+  </p>
 
-<p>
-  We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any
-  changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective
-  immediately, after they are posted on this page.
-</p>
+  <h3>Changes to This Privacy Policy</h3>
 
-<h3>Contact Us</h3>
+  <p>
+    We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any
+    changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are
+    effective immediately, after they are posted on this page.
+  </p>
 
-<p>
-  If you have any questions or suggestions about our Privacy Policy, do not hesitate to
-  <span [routerLink]="'/contact'">contact us</span>.
-</p>
+  <h3>Contact Us</h3>
+
+  <p>
+    If you have any questions or suggestions about our Privacy Policy, do not hesitate to
+    <span [routerLink]="'/contact'">contact us</span>.
+  </p>
+</ng-template>
+
+<ng-template #german>
+  <h2>Datenschutzerklärung</h2>
+  <p>
+    Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich
+    auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003). In diesen Datenschutzinformationen informieren wir
+    Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.
+  </p>
+  <h3>Datensicherheit</h3>
+  <p>
+    Wir treffen nach Maß des Art 32 DSGVO entsprechende Vorkehrungen zum Schutz Ihrer personenbezogenen Daten. Diese
+    betreffen insbesondere den Schutz vor unerlaubtem, rechtswidrigem oder auch zufälligem Zugriff, Verarbeitung,
+    Verlust, Verwendung und Manipulation.
+  </p>
+  <h3>Webseite</h3>
+  <h4>Personenbezogene Daten, Zweck der Datenverarbeitung und Rechtsgrundlage</h4>
+  <p>
+    Personenbezogene Daten sind Angaben, die eindeutig einer Person zugeordnet werden können. Dazu gehören unter anderem
+    Angaben wie vollständiger Name, Anschrift, E-Mail und Telefonnummer. Bei einem Besuch unserer Website werden aus
+    technischen Gründen automatisch weitere Daten erfasst (IP-Adresse, Beginn und Ende der Sitzung, Datum und Uhrzeit
+    der Anfrage, angesteuerte Unterseite auf unserer Webseite, Art und Version des Browsers, Betriebssystem, Referrer
+    URL). Diese technischen Informationen können im Einzelfall personenbezogene Daten sein. Im Regelfall verwenden wir
+    diese technischen Informationen nur, wenn dies (aus technischen Gründen) für den Betrieb und Schutz unserer Website
+    vor Angriffen und Missbrauch erforderlich ist sowie pseudonymisiert oder anonymisiert für statistische Zwecke.
+  </p>
+  <p>
+    Wenn Sie per Anfrageformular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre angegebenen
+    Daten (Vorname, Nachname, Adresse, Telefonnummer, E-Mail) zwecks Bearbeitung der Anfrage und für den Fall von
+    Anschlussfragen sechs Monate bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Eine
+    Verarbeitung Ihrer personenbezogenen Daten für bestimmte Zwecke (z. B. Nutzung Ihrer E-Mail für Newsletter, Werbung)
+    kann auch aufgrund Ihrer Einwilligung erfolgen. Sie können Ihre Einwilligung mit Wirkung für die Zukunft jederzeit
+    widerrufen. Dies gilt auch für den Widerruf von Einwilligungserklärungen, die vor der Geltung der DSGVO, uns
+    gegenüber erteilt worden sind. Über die Zwecke und über die Konsequenzen eines Widerrufs oder der Nichterteilung
+    einer Einwilligung werden Sie gesondert im entsprechenden Text der Einwilligung informiert.
+  </p>
+  <p>
+    Zur Erfüllung von Verträgen bzw. vorvertragliche Maßnahmen und darüber hinaus verarbeiten wir Ihre Daten (Vorname,
+    Nachname, Adresse, Telefonnummer, E-Mail) gegebenenfalls, wenn es erforderlich ist, um berechtigte Interessen von
+    uns oder Dritten zu wahren, insbesondere für folgende Zwecke:
+  </p>
+  <ul>
+    <li>Beantwortung von Anfragen</li>
+    <li>Technische Administration</li>
+    <li>der Werbung oder Markt- und Meinungsforschung, soweit Sie der Nutzung Ihrer Daten nicht widersprochen haben</li>
+    <li>der Prüfung und Optimierung von Verfahren zur Bedarfsanalyse</li>
+    <li>der Weiterentwicklung von Dienstleistungen und Produkten sowie bestehenden Systemen und Prozessen</li>
+    <li>statistischer Auswertungen oder der Marktanalyse</li>
+    <li>
+      der Geltendmachung rechtlicher Ansprüche &amp; Verteidigung bei rechtlichen Streitigkeiten, die nicht unmittelbar
+      dem Vertragsverhältnis zuzuordnen sind
+    </li>
+    <li>
+      der Verhinderung und Aufklärung von Straftaten, soweit nicht ausschließlich zur Erfüllung gesetzlicher Vorgaben
+    </li>
+  </ul>
+  <p>Die Rechtsgrundlagen der Datenverarbeitung sind:</p>
+  <ul>
+    <li>Vertragsabwicklung gemäß Art 6 Abs 1 lit b DSGVO</li>
+    <li>Ihre allfällige Einwilligung gemäß Art 6 Abs 1 lit a DSGVO</li>
+    <li>berechtigtes Interesse Art 6 Abs 1 lit f DSGVO</li>
+  </ul>
+  <h3>Speicherdauer</h3>
+  <p>
+    Die Löschung der gespeicherten personenbezogenen Daten erfolgt, wenn Sie als Nutzer unserer Website und/oder Kunde
+    die Einwilligung zur Speicherung widerrufen, wenn Ihre Daten zur Erfüllung des mit der Speicherung verfolgten Zwecks
+    nicht mehr erforderlich sind und nach Ablauf der gesetzlichen Aufbewahrungspflichten bzw. nach Ablauf der Dauer
+    allfälliger darüber hinaus andauernden Rechtsstreitigkeiten oder wenn Ihre Speicherung aus sonstigen gesetzlichen
+    Gründen unzulässig ist bzw. wird.
+  </p>
+  <h3>Weitergabe von Daten / Empfänger bzw. Kategorien von Empfängern</h3>
+  <p>
+    Eine Weitergabe Ihrer Daten an externe Stellen erfolgt ausschließlich im Zusammenhang mit der Vertragsabwicklung, zu
+    Zwecken der Erfüllung gesetzlicher Vorgaben, nach denen wir zur Auskunft, Meldung oder Weitergabe von Daten
+    verpflichtet sind oder sofern die Datenweitergabe im öffentlichen Interesse liegt oder Sie zuvor eingewilligt haben.
+    Sie haben das Recht, eine erteilte Einwilligung mit Wirkung auf die Zukunft jederzeit zu widerrufen.
+  </p>
+  <p>Personenbezogene Daten werden von uns an die nachfolgend bezeichneten Dritten weitergegeben bzw. übermittelt:</p>
+  <ul>
+    <li>
+      Verschiedene Dienstleister oder Partnerunternehmen, die uns bei der Bestellabwicklung, bei der Versorgung der
+      Kunden mit Informationen, Werbung und bei der Bereitstellung von Dienstleistungen unterstützen, EDV Dienstleister
+      und technische Verarbeiter (Auftragsverarbeiter gemäß Art. 28 DS-GVO). Diese Unternehmen sind verpflichtet,
+      sämtliche Datenschutzbestimmungen einzuhalten. Für die Auftragsdatenverarbeitung gelten strenge
+      datenschutzrechtliche Vorschriften, insbesondere dürfen diese Unternehmen die Daten ausschließlich zur Erfüllung
+      ihrer Aufgaben in unserem Auftrag nutzen. Für die Einhaltung der datenschutzrechtlichen Vorschriften durch diese
+      Unternehmen sind wir verantwortlich und haben wir entsprechende Auftragsverarbeitungsvereinbarungen mit den
+      Dienstleistern geschlossen
+    </li>
+    <li>an unseren Steuerberater zur Erfüllung unserer steuerrechtlichen Verpflichtungen</li>
+  </ul>
+  <h3>Cookies</h3>
+  <p>
+    Unsere Website verwendet so genannte Cookies. Wir nutzen Cookies dazu, unser Angebot nutzerfreundlich zu gestalten.
+    Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie
+    richten keinen Schaden an. Wird der entsprechende Server unserer Website erneut von Ihnen aufgerufen, sendet Ihr
+    Browser den zuvor empfangenen Cookie wieder zurück an den Server. Der Server kann dann die durch diese Prozedur
+    erhaltenen Informationen auf verschiedene Arten auswerten. Durch Cookies können zB Werbeeinblendungen gesteuert oder
+    das Navigieren auf einer Internetseite erleichtert werden.
+  </p>
+  <p>
+    Wenn Sie die Nutzung von Cookies unterbinden möchten, so können Sie dies durch lokale Vornahme der Änderungen Ihrer
+    Einstellungen in dem auf Ihrem Computer verwendeten Internetbrowser (zB Internet Explorer, Mozilla Firefox, Safari
+    etc.) tun. Sie können Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies
+    nur im Einzelfall erlauben. Bei der Deaktivierung von Cookies kann zur Einschränkung der Funktionalität unserer
+    Website kommen.
+  </p>
+  <h4>Verwendung von Google Fonts</h4>
+  <p>
+    Auf unserer Website und zur Ergänzung unsere Onlineangebotes setzen wir den Drittanbieterdienst Google Fonts ein.
+    Dies tun wir auf Basis unserer berechtigten Interessen (Art 6 Abs 1 lit f DSGVO), z.B. unserem Interesse an der
+    Optimierung und dem wirtschaftlichen Betrieb unserer Onlineangebote. Diesr Dienst setzen voraus, dass die die
+    IP-Adresse der Website-Besucher wahrgenommen wird. Ohne die IP-Adresse könnten die bezogenen Inhalte nicht an ihren
+    Browser gesendet werden.
+  </p>
+  <p>
+    Anbieter ist die Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Deren Datenschutzrichtlinien
+    finden Sie hier: www.google.com/policies/privacy/. Ein Opt-out wäre hier möglich:
+    https://adssettings.google.com/authenticated
+  </p>
+  <h3>Ihre Rechte</h3>
+  <p>
+    Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit,
+    Widerruf und Widerspruch zu.
+  </p>
+  <p>
+    Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre
+    datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei uns
+    sebastianpost@online.de oder der Datenschutzbehörde beschweren.
+  </p>
+</ng-template>

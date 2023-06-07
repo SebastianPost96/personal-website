@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ConfigService } from '../../services/config.service';
 
 @Component({
   selector: 'app-privacy',
@@ -12,4 +13,6 @@ import { RouterModule } from '@angular/router';
 })
 export class PrivacyComponent {
   public readonly url = window.location.origin;
+
+  constructor(public config: ConfigService) {}
 }
