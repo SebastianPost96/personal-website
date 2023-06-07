@@ -4,13 +4,17 @@ import { takeUntilDestroyed, toObservable, toSignal } from '@angular/core/rxjs-i
 import { delay, map } from 'rxjs';
 
 const DARK_MODE = 'darkmode';
+const LANGUAGE = 'lang';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ResponsivenessService {
-  public _isDarkMode = signal(inject(MediaMatcher).matchMedia('(prefers-color-scheme: dark)').matches);
+export class ConfigService {
+  private _isDarkMode = signal(inject(MediaMatcher).matchMedia('(prefers-color-scheme: dark)').matches);
+  private _language = signal(navigator.language.startsWith('de') ? 'de' : 'en');
+
   public isDarkMode = this._isDarkMode.asReadonly();
+  public language = this._language.asReadonly();
   public isMobile = toSignal(
     inject(BreakpointObserver)
       .observe(Breakpoints.Handset)
@@ -19,13 +23,20 @@ export class ResponsivenessService {
 
   constructor() {
     this._syncMobileHeaderColor();
-    this._loadAndPersistDarkMode();
+    this._loadDarkMode();
+    this._loadLanguage();
   }
 
   public toggleDarkMode() {
     const newTheme = !this._isDarkMode();
     localStorage.setItem(DARK_MODE, newTheme.toString());
     this._isDarkMode.set(newTheme);
+  }
+
+  public toggleLanguage() {
+    const newLang = this._language() === 'de' ? 'en' : 'de';
+    localStorage.setItem(LANGUAGE, newLang);
+    this._language.set(newLang);
   }
 
   private _syncMobileHeaderColor() {
@@ -42,10 +53,17 @@ export class ResponsivenessService {
       });
   }
 
-  private _loadAndPersistDarkMode(): void {
+  private _loadDarkMode(): void {
     const stored = localStorage.getItem(DARK_MODE);
     if (stored) {
       this._isDarkMode.set(stored === 'true');
+    }
+  }
+
+  private _loadLanguage(): void {
+    const stored = localStorage.getItem(LANGUAGE);
+    if (stored) {
+      this._language.set(stored);
     }
   }
 }

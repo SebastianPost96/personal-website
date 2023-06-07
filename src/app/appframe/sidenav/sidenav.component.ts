@@ -7,7 +7,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { ResponsivenessService } from 'src/app/services/responsiveness.service';
+import { ConfigService } from 'src/app/services/config.service';
 import { MatIconModule } from '@angular/material/icon';
 
 interface Page {
@@ -52,7 +52,7 @@ export class SidenavComponent {
     )
   );
 
-  constructor(public responsive: ResponsivenessService, private _router: Router) {}
+  constructor(public config: ConfigService, private _router: Router) {}
 
   public navigateToPage(page: Page): void {
     if (page === this.activePage()) return;

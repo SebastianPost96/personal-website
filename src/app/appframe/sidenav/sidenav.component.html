@@ -1,11 +1,11 @@
 <mat-sidenav-container>
   <mat-sidenav
-    [opened]="!responsive.isMobile() || sideNavOpen"
+    [opened]="!config.isMobile() || sideNavOpen"
     (closed)="toggleSideNav.emit(false)"
-    [mode]="responsive.isMobile() ? 'over' : 'side'"
+    [mode]="config.isMobile() ? 'over' : 'side'"
   >
     <mat-nav-list>
-      <mat-list-item *ngIf="responsive.isMobile()" class="no-events">
+      <mat-list-item *ngIf="config.isMobile()" class="no-events">
         <h3>Sebastian Post</h3>
       </mat-list-item>
       <ng-container *ngFor="let page of pages; let i = index">
@@ -21,7 +21,7 @@
   </mat-sidenav>
   <mat-sidenav-content #container>
     <div class="responsive-body">
-      <mat-card *ngIf="!responsive.isMobile(); else noCard">
+      <mat-card *ngIf="!config.isMobile(); else noCard">
         <mat-card-content *ngIf="activePage()" class="fade-in">
           <router-outlet (activate)="container.getElementRef().nativeElement.scrollTo(0, 0)"></router-outlet>
         </mat-card-content>

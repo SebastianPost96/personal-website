@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { CONTACT_INFORMATION } from '../../constants/contact-information';
 import { MatButtonModule } from '@angular/material/button';
-import { ResponsivenessService } from '../../services/responsiveness.service';
+import { ConfigService } from '../../services/config.service';
 
 type ResumeFragment =
   | { type: 'title'; content: string }
@@ -96,7 +96,7 @@ export class ResumeComponent {
     },
   ];
 
-  constructor(public responsive: ResponsivenessService) {}
+  constructor(public config: ConfigService) {}
 
   public downloadCV(): void {
     const link = document.createElement('a');

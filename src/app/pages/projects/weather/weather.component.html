@@ -24,7 +24,7 @@
 
 <a href="https://sebastianpost96.github.io/tailwind-weather-app/" target="_blank">
   <img
-    *ngIf="!responsive.isMobile()"
+    *ngIf="!config.isMobile()"
     [width]="554.5"
     [height]="179"
     priority
@@ -33,7 +33,7 @@
   />
 
   <img
-    *ngIf="responsive.isMobile()"
+    *ngIf="config.isMobile()"
     [width]="725 / 2.2"
     [height]="407 / 2.2"
     priority

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { ResponsivenessService } from '../../../services/responsiveness.service';
+import { ConfigService } from '../../../services/config.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -14,5 +14,5 @@ import { MatIconModule } from '@angular/material/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WeatherComponent {
-  constructor(public responsive: ResponsivenessService) {}
+  constructor(public config: ConfigService) {}
 }

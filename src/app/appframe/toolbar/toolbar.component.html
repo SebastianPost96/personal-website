@@ -1,29 +1,29 @@
 <mat-toolbar id="toolbar" color="primary">
-  <button *ngIf="responsive.isMobile()" mat-icon-button (click)="toggleSideNav.emit()">
+  <button *ngIf="config.isMobile()" mat-icon-button (click)="toggleSideNav.emit()">
     <mat-icon>menu</mat-icon>
   </button>
-  <div *ngIf="!responsive.isMobile()" class="toolbar-left">
+  <div *ngIf="!config.isMobile()" class="toolbar-left">
     <span>Sebastian Post</span> <span class="big">|</span> <small>Software Developer</small>
   </div>
 
   <div class="toolbar-spacer gap"></div>
 
   <div class="toolbar-right gap">
-    <button (click)="responsive.toggleDarkMode()" mat-icon-button>
-      <mat-icon>{{ responsive.isDarkMode() ? "dark_mode" : "light_mode" }}</mat-icon>
+    <button (click)="config.toggleDarkMode()" mat-icon-button>
+      <mat-icon>{{ config.isDarkMode() ? "dark_mode" : "light_mode" }}</mat-icon>
     </button>
     <mat-divider [inset]="false" [vertical]="true"></mat-divider>
     <div class="buttons">
       <ng-container *ngFor="let button of buttons">
-        <a *ngIf="!responsive.isMobile(); else mobileButton" [href]="button.link" mat-button>
+        <a *ngIf="!config.isMobile(); else mobileButton" [href]="button.link" mat-button>
           <div class="button-label">
-            <mat-icon [svgIcon]="responsive.isDarkMode() ? button.iconDark : button.iconLight"></mat-icon>
+            <mat-icon [svgIcon]="config.isDarkMode() ? button.iconDark : button.iconLight"></mat-icon>
             {{ button.label }}
           </div>
         </a>
         <ng-template #mobileButton>
           <a [href]="button.link" mat-icon-button>
-            <mat-icon [svgIcon]="responsive.isDarkMode() ? button.iconDark : button.iconLight"></mat-icon>
+            <mat-icon [svgIcon]="config.isDarkMode() ? button.iconDark : button.iconLight"></mat-icon>
           </a>
         </ng-template>
       </ng-container>
