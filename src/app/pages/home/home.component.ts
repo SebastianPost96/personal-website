@@ -1,11 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkillComponent } from './skill/skill.component';
-
-export type Skill = {
-  icon: string;
-  label: string;
-};
+import { Skill } from '../../types/skill';
 
 @Component({
   selector: 'app-home',

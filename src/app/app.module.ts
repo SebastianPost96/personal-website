@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './appframe/sidenav/sidenav.component';
 import { ToolbarComponent } from './appframe/toolbar/toolbar.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { TranslationPipe } from './pipes/translation.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TranslationPipe],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

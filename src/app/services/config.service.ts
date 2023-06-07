@@ -2,6 +2,7 @@ import { BreakpointObserver, Breakpoints, MediaMatcher } from '@angular/cdk/layo
 import { inject, Injectable, signal } from '@angular/core';
 import { takeUntilDestroyed, toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { delay, map } from 'rxjs';
+import { Language } from '../types/language';
 
 const DARK_MODE = 'darkmode';
 const LANGUAGE = 'lang';
@@ -11,7 +12,7 @@ const LANGUAGE = 'lang';
 })
 export class ConfigService {
   private _isDarkMode = signal(inject(MediaMatcher).matchMedia('(prefers-color-scheme: dark)').matches);
-  private _language = signal(navigator.language.startsWith('de') ? 'de' : 'en');
+  private _language = signal<Language>(navigator.language.startsWith('de') ? 'de' : 'en');
 
   public isDarkMode = this._isDarkMode.asReadonly();
   public language = this._language.asReadonly();
@@ -33,10 +34,9 @@ export class ConfigService {
     this._isDarkMode.set(newTheme);
   }
 
-  public toggleLanguage() {
-    const newLang = this._language() === 'de' ? 'en' : 'de';
-    localStorage.setItem(LANGUAGE, newLang);
-    this._language.set(newLang);
+  public setLanguage(language: Language) {
+    localStorage.setItem(LANGUAGE, language);
+    this._language.set(language);
   }
 
   private _syncMobileHeaderColor() {
@@ -63,7 +63,7 @@ export class ConfigService {
   private _loadLanguage(): void {
     const stored = localStorage.getItem(LANGUAGE);
     if (stored) {
-      this._language.set(stored);
+      this._language.set(stored as Language);
     }
   }
 }
