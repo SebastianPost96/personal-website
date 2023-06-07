@@ -22,7 +22,7 @@
         <button
           *ngFor="let lang of languageOptions"
           (click)="config.setLanguage(lang.language)"
-          [class.not-selected]="config.language() !== lang.language"
+          [class.lang-selected]="config.language() === lang.language"
           mat-menu-item
           role="menuitemradio"
         >

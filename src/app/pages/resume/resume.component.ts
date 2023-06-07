@@ -7,6 +7,8 @@ import { ConfigService } from '../../services/config.service';
 import { Translation } from '../../types/translation';
 import { translations } from '../../constants/global-translations';
 import { TranslationPipe } from '../../pipes/translation.pipe';
+import { MatDividerModule } from '@angular/material/divider';
+import { SpacerComponent } from '../../ui/spacer/spacer.component';
 
 type ResumeFragment =
   | { type: 'title'; content: string }
@@ -29,12 +31,21 @@ type ResumeFragment =
       subtitle: Translation | string;
       timeLine: Translation;
       description: Translation[];
-    };
+    }
+  | { type: 'spacer' };
 
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [CommonModule, MatIconModule, NgOptimizedImage, MatButtonModule, TranslationPipe],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    NgOptimizedImage,
+    MatButtonModule,
+    TranslationPipe,
+    MatDividerModule,
+    SpacerComponent,
+  ],
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -55,6 +66,7 @@ export class ResumeComponent {
       link: 'https://' + CONTACT_INFORMATION.linkedin,
       svgIcon: 'linkedin',
     },
+    { type: 'spacer' },
     { type: 'section', content: translations.experience },
     {
       type: 'occupation',
@@ -91,6 +103,7 @@ export class ResumeComponent {
         { en: '● Maintenance of soft- and hardware', de: '● Wartung von Soft- und Hardware' },
       ],
     },
+    { type: 'spacer' },
     { type: 'section', content: { de: 'Ausbildung', en: 'Education' } },
     {
       type: 'occupation',

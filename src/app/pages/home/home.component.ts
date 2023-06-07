@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SkillComponent } from './skill/skill.component';
+import { SkillComponent } from '../../ui/skill/skill.component';
 import { Skill } from '../../types/skill';
 import { translations } from '../../constants/global-translations';
 import { TranslationPipe } from '../../pipes/translation.pipe';

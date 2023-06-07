@@ -19,7 +19,7 @@
     </a>
   </div>
 
-  <h3 *ngIf="item.type === 'section'">{{ item.content | translate }}</h3>
+  <h3 *ngIf="item.type === 'section'">{{ item.content | translate | titlecase }}</h3>
 
   <div *ngIf="item.type === 'occupation'" class="occupation">
     <div class="icon">
@@ -32,4 +32,6 @@
       <small *ngFor="let line of item.description">{{ line | translate }}</small>
     </div>
   </div>
+
+  <app-spacer *ngIf="item.type === 'spacer'" [margin]="2"> </app-spacer>
 </ng-container>
