@@ -15,9 +15,9 @@ import { Translation } from '../../types/translation';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  public readonly proficiencies: { title: Translation; skills: Skill[] }[] = [
+  public readonly proficiencies: { title: Translation | string; skills: Skill[] }[] = [
     {
-      title: { en: 'Frameworks', de: 'Frameworks' },
+      title: 'Frameworks',
       skills: [
         { label: 'Angular', icon: 'angular.png' },
         { label: 'React', icon: 'react.png' },
@@ -35,7 +35,7 @@ export class HomeComponent {
       ],
     },
     {
-      title: { en: 'UI', de: 'UI' },
+      title: 'UI',
       skills: [
         { label: 'Material', icon: 'material.svg' },
         { label: 'PrimeNG', icon: 'primeng.png' },

@@ -2,7 +2,7 @@
 
 <div class="skills-container">
   <div *ngFor="let proficiency of proficiencies">
-    <h4>{{ proficiency.title | translate | titlecase }}</h4>
+    <h4>{{ proficiency.title | translate }}</h4>
     <div class="skills">
       <app-skill *ngFor="let skill of proficiency.skills" [skill]="skill"></app-skill>
     </div>
