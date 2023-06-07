@@ -52,7 +52,6 @@
   .responsive-body {
     max-width: $body-max-width;
     margin: 32px;
-    overflow-x: hidden;
 
     :host-context(.mobile) & {
       margin: 0;
