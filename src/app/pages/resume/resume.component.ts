@@ -4,10 +4,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { CONTACT_INFORMATION } from '../../constants/contact-information';
 import { MatButtonModule } from '@angular/material/button';
 import { ConfigService } from '../../services/config.service';
+import { Translation } from '../../types/translation';
+import { translations } from '../../constants/global-translations';
+import { TranslationPipe } from '../../pipes/translation.pipe';
 
 type ResumeFragment =
   | { type: 'title'; content: string }
-  | { type: 'paragraph'; content: string }
+  | { type: 'paragraph'; content: Translation }
   | {
       type: 'imageIcon';
       content: string;
@@ -17,21 +20,21 @@ type ResumeFragment =
     }
   | {
       type: 'section';
-      content: string;
+      content: Translation;
     }
   | {
       type: 'occupation';
       icon: string;
-      title: string;
-      subtitle: string;
-      timeLine: string;
-      description: string[];
+      title: Translation;
+      subtitle: Translation | string;
+      timeLine: Translation;
+      description: Translation[];
     };
 
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [CommonModule, MatIconModule, NgOptimizedImage, MatButtonModule],
+  imports: [CommonModule, MatIconModule, NgOptimizedImage, MatButtonModule, TranslationPipe],
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -39,7 +42,7 @@ type ResumeFragment =
 export class ResumeComponent {
   public readonly resumeContent: ResumeFragment[] = [
     { type: 'title', content: 'Sebastian Post' },
-    { type: 'paragraph', content: 'Schweinfurt, Bavaria, Germany' },
+    { type: 'paragraph', content: { en: 'Schweinfurt, Bavaria, Germany', de: 'Schweinfurt, Bayern, Deutschland' } },
     {
       type: 'imageIcon',
       content: CONTACT_INFORMATION.email,
@@ -52,47 +55,59 @@ export class ResumeComponent {
       link: 'https://' + CONTACT_INFORMATION.linkedin,
       svgIcon: 'linkedin',
     },
-    { type: 'section', content: 'Experience' },
+    { type: 'section', content: translations.experience },
     {
       type: 'occupation',
       icon: 'assets/nerdware.jfif',
-      title: 'Frontend Developer',
+      title: { en: 'Frontend Developer', de: 'Frontend-Entwickler' },
       subtitle: 'nerdware GmbH',
-      timeLine: 'Oct 2022 - Present',
-      description: ['Working on multinational HR support system.'],
+      timeLine: { en: 'Oct 2022 - Present', de: 'Okt 2022 - Heute' },
+      description: [
+        { de: 'Arbeit an einem multinationalen HR-Support System.', en: 'Working on multinational HR support system.' },
+      ],
     },
     {
       type: 'occupation',
       icon: 'assets/aracom.jpg',
-      title: 'Frontend Developer',
+      title: { en: 'Frontend Developer', de: 'Frontend-Entwickler' },
       subtitle: 'AraCom IT Services AG',
-      timeLine: 'Apr 2021 - Sep 2022 (1 year 6 months)',
-      description: ['Projects on Enterprise Resource Planning and Internationalization.'],
+      timeLine: { en: 'Apr 2021 - Sep 2022 (1 year 6 months)', de: 'Apr 2021 - Sep 2022 (1 Jahr 6 Monate)' },
+      description: [
+        {
+          en: 'Projects on Enterprise Resource Planning and Internationalization.',
+          de: 'Projekte zu Enterprise Resource Planning und Internationalisierung.',
+        },
+      ],
     },
     {
       type: 'occupation',
       icon: 'assets/ronny.png',
-      title: 'IT Administrator (Minijob)',
+      title: { en: 'IT Administrator (Minijob)', de: 'IT Administrator (Minijob)' },
       subtitle: 'Ronny T-Shirt Druck',
-      timeLine: '2015 - 2021 (6 years)',
-      description: ['● Onlineshop web development', '● SEO', '● Maintenance of soft- and hardware'],
+      timeLine: { en: '2015 - 2021 (6 years)', de: '2015 - 2021 (6 Jahre)' },
+      description: [
+        { en: '● Onlineshop web development', de: '● Onlineshop Webentwicklung' },
+        { en: '● SEO', de: '● SEO' },
+        { en: '● Maintenance of soft- and hardware', de: '● Wartung von Soft- und Hardware' },
+      ],
     },
-    { type: 'section', content: 'Education' },
+    { type: 'section', content: { de: 'Ausbildung', en: 'Education' } },
     {
       type: 'occupation',
       icon: 'assets/uni_bamberg.jfif',
-      title: 'Otto-Friedrich-Universität Bamberg',
+      title: { de: 'Otto-Friedrich-Universität Bamberg', en: 'University of Bamberg' },
       subtitle: 'Bachelor of Science - BS, Software Systems Science',
-      timeLine: 'Oct 2017 - Mar 2021',
+      timeLine: { en: 'Oct 2017 - Mar 2021', de: 'Okt 2017 - Mär 2021' },
       description: [
-        "● Bachelor's thesis on a business search engine frontend written in Kotlin-React",
-        '● Software projects using mainly Angular and Spring Boot.',
+        {
+          en: "● Bachelor's thesis on a business search engine frontend written in Kotlin-React",
+          de: '● Bachelorarbeit über ein Firmensuchmaschinen-Frontend, geschrieben in Kotlin-React',
+        },
+        {
+          en: '● Software projects using mainly Angular and Spring Boot.',
+          de: '● Softwareprojekte mit größtenteils Angular and Spring Boot.',
+        },
       ],
-    },
-    { type: 'section', content: 'Skills' },
-    {
-      type: 'paragraph',
-      content: ['Angular', 'Nx', 'TypeScript', 'RxJS', 'SCSS', 'HTML', 'SEO'].join('   •   '),
     },
   ];
 

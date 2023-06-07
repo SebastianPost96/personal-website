@@ -10,23 +10,26 @@
     </ng-template>
   </div>
 
-  <p *ngIf="item.type === 'paragraph'" class="paragraph">{{ item.content }}</p>
+  <p *ngIf="item.type === 'paragraph'" class="paragraph">{{ item.content | translate }}</p>
+
   <div *ngIf="item.type === 'imageIcon'">
     <a [href]="item.link" class="image-icon">
       <mat-icon [svgIcon]="item.svgIcon ?? ''" [fontIcon]="item.fontIcon ?? ''"></mat-icon>
       <span> {{ item.content }}</span>
     </a>
   </div>
-  <h3 *ngIf="item.type === 'section'">{{ item.content }}</h3>
+
+  <h3 *ngIf="item.type === 'section'">{{ item.content | translate }}</h3>
+
   <div *ngIf="item.type === 'occupation'" class="occupation">
     <div class="icon">
       <img [height]="24" [width]="24" [ngSrc]="item.icon" />
     </div>
     <div class="info">
-      <h4>{{ item.title }}</h4>
-      <span>{{ item.subtitle }}</span>
-      <small>{{ item.timeLine }}</small>
-      <small *ngFor="let line of item.description">{{ line }}</small>
+      <h4>{{ item.title | translate }}</h4>
+      <span>{{ item.subtitle | translate }}</span>
+      <small>{{ item.timeLine | translate }}</small>
+      <small *ngFor="let line of item.description">{{ line | translate }}</small>
     </div>
   </div>
 </ng-container>

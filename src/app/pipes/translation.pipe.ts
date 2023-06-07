@@ -10,7 +10,9 @@ import { ConfigService } from '../services/config.service';
 export class TranslationPipe implements PipeTransform {
   constructor(private config: ConfigService) {}
 
-  transform(translation: Translation): string {
+  transform(translation: Translation | string): string {
+    if (typeof translation === 'string') return translation;
+
     return translation[this.config.language()];
   }
 }
