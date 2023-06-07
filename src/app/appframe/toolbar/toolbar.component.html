@@ -3,7 +3,8 @@
     <mat-icon>menu</mat-icon>
   </button>
   <div *ngIf="!config.isMobile()" class="toolbar-left">
-    <span>Sebastian Post</span> <span class="big">|</span> <small>Software Developer</small>
+    <span>Sebastian Post</span> <span class="big">|</span>
+    <small>{{ translations.softwareDeveloper | translate | titlecase }}</small>
   </div>
 
   <div class="toolbar-spacer gap"></div>

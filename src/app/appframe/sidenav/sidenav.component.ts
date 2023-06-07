@@ -9,17 +9,27 @@ import { filter, map } from 'rxjs';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ConfigService } from 'src/app/services/config.service';
 import { MatIconModule } from '@angular/material/icon';
+import { Translation } from '../../types/translation';
+import { TranslationPipe } from '../../pipes/translation.pipe';
 
 interface Page {
   route: string;
-  title: string;
+  title: Translation;
   icon?: string;
 }
 
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [CommonModule, MatSidenavModule, MatListModule, AppRoutingModule, MatCardModule, MatIconModule],
+  imports: [
+    CommonModule,
+    MatSidenavModule,
+    MatListModule,
+    AppRoutingModule,
+    MatCardModule,
+    MatIconModule,
+    TranslationPipe,
+  ],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -29,12 +39,12 @@ export class SidenavComponent {
   @Output() toggleSideNav = new EventEmitter<boolean>();
 
   public readonly pages: Page[] = [
-    { route: '/', title: 'About', icon: 'person' },
-    { route: '/resume', title: 'Resume', icon: 'description' },
-    { route: '/portfolio', title: 'Code Samples', icon: 'code' },
-    { route: '/contact', title: 'Contact', icon: 'mail' },
-    { route: '/imprint', title: 'Imprint' },
-    { route: '/privacy', title: 'Privacy Notice' },
+    { route: '/', title: { en: 'About', de: 'Info' }, icon: 'person' },
+    { route: '/resume', title: { en: 'Resume', de: 'Lebenslauf' }, icon: 'description' },
+    { route: '/portfolio', title: { en: 'Code Samples', de: 'Codebeispiele' }, icon: 'code' },
+    { route: '/contact', title: { en: 'Contact', de: 'Kontakt' }, icon: 'mail' },
+    { route: '/imprint', title: { en: 'Imprint', de: 'Impressum' } },
+    { route: '/privacy', title: { en: 'Privacy Notice', de: 'Datenschutz' } },
   ];
 
   public activePage = toSignal(

@@ -4,6 +4,8 @@ import { ConfigService } from '../services/config.service';
 
 @Pipe({
   name: 'translate',
+  standalone: true,
+  pure: false,
 })
 export class TranslationPipe implements PipeTransform {
   constructor(private config: ConfigService) {}

@@ -12,6 +12,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatPseudoCheckboxModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { translations } from '../../constants/global-translations';
+import { TranslationPipe } from '../../pipes/translation.pipe';
 
 @Component({
   selector: 'app-toolbar',
@@ -27,6 +29,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     FormsModule,
     MatPseudoCheckboxModule,
     MatCheckboxModule,
+    TranslationPipe,
   ],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
@@ -51,6 +54,8 @@ export class ToolbarComponent {
     { label: 'Deutsch', language: 'de' },
     { label: 'English', language: 'en' },
   ];
+
+  public translations = translations;
 
   constructor(public config: ConfigService) {}
 }

@@ -1,10 +1,10 @@
-<h2>Experience</h2>
+<h2>{{ translations.experience | translate | titlecase }}</h2>
 
 <div class="skills-container">
-  <div *ngFor="let section of proficiencies | keyvalue : noSort">
-    <h4>{{ section.key }}</h4>
+  <div *ngFor="let proficiency of proficiencies">
+    <h4>{{ proficiency.title | translate | titlecase }}</h4>
     <div class="skills">
-      <app-skill *ngFor="let proficiency of section.value" [skill]="proficiency"></app-skill>
+      <app-skill *ngFor="let skill of proficiency.skills" [skill]="skill"></app-skill>
     </div>
   </div>
 </div>
