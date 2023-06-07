@@ -16,6 +16,7 @@
   .toolbar-right {
     display: flex;
     align-items: center;
+
     mat-divider {
       align-self: stretch;
     }
@@ -36,5 +37,12 @@
   .gap {
     display: flex;
     gap: 10px;
+  }
+}
+
+.not-selected {
+  opacity: 0.4;
+  &:hover {
+    opacity: 0.6;
   }
 }

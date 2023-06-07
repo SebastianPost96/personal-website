@@ -9,9 +9,28 @@
   <div class="toolbar-spacer gap"></div>
 
   <div class="toolbar-right gap">
-    <button (click)="config.toggleDarkMode()" mat-icon-button>
-      <mat-icon>{{ config.isDarkMode() ? "dark_mode" : "light_mode" }}</mat-icon>
-    </button>
+    <div>
+      <button (click)="config.toggleDarkMode()" mat-icon-button>
+        <mat-icon>{{ config.isDarkMode() ? "dark_mode" : "light_mode" }}</mat-icon>
+      </button>
+      <button [matMenuTriggerFor]="menu" mat-icon-button>
+        <mat-icon>language</mat-icon>
+      </button>
+
+      <mat-menu #menu>
+        <button
+          *ngFor="let lang of languageOptions"
+          (click)="config.setLanguage(lang.language)"
+          [class.not-selected]="config.language() !== lang.language"
+          mat-menu-item
+          role="menuitemradio"
+        >
+          <mat-icon [svgIcon]="lang.language"></mat-icon>
+          <span>{{ lang.label }}</span>
+        </button>
+      </mat-menu>
+    </div>
+
     <mat-divider [inset]="false" [vertical]="true"></mat-divider>
     <div class="buttons">
       <ng-container *ngFor="let button of buttons">

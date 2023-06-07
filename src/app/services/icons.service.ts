@@ -20,6 +20,12 @@ export class IconsService {
       })
       .addSvgIcon('linkedin', this._sanitizer.bypassSecurityTrustResourceUrl('assets/linkedin.svg'), {
         viewBox: '0 0 36 36',
+      })
+      .addSvgIcon('de', this._sanitizer.bypassSecurityTrustResourceUrl('assets/flags/de.svg'), {
+        viewBox: '0 0 640 480',
+      })
+      .addSvgIcon('en', this._sanitizer.bypassSecurityTrustResourceUrl('assets/flags/en.svg'), {
+        viewBox: '0 0 640 480',
       });
   }
 }
