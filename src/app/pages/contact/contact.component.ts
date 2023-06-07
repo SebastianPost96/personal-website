@@ -4,12 +4,11 @@ import { CONTACT_INFORMATION } from '../../constants/contact-information';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslationFile } from '../../types/translation';
 import { TranslationPipe } from '../../pipes/translation.pipe';
-import { SpacerComponent } from '../../ui/spacer/spacer.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, MatIconModule, TranslationPipe, SpacerComponent],
+  imports: [CommonModule, MatIconModule, TranslationPipe],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
