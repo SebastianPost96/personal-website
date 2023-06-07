@@ -1,10 +1,10 @@
 <div class="description">
-  <p>Minesweeper built with Angular. Sample project for an RxJS state management framework.</p>
+  <p>{{ translation.description | translate }}</p>
 
   <a
     href="https://github.com/SebastianPost96/rx-boilerstate"
     target="_blank"
-    [matTooltip]="'Source code'"
+    [matTooltip]="translation.sourceCode | translate | titlecase"
     mat-icon-button
     ><mat-icon>code</mat-icon></a
   >

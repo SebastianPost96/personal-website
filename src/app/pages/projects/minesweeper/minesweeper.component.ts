@@ -5,11 +5,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BehaviorSubject, combineLatest, map, shareReplay, timer } from 'rxjs';
+import { TranslationFile } from '../../../types/translation';
+import { translations } from '../../../constants/global-translations';
+import { TranslationPipe } from '../../../pipes/translation.pipe';
 
 @Component({
   selector: 'app-minesweeper',
   standalone: true,
-  imports: [CommonModule, MatProgressSpinnerModule, MatButtonModule, MatIconModule, MatTooltipModule],
+  imports: [CommonModule, MatProgressSpinnerModule, MatButtonModule, MatIconModule, MatTooltipModule, TranslationPipe],
   templateUrl: './minesweeper.component.html',
   styleUrls: ['./minesweeper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -22,4 +25,12 @@ export class MinesweeperComponent {
     map(([hasData]) => hasData),
     shareReplay(0)
   );
+
+  translation = {
+    description: {
+      de: 'Minesweeper entwickelt mit Angular. Beispielprojekt für ein RxJS State-Management Framework.',
+      en: 'Minesweeper built with Angular. Sample project for an RxJS state management framework.',
+    },
+    sourceCode: translations.sourceCode,
+  } satisfies TranslationFile;
 }

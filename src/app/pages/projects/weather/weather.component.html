@@ -1,21 +1,20 @@
 <div class="description">
   <p>
-    Small App that displays the local weather by using a public API. <br />
-    UI components were built from the ground up with Tailwind.
+    {{ translation.description | translate }}
   </p>
 
   <div class="buttons">
     <a
       href="https://sebastianpost96.github.io/tailwind-weather-app/"
       target="_blank"
-      [matTooltip]="'Open'"
+      [matTooltip]="translation.open | translate | titlecase"
       mat-icon-button
       ><mat-icon>open_in_new</mat-icon></a
     >
     <a
       href="https://github.com/SebastianPost96/tailwind-weather-app"
       target="_blank"
-      [matTooltip]="'Source code'"
+      [matTooltip]="translation.sourceCode | translate | titlecase"
       mat-icon-button
       ><mat-icon>code</mat-icon></a
     >

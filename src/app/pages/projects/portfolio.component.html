@@ -1,8 +1,8 @@
 <mat-tab-group>
-  <mat-tab label="Weather App">
+  <mat-tab [label]="translations.weatherApp | translate">
     <app-weather></app-weather>
   </mat-tab>
-  <mat-tab label="Minesweeper">
+  <mat-tab [label]="translations.mineSweeper | translate">
     <ng-template matTabContent>
       <app-minesweeper></app-minesweeper>
     </ng-template>
