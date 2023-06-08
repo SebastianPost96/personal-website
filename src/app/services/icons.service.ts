@@ -12,19 +12,19 @@ export class IconsService {
 
   private _registerIcons() {
     this._iconRegistry
-      .addSvgIcon('github', this._sanitizer.bypassSecurityTrustResourceUrl('assets/github.svg'), {
+      .addSvgIcon('github', this._sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'), {
         viewBox: '0 0 98 96',
       })
-      .addSvgIcon('github-white', this._sanitizer.bypassSecurityTrustResourceUrl('assets/github-white.svg'), {
+      .addSvgIcon('github-white', this._sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github-white.svg'), {
         viewBox: '0 0 98 96',
       })
-      .addSvgIcon('linkedin', this._sanitizer.bypassSecurityTrustResourceUrl('assets/linkedin.svg'), {
+      .addSvgIcon('linkedin', this._sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'), {
         viewBox: '0 0 36 36',
       })
-      .addSvgIcon('de', this._sanitizer.bypassSecurityTrustResourceUrl('assets/flags/de.svg'), {
+      .addSvgIcon('de', this._sanitizer.bypassSecurityTrustResourceUrl('assets/icons/flags/de.svg'), {
         viewBox: '0 0 640 480',
       })
-      .addSvgIcon('en', this._sanitizer.bypassSecurityTrustResourceUrl('assets/flags/en.svg'), {
+      .addSvgIcon('en', this._sanitizer.bypassSecurityTrustResourceUrl('assets/icons/flags/en.svg'), {
         viewBox: '0 0 640 480',
       });
   }

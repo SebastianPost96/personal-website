@@ -70,7 +70,7 @@ export class ResumeComponent {
     { type: 'section', content: TRANSLATIONS.experience },
     {
       type: 'occupation',
-      icon: 'assets/nerdware.jfif',
+      icon: 'assets/icons/nerdware.jfif',
       title: { en: 'Frontend Developer', de: 'Frontend-Entwickler' },
       subtitle: 'nerdware GmbH',
       timeLine: { en: 'Oct 2022 - Present', de: 'Okt 2022 - Heute' },
@@ -81,7 +81,7 @@ export class ResumeComponent {
     { type: 'spacer', size: 1, hide: true },
     {
       type: 'occupation',
-      icon: 'assets/aracom.jpg',
+      icon: 'assets/icons/aracom.jpg',
       title: { en: 'Frontend Developer', de: 'Frontend-Entwickler' },
       subtitle: 'AraCom IT Services AG',
       timeLine: { en: 'Apr 2021 - Sep 2022 (1 year 6 months)', de: 'Apr 2021 - Sep 2022 (1 Jahr 6 Monate)' },
@@ -95,7 +95,7 @@ export class ResumeComponent {
     { type: 'spacer', size: 1, hide: true },
     {
       type: 'occupation',
-      icon: 'assets/ronny.png',
+      icon: 'assets/icons/ronny.png',
       title: 'IT Administrator (Minijob)',
       subtitle: 'Ronny T-Shirt Druck',
       timeLine: { en: '2015 - 2021 (6 years)', de: '2015 - 2021 (6 Jahre)' },
@@ -109,7 +109,7 @@ export class ResumeComponent {
     { type: 'section', content: { de: 'Ausbildung', en: 'Education' } },
     {
       type: 'occupation',
-      icon: 'assets/uni_bamberg.jfif',
+      icon: 'assets/icons/uni_bamberg.jfif',
       title: { de: 'Otto-Friedrich-Universität Bamberg', en: 'University of Bamberg' },
       subtitle: 'Bachelor of Science - BS, Software Systems Science',
       timeLine: { en: 'Oct 2017 - Mar 2021', de: 'Okt 2017 - Mär 2021' },
