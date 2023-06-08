@@ -27,7 +27,7 @@ $personal-website-theme: mat.define-light-theme(
 
 // Dark
 app-root.dark {
-  $primary-palette: mat.define-palette(mat.$red-palette, 400) !global;
+  $primary-palette: mat.define-palette(mat.$cyan-palette, 400) !global;
   $accent-palette: mat.define-palette(mat.$grey-palette, 300) !global;
   $warn-palette: mat.define-palette(mat.$red-palette) !global;
 
