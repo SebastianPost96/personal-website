@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1686242985889,
+  "timestamp": 1686253434283,
   "index": "/personal-website/index.html",
   "assetGroups": [
     {
@@ -18,11 +18,11 @@
         "/personal-website/996.d7c89bc3c2800860.js",
         "/personal-website/favicon.ico",
         "/personal-website/index.html",
-        "/personal-website/main.6d5a3296b7445f4c.js",
+        "/personal-website/main.a7b3ca564e09b039.js",
         "/personal-website/manifest.webmanifest",
         "/personal-website/polyfills.18e0c4b7fb11c0a6.js",
         "/personal-website/runtime.c1fa8df81b357769.js",
-        "/personal-website/styles.6e5010b492ba5784.css"
+        "/personal-website/styles.02bbad58c9c95b67.css"
       ],
       "patterns": []
     },
@@ -140,14 +140,14 @@
     "/personal-website/assets/skills_icons/windows.png": "9187f1a95d7d0893ff127d5e8ec477e69e99e79f",
     "/personal-website/assets/uni_bamberg.jfif": "8df596bb6ada0b1b33472d2260847843dbab9702",
     "/personal-website/favicon.ico": "e033ecd3762b76a22b8b5e1371c980b06b6ac2d9",
-    "/personal-website/index.html": "a4051be900072b1201e5f18b9c287fac0254a20c",
-    "/personal-website/main.6d5a3296b7445f4c.js": "6c7e5e20cf650563b78869291fe0e8fb0869a2b3",
+    "/personal-website/index.html": "0838fd8f41c0eeeb9133a4857382dcc1becbb63f",
+    "/personal-website/main.a7b3ca564e09b039.js": "e5f9e6e830d26926475a0b13bf93ec8dc4f496e9",
     "/personal-website/manifest.webmanifest": "350f685daf723a60791687bb6aa633461650f979",
     "/personal-website/polyfills.18e0c4b7fb11c0a6.js": "516bbde08d319098ad925c6919139c52d7e0be62",
     "/personal-website/runtime.c1fa8df81b357769.js": "e7f001a222a27a0642a89eec5c3e466582485258",
     "/personal-website/rx-js-black.b795cddb3a6dedf7.svg": "eeab381c43fc31c767fb509c1198de26c0d05ee0",
     "/personal-website/rx-js.ae6b51f4977da020.svg": "5e9eade42ac9d933fd8192a0c029735b46d9c9f8",
-    "/personal-website/styles.6e5010b492ba5784.css": "0d2fd0573418a2da3e531bf18f6c6cb387b132f0"
+    "/personal-website/styles.02bbad58c9c95b67.css": "0290336ecbb8b9821658e6078855898b8d689ad0"
   },
   "navigationUrls": [
     {
