@@ -9,9 +9,9 @@ import { filter, map } from 'rxjs';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ConfigService } from 'src/app/services/config.service';
 import { MatIconModule } from '@angular/material/icon';
-import { Translation } from '../../types/translation';
-import { TranslationPipe } from '../../pipes/translation.pipe';
-import { TRANSLATIONS } from '../../constants/global-translations';
+import { Translation } from '../../../types/translation';
+import { TranslationPipe } from '../../../pipes/translation.pipe';
+import { TRANSLATIONS } from '../../../constants/global-translations';
 
 interface Page {
   route: string;

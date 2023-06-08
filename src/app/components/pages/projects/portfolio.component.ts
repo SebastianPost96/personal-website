@@ -3,8 +3,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MinesweeperComponent } from './minesweeper/minesweeper.component';
 import { WeatherComponent } from './weather/weather.component';
-import { TranslationFile } from '../../types/translation';
-import { TranslationPipe } from '../../pipes/translation.pipe';
+import { TranslationFile } from '../../../types/translation';
+import { TranslationPipe } from '../../../pipes/translation.pipe';
 
 @Component({
   selector: 'app-portfolio',

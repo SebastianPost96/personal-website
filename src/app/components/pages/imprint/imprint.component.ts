@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CONTACT_INFORMATION } from '../../constants/contact-information';
-import { TRANSLATIONS } from '../../constants/global-translations';
-import { TranslationPipe } from '../../pipes/translation.pipe';
+import { CONTACT_INFORMATION } from '../../../constants/contact-information';
+import { TRANSLATIONS } from '../../../constants/global-translations';
+import { TranslationPipe } from '../../../pipes/translation.pipe';
 
 @Component({
   selector: 'app-imprint',

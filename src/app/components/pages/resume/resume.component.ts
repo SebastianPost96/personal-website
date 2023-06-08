@@ -1,12 +1,12 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { CONTACT_INFORMATION } from '../../constants/contact-information';
+import { CONTACT_INFORMATION } from '../../../constants/contact-information';
 import { MatButtonModule } from '@angular/material/button';
-import { ConfigService } from '../../services/config.service';
-import { Translation } from '../../types/translation';
-import { TRANSLATIONS } from '../../constants/global-translations';
-import { TranslationPipe } from '../../pipes/translation.pipe';
+import { ConfigService } from '../../../services/config.service';
+import { Translation } from '../../../types/translation';
+import { TRANSLATIONS } from '../../../constants/global-translations';
+import { TranslationPipe } from '../../../pipes/translation.pipe';
 import { MatDividerModule } from '@angular/material/divider';
 import { SpacerComponent } from '../../ui/spacer/spacer.component';
 

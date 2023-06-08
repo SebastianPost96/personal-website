@@ -39,12 +39,12 @@
     background-position: bottom right, top 3% right 2%;
 
     :host-context(.light) & {
-      background-image: url("~src/assets/angular-black.svg"), url("~src/assets/rx-js-black.svg");
+      background-image: url("~../../../../assets/angular-black.svg"), url("~../../../../assets/rx-js-black.svg");
       background-color: #f0f0f0;
     }
 
     :host-context(.dark) & {
-      background-image: url("~src/assets/angular.svg"), url("~src/assets/rx-js.svg");
+      background-image: url("~../../../../assets/angular.svg"), url("~../../../../assets/rx-js.svg");
       background-color: #202020;
     }
   }

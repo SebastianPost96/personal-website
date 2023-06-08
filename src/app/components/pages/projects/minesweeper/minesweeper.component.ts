@@ -5,9 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BehaviorSubject, combineLatest, map, shareReplay, timer } from 'rxjs';
-import { TranslationFile } from '../../../types/translation';
-import { TRANSLATIONS } from '../../../constants/global-translations';
-import { TranslationPipe } from '../../../pipes/translation.pipe';
+import { TranslationFile } from '../../../../types/translation';
+import { TRANSLATIONS } from '../../../../constants/global-translations';
+import { TranslationPipe } from '../../../../pipes/translation.pipe';
 
 @Component({
   selector: 'app-minesweeper',

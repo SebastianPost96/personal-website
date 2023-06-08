@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkillComponent } from '../../ui/skill/skill.component';
-import { Skill } from '../../types/skill';
-import { TRANSLATIONS } from '../../constants/global-translations';
-import { TranslationPipe } from '../../pipes/translation.pipe';
-import { Translation } from '../../types/translation';
+import { Skill } from '../../../types/skill';
+import { TRANSLATIONS } from '../../../constants/global-translations';
+import { TranslationPipe } from '../../../pipes/translation.pipe';
+import { Translation } from '../../../types/translation';
 
 @Component({
   selector: 'app-home',

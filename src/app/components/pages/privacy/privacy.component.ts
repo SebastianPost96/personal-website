@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ConfigService } from '../../services/config.service';
+import { ConfigService } from '../../../services/config.service';
 
 @Component({
   selector: 'app-privacy',

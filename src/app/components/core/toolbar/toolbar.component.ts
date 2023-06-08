@@ -7,13 +7,13 @@ import { ConfigService } from 'src/app/services/config.service';
 import { MatButtonModule } from '@angular/material/button';
 import { CONTACT_INFORMATION } from 'src/app/constants/contact-information';
 import { MatMenuModule } from '@angular/material/menu';
-import { Language } from '../../types/language';
+import { Language } from '../../../types/language';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatPseudoCheckboxModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { TRANSLATIONS } from '../../constants/global-translations';
-import { TranslationPipe } from '../../pipes/translation.pipe';
+import { TRANSLATIONS } from '../../../constants/global-translations';
+import { TranslationPipe } from '../../../pipes/translation.pipe';
 
 @Component({
   selector: 'app-toolbar',

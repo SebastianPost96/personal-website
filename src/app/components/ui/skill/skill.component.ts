@@ -3,7 +3,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { Skill } from '../../types/skill';
+import { Skill } from '../../../types/skill';
 
 @Component({
   selector: 'app-skill',

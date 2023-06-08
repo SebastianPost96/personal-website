@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CONTACT_INFORMATION } from '../../constants/contact-information';
+import { CONTACT_INFORMATION } from '../../../constants/contact-information';
 import { MatIconModule } from '@angular/material/icon';
-import { TranslationFile } from '../../types/translation';
-import { TranslationPipe } from '../../pipes/translation.pipe';
+import { TranslationFile } from '../../../types/translation';
+import { TranslationPipe } from '../../../pipes/translation.pipe';
 
 @Component({
   selector: 'app-contact',
