@@ -21,10 +21,10 @@ export class IconsService {
       .addSvgIcon('linkedin', this._sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'), {
         viewBox: '0 0 36 36',
       })
-      .addSvgIcon('de', this._sanitizer.bypassSecurityTrustResourceUrl('assets/icons/flags/de.svg'), {
+      .addSvgIcon('de', this._sanitizer.bypassSecurityTrustResourceUrl('assets/flags/de.svg'), {
         viewBox: '0 0 640 480',
       })
-      .addSvgIcon('en', this._sanitizer.bypassSecurityTrustResourceUrl('assets/icons/flags/en.svg'), {
+      .addSvgIcon('en', this._sanitizer.bypassSecurityTrustResourceUrl('assets/flags/en.svg'), {
         viewBox: '0 0 640 480',
       });
   }
