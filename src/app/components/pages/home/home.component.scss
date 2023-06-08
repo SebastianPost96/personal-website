@@ -1,5 +1,4 @@
 @use "@angular/material" as mat;
-@import "../../../../styles";
 
 h2,
 h3,
@@ -11,7 +10,7 @@ h4 {
   display: flex;
   align-items: center;
   margin: 0;
-  color: mat.get-color-from-palette($primary-palette, "text");
+  color: var(--text-primary);
 
   &::before,
   &::after {

@@ -1,6 +1,12 @@
 @use "@angular/material" as mat;
 @include mat.core();
 
+@mixin exposeVariables($selector) {
+  @at-root :root #{$selector} {
+    --text-primary: #{mat.get-color-from-palette($primary-palette, "text")};
+  }
+}
+
 // Light
 $primary-palette: mat.define-palette(mat.$cyan-palette, 700);
 $accent-palette: mat.define-palette(mat.$grey-palette, 700);
@@ -17,10 +23,11 @@ $personal-website-theme: mat.define-light-theme(
   )
 );
 @include mat.all-component-themes($personal-website-theme);
+@include exposeVariables(&);
 
 // Dark
 app-root.dark {
-  $primary-palette: mat.define-palette(mat.$cyan-palette, 400) !global;
+  $primary-palette: mat.define-palette(mat.$red-palette, 400) !global;
   $accent-palette: mat.define-palette(mat.$grey-palette, 300) !global;
   $warn-palette: mat.define-palette(mat.$red-palette) !global;
 
@@ -34,4 +41,6 @@ app-root.dark {
     )
   );
   @include mat.all-component-colors($personal-website-theme-dark);
+  @include exposeVariables(&);
 }
+
