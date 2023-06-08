@@ -1,7 +1,26 @@
+@use "@angular/material" as mat;
+@import "../../../../styles";
+
 h2,
 h3,
 h4 {
   text-align: center;
+}
+
+.fancy-header {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: mat.get-color-from-palette($primary-palette, "text");
+
+  &::before,
+  &::after {
+    content: "";
+    border: 1px solid;
+    flex: 1;
+    height: 0;
+    margin: 0 16px;
+  }
 }
 
 .skills-container {
@@ -11,7 +30,6 @@ h4 {
   column-gap: 16px;
   margin-left: auto;
   margin-right: auto;
-
 
   :host-context(.desktop) & {
     max-width: 700px;

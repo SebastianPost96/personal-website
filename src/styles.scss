@@ -1,25 +1,7 @@
-@use "@angular/material" as mat;
-
 @import "animate.css";
 @import "styles/theme";
 @import "styles/globals";
 
 .big {
   font-size: larger;
-}
-
-.fancy-header {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  color: mat.get-color-from-palette($primary-palette, 'text');
-
-  &::before,
-  &::after {
-    content: "";
-    border: 1px solid;
-    flex: 1;
-    height: 0;
-    margin: 0 16px;
-  }
 }
