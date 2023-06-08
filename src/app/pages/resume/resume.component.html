@@ -1,12 +1,18 @@
 <ng-container *ngFor="let item of resumeContent">
   <div *ngIf="item.type === 'title'" class="title">
     <h2>{{ item.content }}</h2>
-    <button *ngIf="!config.isMobile(); else justIcon" (click)="downloadCV()" mat-flat-button color="accent">
-      Download
-      <mat-icon>download</mat-icon>
-    </button>
-    <ng-template #justIcon>
-      <mat-icon (click)="downloadCV()">download</mat-icon>
+    <ng-container *ngIf="config.isMobile(); then mobileButton; else desktopButton"> </ng-container>
+
+    <ng-template #mobileButton>
+      <button (click)="downloadCV()" mat-mini-fab>
+        <mat-icon>download</mat-icon>
+      </button>
+    </ng-template>
+    <ng-template #desktopButton>
+      <button class="download-fab" (click)="downloadCV()" mat-fab extended>
+        Download
+        <mat-icon>download</mat-icon>
+      </button>
     </ng-template>
   </div>
 
