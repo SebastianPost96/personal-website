@@ -5,7 +5,7 @@ import { CONTACT_INFORMATION } from '../../constants/contact-information';
 import { MatButtonModule } from '@angular/material/button';
 import { ConfigService } from '../../services/config.service';
 import { Translation } from '../../types/translation';
-import { translations } from '../../constants/global-translations';
+import { TRANSLATIONS } from '../../constants/global-translations';
 import { TranslationPipe } from '../../pipes/translation.pipe';
 import { MatDividerModule } from '@angular/material/divider';
 import { SpacerComponent } from '../../ui/spacer/spacer.component';
@@ -67,7 +67,7 @@ export class ResumeComponent {
       svgIcon: 'linkedin',
     },
     { type: 'spacer', size: 2 },
-    { type: 'section', content: translations.experience },
+    { type: 'section', content: TRANSLATIONS.experience },
     {
       type: 'occupation',
       icon: 'assets/nerdware.jfif',

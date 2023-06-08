@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslationFile } from '../../../types/translation';
 import { TranslationPipe } from '../../../pipes/translation.pipe';
-import { translations } from '../../../constants/global-translations';
+import { TRANSLATIONS } from '../../../constants/global-translations';
 
 @Component({
   selector: 'app-weather',
@@ -22,8 +22,8 @@ export class WeatherComponent {
       de: 'Kleine App, die das örtliche Wetter mithilfe einer öffentlichen API anzeigt. \nDie UI-Komponenten wurden von Grund auf mit Tailwind entwickelt.',
       en: 'Small App that displays the local weather by using a public API. \nUI components were built from the ground up with Tailwind',
     },
-    open: translations.open,
-    sourceCode: translations.sourceCode,
+    open: TRANSLATIONS.open,
+    sourceCode: TRANSLATIONS.sourceCode,
   } satisfies TranslationFile;
 
   constructor(public config: ConfigService) {}

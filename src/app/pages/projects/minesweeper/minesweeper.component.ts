@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BehaviorSubject, combineLatest, map, shareReplay, timer } from 'rxjs';
 import { TranslationFile } from '../../../types/translation';
-import { translations } from '../../../constants/global-translations';
+import { TRANSLATIONS } from '../../../constants/global-translations';
 import { TranslationPipe } from '../../../pipes/translation.pipe';
 
 @Component({
@@ -31,6 +31,6 @@ export class MinesweeperComponent {
       de: 'Minesweeper entwickelt mit Angular. Beispielprojekt für ein RxJS State-Management Framework.',
       en: 'Minesweeper built with Angular. Sample project for an RxJS state management framework.',
     },
-    sourceCode: translations.sourceCode,
+    sourceCode: TRANSLATIONS.sourceCode,
   } satisfies TranslationFile;
 }

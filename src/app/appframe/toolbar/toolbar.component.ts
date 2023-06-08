@@ -12,7 +12,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatPseudoCheckboxModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { translations } from '../../constants/global-translations';
+import { TRANSLATIONS } from '../../constants/global-translations';
 import { TranslationPipe } from '../../pipes/translation.pipe';
 
 @Component({
@@ -55,7 +55,7 @@ export class ToolbarComponent {
     { label: 'English', language: 'en' },
   ];
 
-  public translations = translations;
+  public translations = TRANSLATIONS;
 
   constructor(public config: ConfigService) {}
 

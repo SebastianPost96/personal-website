@@ -11,7 +11,7 @@ import { ConfigService } from 'src/app/services/config.service';
 import { MatIconModule } from '@angular/material/icon';
 import { Translation } from '../../types/translation';
 import { TranslationPipe } from '../../pipes/translation.pipe';
-import { translations } from '../../constants/global-translations';
+import { TRANSLATIONS } from '../../constants/global-translations';
 
 interface Page {
   route: string;
@@ -44,7 +44,7 @@ export class SidenavComponent {
     { route: '/resume', title: { en: 'Resume', de: 'Lebenslauf' }, icon: 'description' },
     { route: '/portfolio', title: { en: 'Code Samples', de: 'Codebeispiele' }, icon: 'code' },
     { route: '/contact', title: { en: 'Contact', de: 'Kontakt' }, icon: 'mail' },
-    { route: '/imprint', title: translations.imprint },
+    { route: '/imprint', title: TRANSLATIONS.imprint },
     { route: '/privacy', title: { en: 'Privacy Notice', de: 'Datenschutz' } },
   ];
 

@@ -1,6 +1,6 @@
 import { TranslationFile } from '../types/translation';
 
-export const translations = {
+export const TRANSLATIONS = {
   softwareDeveloper: { de: 'Softwareentwickler', en: 'software developer' },
   experience: { de: 'Erfahrung', en: 'experience' },
   open: { de: 'öffnen', en: 'open' },
