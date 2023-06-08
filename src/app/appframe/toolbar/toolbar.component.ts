@@ -58,4 +58,13 @@ export class ToolbarComponent {
   public translations = translations;
 
   constructor(public config: ConfigService) {}
+
+  setLanguage(event: MouseEvent, lang: Language) {
+    if (this.config.language() === lang) {
+      event.stopPropagation();
+      return;
+    }
+
+    this.config.setLanguage(lang);
+  }
 }

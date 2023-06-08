@@ -21,7 +21,7 @@
       <mat-menu #menu>
         <button
           *ngFor="let lang of languageOptions"
-          (click)="config.setLanguage(lang.language)"
+          (click)="setLanguage($event, lang.language)"
           [class.lang-selected]="config.language() === lang.language"
           mat-menu-item
           role="menuitemradio"
