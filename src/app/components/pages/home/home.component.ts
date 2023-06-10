@@ -104,6 +104,10 @@ export class HomeComponent {
   translations = {
     experience: TRANSLATIONS.experience,
     qualities: { de: 'Qualitäten', en: 'Qualities' },
-    about: { de: 'Über mich', en: 'About me' },
+    welcome: { de: 'Willkommen', en: 'Welcome' },
+    intro: {
+      de: 'Mein Name ist Sebastian Post und ich bin ein Frontend-Entwickler mit einer Spezialisierung in Angular und reaktiver Programmierung. Aufgrund meiner Erfahrung in der Softwareentwicklung hatte ich die Gelegenheit, an einer Vielzahl von Unternehmensanwendungen, insbesondere ERP- und HRM-Systemen, zu arbeiten. Um Qualitätsstandards zu gewährleisten, lege ich großen Wert darauf, über die neuesten Entwicklungen auf dem Laufenden zu bleiben. Ich lege Wert auf sauberen und eleganten Code und gehe gerne komplexe Herausforderungen an, um intuitive und effiziente Software zu entwickeln.',
+      en: "My name is Sebastian Post, and I am a frontend developer specializing in Angular and reactive programming. With a strong background in developing enterprise applications, I've had the opportunity to work on a variety of projects, in particular ERP and HRM systems. To ensure quality and keep up with the rapidly evolving software development landscape, I prioritize staying up-to-date with the latest advancements. I'm a firm believer in clean and elegant code, and I enjoy tackling complex challenges to craft intuitive and efficient software.",
+    },
   } satisfies TranslationFile;
 }

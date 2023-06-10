@@ -40,7 +40,7 @@ export class SidenavComponent {
   @Output() toggleSideNav = new EventEmitter<boolean>();
 
   public readonly pages: Page[] = [
-    { route: '/', title: { en: 'About', de: 'Info' }, icon: 'person' },
+    { route: '/', title: { en: 'Home', de: 'Home' }, icon: 'home' },
     { route: '/resume', title: { en: 'Resume', de: 'Lebenslauf' }, icon: 'description' },
     { route: '/portfolio', title: { en: 'Code Samples', de: 'Codebeispiele' }, icon: 'code' },
     { route: '/contact', title: { en: 'Contact', de: 'Kontakt' }, icon: 'mail' },
