@@ -15,7 +15,7 @@ import { TRANSLATIONS } from '../../../constants/global-translations';
 
 interface Page {
   route: string;
-  title: Translation;
+  title: Translation | string;
   icon?: string;
 }
 
@@ -40,7 +40,7 @@ export class SidenavComponent {
   @Output() toggleSideNav = new EventEmitter<boolean>();
 
   public readonly pages: Page[] = [
-    { route: '/', title: { en: 'Home', de: 'Home' }, icon: 'home' },
+    { route: '/', title: 'Home', icon: 'home' },
     { route: '/resume', title: { en: 'Resume', de: 'Lebenslauf' }, icon: 'description' },
     { route: '/portfolio', title: { en: 'Code Samples', de: 'Codebeispiele' }, icon: 'code' },
     { route: '/contact', title: { en: 'Contact', de: 'Kontakt' }, icon: 'mail' },
