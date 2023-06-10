@@ -2,7 +2,6 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkillComponent } from '../../ui/skill/skill.component';
 import { Skill } from '../../../types/skill';
-import { TRANSLATIONS } from '../../../constants/global-translations';
 import { TranslationPipe } from '../../../pipes/translation.pipe';
 import { Translation, TranslationFile } from '../../../types/translation';
 import { MatCardModule } from '@angular/material/card';
@@ -102,7 +101,7 @@ export class HomeComponent {
   ];
 
   translations = {
-    experience: TRANSLATIONS.experience,
+    skills: { de: 'Kenntnisse', en: 'Skills' },
     qualities: { de: 'Qualitäten', en: 'Qualities' },
     welcome: { de: 'Willkommen', en: 'Welcome' },
     intro: {
