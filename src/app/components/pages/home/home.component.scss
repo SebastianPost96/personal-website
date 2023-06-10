@@ -70,10 +70,9 @@ h4 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   column-gap: 16px;
-  row-gap: 8px;
+  row-gap: 24px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -16px;
 
   :host-context(.desktop) & {
     max-width: 700px;
@@ -82,6 +81,7 @@ h4 {
 
   h3 {
     margin-bottom: 8px;
+    margin-top: 0;
   }
 
   .skills {
