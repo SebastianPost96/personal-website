@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1686438116194,
+  "timestamp": 1686439016454,
   "index": "/portfolio/index.html",
   "assetGroups": [
     {
@@ -18,7 +18,7 @@
         "/portfolio/953.165c67fc5de22747.js",
         "/portfolio/favicon.ico",
         "/portfolio/index.html",
-        "/portfolio/main.e0dea0e5a3940bfe.js",
+        "/portfolio/main.60d24b93e6304999.js",
         "/portfolio/manifest.webmanifest",
         "/portfolio/polyfills.18e0c4b7fb11c0a6.js",
         "/portfolio/runtime.3ffef73292a88bd7.js",
@@ -136,8 +136,8 @@
     "/portfolio/assets/screenshots/weather_desktop.gif": "ca289064689615735c57aee6ebd976b3f1fa8235",
     "/portfolio/assets/screenshots/weather_mobile.gif": "9ac2e66296abeb6ebdce96c83b412c6f731ed085",
     "/portfolio/favicon.ico": "e033ecd3762b76a22b8b5e1371c980b06b6ac2d9",
-    "/portfolio/index.html": "d2e02f7e530e73179796bd24a06da4ed0614b448",
-    "/portfolio/main.e0dea0e5a3940bfe.js": "d00e312f00dbe198d982c6dd9d8a559376b606f4",
+    "/portfolio/index.html": "9477bfbc60c1a63ce66516881010ff6d25315e9f",
+    "/portfolio/main.60d24b93e6304999.js": "14679601f002c238fb3429ae1abd67181929da4b",
     "/portfolio/manifest.webmanifest": "350f685daf723a60791687bb6aa633461650f979",
     "/portfolio/polyfills.18e0c4b7fb11c0a6.js": "516bbde08d319098ad925c6919139c52d7e0be62",
     "/portfolio/runtime.3ffef73292a88bd7.js": "3dd45648a0632a278d42b6cbe0763b68a3bfa67f",
