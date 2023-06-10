@@ -7,14 +7,14 @@ h4 {
 .intro {
   display: flex;
   overflow: auto;
-  max-width: 780px;
+  max-width: 700px;
   margin: 32px auto 32px auto;
+  gap: 32px;
 
   .intro-text {
     display: flex;
     align-items: center;
     text-align: justify;
-    padding: 0 32px;
   }
 }
 
