@@ -4,6 +4,20 @@ h4 {
   text-align: center;
 }
 
+.intro {
+  display: flex;
+  overflow: auto;
+  max-width: 780px;
+  margin: 32px auto 32px auto;
+
+  .intro-text {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 0 32px;
+  }
+}
+
 .fancy-header {
   display: flex;
   align-items: center;

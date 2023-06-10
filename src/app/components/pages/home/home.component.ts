@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SkillComponent } from '../../ui/skill/skill.component';
 import { Skill } from '../../../types/skill';
@@ -12,7 +12,15 @@ import { SpacerComponent } from '../../ui/spacer/spacer.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SkillComponent, TranslationPipe, MatCardModule, MatIconModule, SpacerComponent],
+  imports: [
+    CommonModule,
+    SkillComponent,
+    TranslationPipe,
+    MatCardModule,
+    MatIconModule,
+    SpacerComponent,
+    NgOptimizedImage,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -96,5 +104,6 @@ export class HomeComponent {
   translations = {
     experience: TRANSLATIONS.experience,
     qualities: { de: 'Qualitäten', en: 'Qualities' },
+    about: { de: 'Über mich', en: 'About me' },
   } satisfies TranslationFile;
 }
