@@ -6,10 +6,16 @@ h4 {
 
 .intro {
   display: flex;
-  overflow: auto;
   max-width: 700px;
   margin: 32px auto 32px auto;
   gap: 32px;
+  justify-content: center;
+  flex-direction: row-reverse;
+
+
+  :host-context(.mobile) & {
+    flex-wrap: wrap;
+  }
 
   .intro-text {
     display: flex;
