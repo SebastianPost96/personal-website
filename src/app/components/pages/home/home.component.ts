@@ -4,17 +4,47 @@ import { SkillComponent } from '../../ui/skill/skill.component';
 import { Skill } from '../../../types/skill';
 import { TRANSLATIONS } from '../../../constants/global-translations';
 import { TranslationPipe } from '../../../pipes/translation.pipe';
-import { Translation } from '../../../types/translation';
+import { Translation, TranslationFile } from '../../../types/translation';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { SpacerComponent } from '../../ui/spacer/spacer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SkillComponent, TranslationPipe],
+  imports: [CommonModule, SkillComponent, TranslationPipe, MatCardModule, MatIconModule, SpacerComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
+  public readonly qualities: { icon: string; title: Translation; subtext: Translation }[] = [
+    {
+      icon: 'speed',
+      title: { en: 'Fast', de: 'Schnell' },
+      subtext: {
+        en: 'Fast load times and lag free interaction, even with big data.',
+        de: 'Schnelles Laden und ruckelfreie Interaktion, selbst bei großen Datenmengen.',
+      },
+    },
+    {
+      icon: 'devices',
+      title: { en: 'Responsive', de: 'Responsiv' },
+      subtext: {
+        en: 'Layouts for desktop, mobile or both together.',
+        de: 'Layouts für Desktop, Mobilgeräte oder beide zusammen.',
+      },
+    },
+    {
+      icon: 'engineering',
+      title: { en: 'Scalable', de: 'Skalierbar' },
+      subtext: {
+        en: 'Efficient management of growing features and software size.',
+        de: 'Effizientesr Umgang mit wachsender Software und Funktionalität.',
+      },
+    },
+  ];
+
   public readonly proficiencies: { title: Translation | string; skills: Skill[] }[] = [
     {
       title: 'Frameworks',
@@ -63,5 +93,8 @@ export class HomeComponent {
     },
   ];
 
-  translations = TRANSLATIONS;
+  translations = {
+    experience: TRANSLATIONS.experience,
+    qualities: { de: 'Qualitäten', en: 'Qualities' },
+  } satisfies TranslationFile;
 }

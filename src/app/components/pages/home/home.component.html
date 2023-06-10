@@ -1,8 +1,18 @@
+<h2 class="fancy-header">{{ translations.qualities | translate | titlecase }}</h2>
+
+<div class="qualities">
+  <div *ngFor="let quality of qualities">
+    <mat-icon>{{ quality.icon }}</mat-icon>
+    <h3>{{ quality.title | translate }}</h3>
+    <div>{{ quality.subtext | translate }}</div>
+  </div>
+</div>
+
 <h2 class="fancy-header">{{ translations.experience | translate | titlecase }}</h2>
 
 <div class="skills-container">
   <div *ngFor="let proficiency of proficiencies">
-    <h4>{{ proficiency.title | translate }}</h4>
+    <h3>{{ proficiency.title | translate }}</h3>
     <div class="skills">
       <app-skill *ngFor="let skill of proficiency.skills" [skill]="skill"></app-skill>
     </div>

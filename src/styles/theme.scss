@@ -1,9 +1,16 @@
 @use "@angular/material" as mat;
+@use "sass:map";
 @include mat.core();
 
 @mixin exposeVariables($selector) {
   @at-root :root #{$selector} {
     --text-primary: #{mat.get-color-from-palette($primary-palette, "text")};
+
+    @if #{$selector} == "app-root.dark" {
+      --bg-nested-card: #{map.get(mat.$grey-palette, 700)};
+    } @else {
+      --bg-nested-card: #{map.get(mat.$grey-palette, 300)};
+    }
   }
 }
 
@@ -43,4 +50,3 @@ app-root.dark {
   @include mat.all-component-colors($personal-website-theme-dark);
   @include exposeVariables(&);
 }
-
