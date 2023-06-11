@@ -130,8 +130,10 @@ export class ResumeComponent {
 
   public downloadCV(): void {
     const link = document.createElement('a');
-    link.download = 'Resume-Sebastian-Post.pdf';
-    link.href = 'assets/Resume-Sebastian-Post.pdf';
+    const fileName = this.config.language() === 'de' ? 'Sebastian Post Lebenslauf.pdf' : 'Sebastian Post Resume.pdf';
+
+    link.download = fileName;
+    link.href = `assets/${fileName}`;
     link.click();
   }
 }
