@@ -47,7 +47,7 @@ export class HomeComponent {
       title: { en: 'Scalable', de: 'Skalierbar' },
       subtext: {
         en: 'Efficient management of growing features and software size.',
-        de: 'Effizientesr Umgang mit wachsender Software und Funktionalität.',
+        de: 'Effizienter Umgang mit wachsender Software und Funktionalität.',
       },
     },
   ];

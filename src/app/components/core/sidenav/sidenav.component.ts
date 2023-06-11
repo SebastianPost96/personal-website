@@ -36,7 +36,7 @@ interface Page {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavComponent {
-  @Input() sideNavOpen!: boolean;
+  @Input({ required: true }) sideNavOpen!: boolean;
   @Output() toggleSideNav = new EventEmitter<boolean>();
 
   public readonly pages: Page[] = [
