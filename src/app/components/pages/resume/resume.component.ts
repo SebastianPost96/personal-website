@@ -100,9 +100,9 @@ export class ResumeComponent {
       subtitle: 'Ronny T-Shirt Druck',
       timeLine: { en: '2015 - 2021 (6 years)', de: '2015 - 2021 (6 Jahre)' },
       description: [
-        { en: '● Onlineshop web development', de: '● Onlineshop Webentwicklung' },
-        { en: '● SEO', de: '● SEO' },
-        { en: '● Maintenance of soft- and hardware', de: '● Wartung von Soft- und Hardware' },
+        { en: '● Onlineshop web development.', de: '● Onlineshop Webentwicklung.' },
+        { en: '● SEO.', de: '● SEO.' },
+        { en: '● Maintenance of soft- and hardware.', de: '● Wartung von Soft- und Hardware.' },
       ],
     },
     { type: 'spacer', size: 2 },
@@ -115,8 +115,8 @@ export class ResumeComponent {
       timeLine: { en: 'Oct 2017 - Mar 2021', de: 'Okt 2017 - Mär 2021' },
       description: [
         {
-          en: "● Bachelor's thesis on a business search engine frontend written in Kotlin-React",
-          de: '● Bachelorarbeit über ein Firmensuchmaschinen-Frontend, geschrieben in Kotlin-React',
+          en: "● Bachelor's thesis on a business search engine frontend written in Kotlin-React.",
+          de: '● Bachelorarbeit über ein Firmensuchmaschinen-Frontend, geschrieben in Kotlin-React.',
         },
         {
           en: '● Software projects using mainly Angular and Spring Boot.',
