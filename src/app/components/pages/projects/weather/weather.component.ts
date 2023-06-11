@@ -19,8 +19,8 @@ import { TRANSLATIONS } from '../../../../constants/global-translations';
 export class WeatherComponent {
   translation = {
     description: {
-      de: 'Kleine App, die das örtliche Wetter mithilfe einer öffentlichen API anzeigt. \nDie UI-Komponenten wurden von Grund auf mit Tailwind entwickelt.',
-      en: 'Small App that displays the local weather by using a public API. \nUI components were built from the ground up with Tailwind',
+      de: 'Kleine App, die das örtliche Wetter mithilfe einer öffentlichen API anzeigt. \nEntwickelt, um Tailwind zur Komponentenerstellung auszuprobieren.',
+      en: 'Small App that displays the local weather by using a public API. \nBuilt to try out UI component building with Tailwind',
     },
     open: TRANSLATIONS.open,
     sourceCode: TRANSLATIONS.sourceCode,
